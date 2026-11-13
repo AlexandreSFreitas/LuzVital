@@ -1,0 +1,60 @@
+# ===== Segredos e credenciais (NUNCA versionar) =====
+.env
+.env.*
+*.env
+!env.example
+**/wallet/
+**/Wallet_*/
+*.pem
+*.key
+*.p12
+*.jks
+**/secrets/
+credentials*.json
+application-local.properties
+application-local.yml
+
+# ===== Configurações pessoais do Claude Code =====
+.claude/settings.local.json
+CLAUDE.local.md
+
+# ===== Dados reais / sensíveis =====
+# Só dados simulados ou públicos entram no Git.
+data-science/data/raw/
+**/dados-reais/
+**/*.real.csv
+
+# ===== Entregáveis gerados (enviados pelo Teams/Portal, não pelo Git) =====
+disciplines/**/*.zip
+disciplines/**/*.pdf
+pitch/**/*.mp4
+pitch/**/*.mov
+ar-vr/**/*.mp4
+ar-vr/**/*.mov
+
+# ===== Java / Maven =====
+target/
+*.class
+*.log
+hs_err_pid*
+
+# ===== Python =====
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+
+# ===== Node (caso o frontend use) =====
+node_modules/
+dist/
+build/
+
+# ===== IDEs e sistema =====
+.idea/
+*.iml
+.vscode/
+Thumbs.db
+desktop.ini
+.DS_Store
