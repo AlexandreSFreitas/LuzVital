@@ -93,4 +93,11 @@ A **LuzVital** é uma plataforma web que funciona assim:
 6. VIVA (mesma reportagem do item 3) — resposta da Enel sobre o cadastro de clientes vitais
 7. BandNews FM — desligamento de 28/08/2025, Jardim Ângela como bairro mais afetado: https://www.band.com.br/bandnews-fm/noticias/apagao-sp-202508280636
 
-> ⚠️ **Pendente:** o briefing pede uma **conversa com uma pessoa real** que convive com o problema. Quando ela acontecer, registre aqui um resumo sem dados pessoais e ajuste as personas.
+## Escuta (etapa "Escutar" do briefing)
+
+**Decisão da equipe (13/11/2026):** a escuta será feita a partir dos depoimentos do documentário **"De Volta para Casa (Back Home)"**, da ONG que atua com pessoas eletrodependentes.
+
+- [ ] Registrar aqui um resumo do que os depoimentos mostram: o que as famílias fazem hoje quando falta energia e o que atrapalha. Sem dados pessoais além do que o próprio documentário torna público.
+- [ ] Creditar o documentário e a ONG.
+- [ ] Ajustar as personas se os depoimentos contradisserem alguma suposição.
+- [ ] *Recomendado:* uma troca curta de mensagens com a ONG (o mesmo contato do pedido de autorização dos trechos para o pitch). Assim existe também uma **conversa** direta, que é o que o briefing pede literalmente.

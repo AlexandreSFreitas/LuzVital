@@ -11,7 +11,7 @@ Marque `[x]` somente quando o artefato existir **e** tiver sido conferido.
 - [ ] `prompts.md` com os prompts de IA usados
 - [ ] Nenhum dado pessoal real; fontes dos dados indicadas
 - [ ] Todos os integrantes identificados (nome e RM) em cada entrega
-- [ ] Conversa com uma pessoa real que convive com o problema (registrada)
+- [ ] Conversa com uma pessoa real que convive com o problema (registrada) — decisão: depoimentos do documentário "De Volta para Casa" + contato com a ONG (ver `docs/agile/01_IDEIA.md`)
 
 ## Agile Methodology With Squad Framework — PDF único (+ link do vídeo)
 
