@@ -12,7 +12,7 @@
 | **Problema, em uma frase** | Quando falta energia, ninguém sabe rapidamente quais pacientes que dependem de aparelhos elétricos estão em risco nem quem deve agir |
 | **Como funciona** | O paciente é cadastrado com endereço, região, equipamentos e autonomia de bateria. Quando uma interrupção de energia é registrada numa região, a LuzVital cruza a região com os pacientes, gera alertas para os contatos responsáveis e acompanha a confirmação e o atendimento |
 | **O que cada parte faz** | Veja a tabela abaixo |
-| **Link do repositório** | _a preencher após a criação no GitHub_ |
+| **Link do repositório** | https://github.com/AlexandreSFreitas/LuzVital |
 | **Indicador de impacto** | Tempo entre a interrupção de energia e a confirmação do alerta por um responsável (_meta a definir_) |
 | **ODS conectados** | _Proposta:_ ODS 3 (saúde e bem-estar), ODS 9 (infraestrutura), ODS 10 (redução das desigualdades), ODS 11 (cidades sustentáveis). _Justificativa em `docs/PROJECT_SPEC.md`_ |
 
@@ -32,9 +32,13 @@
 
 ## Equipe
 
-| Nome | RM |
-|---|---|
-| _a preencher_ | _a preencher_ |
+| Nome | RM | Responsabilidade principal |
+|---|---|---|
+| Alexandre Freitas Silva | 566278 | Coordenação geral, backend Java, Agile, Data Science e pitch |
+| Arthur Gaspare Gil | 555746 | AR-VR |
+| Felipe Rodrigues Gomes Ribeiro | 562482 | Database Design, Dynamic Programming e Network |
+
+Todos os integrantes participam e sabem explicar o projeto inteiro (regra "Todo mundo constrói" da GS).
 
 ## Uso de IA
 

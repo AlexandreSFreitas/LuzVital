@@ -57,7 +57,7 @@ Este arquivo orienta o Claude Code neste repositório. Ele é curto de propósit
 ## Regras de desenvolvimento
 
 - Simples primeiro: uma função que funciona vale mais que dez pela metade.
-- Backend em camadas, como pedido em aula: **model, DAO, BO, controller e tratamento de exceções**. Detalhes em `docs/ARCHITECTURE.md`.
+- Backend em camadas, como pedido em aula: **model, DAO, BO, controller e tratamento de exceções**. DAO com **JDBC puro** (sem JPA). Detalhes em `docs/ARCHITECTURE.md`.
 - Java 21 (LTS). Use `./mvnw` (ou `mvnw.cmd` no Windows), nunca um Maven global.
 - Python sempre em ambiente virtual (`.venv`). Não instale bibliotecas fora do `requirements.txt` sem perguntar.
 - Interfaces para o cidadão real: letras legíveis, bom contraste, linguagem simples, telas pequenas.
@@ -87,5 +87,10 @@ Não declare algo como pronto sem ter rodado a verificação correspondente.
 ## Ambiente local (Windows)
 
 - Java: Microsoft OpenJDK 21 (`JAVA_HOME` do usuário).
-- Oracle: **local por enquanto** (Docker), mas a entrega de DDD exige o **servidor Oracle da FIAP** e deploy no **render.com**. Planeje a troca por variáveis de ambiente.
+- Oracle: credenciais da FIAP **funcionando** (13/11). Local em Docker é opcional, mas a entrega de DDD exige o **servidor Oracle da FIAP** e deploy no **render.com**. Planeje a troca por variáveis de ambiente.
 - Frontend: tecnologia não definida.
+- Oracle Data Modeler: **ainda não instalado** (necessário para o diagrama lógico de Database Design).
+
+## Equipe
+
+Alexandre Freitas Silva (566278) — geral, backend, Agile, Data Science, pitch · Felipe Rodrigues Gomes Ribeiro (562482) — Database, Dynamic Programming, Network · Arthur Gaspare Gil (555746) — AR-VR. Número da equipe (X da rede 192.168.X.0/24): **pendente**.
