@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LuzVital — Cadastro do paciente (protótipo)</title>
+<link rel="stylesheet" href="estilo.css">
+<style>
+  main { max-width: 860px; margin: 0 auto; padding: 1.5rem 2rem 3rem; }
+  .intro { margin: .35rem 0 0; color: var(--texto-suave); }
+  form { display: grid; gap: 2rem; margin-top: 1.5rem; }
+  fieldset { border: 0; border-top: 2px solid var(--linha); padding: 1.25rem 0 0; margin: 0; display: grid; gap: 1rem; }
+  legend { font-weight: 700; font-size: 1.15rem; padding-right: .75rem; }
+  .linha { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 1rem; }
+  label { display: grid; gap: .3rem; font-weight: 700; font-size: .95rem; }
+  label small { font-weight: 400; color: var(--texto-suave); }
+  input, select { width: 100%; min-width: 0; font: inherit; padding: .6rem .7rem; border: 2px solid var(--linha); border-radius: 6px; background: #fff; color: var(--noite); }
+  input:focus, select:focus { border-color: var(--noite); }
+  table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+  th, td { text-align: left; padding: .6rem .5rem; border-bottom: 1px solid var(--linha); vertical-align: middle; }
+  th { font-size: .85rem; color: var(--texto-suave); font-weight: 700; }
+  .ordem { font-weight: 700; }
+  .adicionar { background: none; border: 0; padding: .25rem 0; font-weight: 700; text-decoration: underline; color: var(--noite); justify-self: start; }
+  .aviso { background: #fff; border-left: 4px solid var(--luz); padding: .75rem 1rem; font-size: .92rem; margin: 0; }
+  .fim { display: flex; gap: 1rem; justify-content: flex-end; flex-wrap: wrap; }
+  @media (max-width: 700px) { main { padding: 1rem; } .topo { padding: .75rem 1rem; flex-wrap: wrap; } }
+</style>
+</head>
+<body>
+<header class="topo">
+  <a class="marca" href="index.html">LuzVital</a>
+  <nav aria-label="Principal">
+    <a href="painel.html">Interrupções</a>
+    <a href="paciente.html" aria-current="page">Pacientes</a>
+  </nav>
+  <span class="quem">Central Zona Sul · Rafael Souza</span>
+</header>
+
+<main>
+  <h1>Lúcia Andrade</h1>
+  <p class="intro">Só o que quem vai ajudar precisa saber. Dados fictícios neste protótipo.</p>
+
+  <form onsubmit="return false">
+    <fieldset>
+      <legend>Paciente e endereço</legend>
+      <div class="linha">
+        <label>Nome completo <input value="Lúcia Andrade"></label>
+        <label>Data de nascimento <input type="date" value="1955-03-14"></label>
+      </div>
+      <div class="linha">
+        <label>Rua <input value="Rua das Margaridas"></label>
+        <label>Número <input value="120"></label>
+        <label>CEP <input value="04900000" inputmode="numeric"></label>
+      </div>
+      <div class="linha">
+        <label>Região <small>Usada para saber quem foi afetado</small>
+          <select><option selected>Jardim Ângela — São Paulo</option><option>Capão Redondo — São Paulo</option><option>Jardim São Luís — São Paulo</option></select>
+        </label>
+        <label>Observação para quem vai ajudar <small>Opcional</small>
+          <input value="Casa no fundo do quintal, portão azul">
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Equipamentos e bateria</legend>
+      <table>
+        <thead><tr><th>Equipamento</th><th>Suporte à vida</th><th>Reserva sem energia</th><th>Fonte alternativa</th></tr></thead>
+        <tbody>
+          <tr><td>Concentrador de oxigênio</td><td>Sim</td><td>
+            <div class="autonomia"><div class="trilho" role="img" aria-label="3 horas de reserva"><div class="carga" style="width:37.5%"></div></div><span class="legenda">3h (180 min)</span></div>
+          </td><td>Cilindro de O₂</td></tr>
+          <tr><td>Oxímetro de pulso</td><td>Não</td><td>
+            <div class="autonomia"><div class="trilho" role="img" aria-label="8 horas de reserva"><div class="carga" style="width:100%"></div></div><span class="legenda">8h (480 min)</span></div>
+          </td><td>Pilhas</td></tr>
+        </tbody>
+      </table>
+      <button class="adicionar" type="button">Adicionar equipamento</button>
+      <p class="aviso">A reserva informa quanto tempo o equipamento funciona sem energia. Ela é usada para ordenar os alertas e não substitui a avaliação da equipe de saúde.</p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Quem avisar, nesta ordem</legend>
+      <table>
+        <thead><tr><th>Ordem</th><th>Nome</th><th>Vínculo</th><th>Telefone</th></tr></thead>
+        <tbody>
+          <tr><td class="ordem">1</td><td>Mariana Andrade</td><td>Filha, cuidadora principal</td><td>(11) 90000-0001</td></tr>
+          <tr><td class="ordem">2</td><td>Paulo Andrade</td><td>Filho</td><td>(11) 90000-0002</td></tr>
+          <tr><td class="ordem">3</td><td>Equipe Vida em Casa</td><td>Home care</td><td>(11) 3000-0003</td></tr>
+        </tbody>
+      </table>
+      <button class="adicionar" type="button">Adicionar contato</button>
+    </fieldset>
+
+    <div class="fim">
+      <button class="botao botao-secundario" type="button">Cancelar</button>
+      <button class="botao botao-principal" type="submit">Salvar paciente</button>
+    </div>
+  </form>
+</main>
+</body>
+</html>

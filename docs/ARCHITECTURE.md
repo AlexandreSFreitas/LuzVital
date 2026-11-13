@@ -33,7 +33,7 @@ A rede onde a solução roda fisicamente é projetada no Packet Tracer (`network
 
 | Decisão | Status |
 |---|---|
-| Tecnologia do frontend | Não definida |
+| Tecnologia do frontend | Protótipo em HTML/CSS puro (`frontend/prototipo/`). **Atualizar para o MVP oficial** ligado à API Java quando o backend estiver pronto |
 | JDBC puro vs. JPA no DAO | **Decidido: JDBC puro (DAO manual)** |
 | Fonte dos dados para Data Science | A definir (pública ou simulada) |
 | Problema de Programação Dinâmica | A definir (ex.: rota de visita a pacientes por grafo; priorização por autonomia) |

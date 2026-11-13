@@ -1,0 +1,61 @@
+/* LuzVital — protótipo (Agile). Tokens compartilhados pelas 3 telas. */
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap");
+
+:root {
+  --noite: #1B2A41;      /* apagão: fundo da tela do contato, texto da central */
+  --noite-2: #263a57;
+  --luz: #F2B134;        /* sinal de luz: ação principal, autonomia */
+  --cuidado: #2E7D6B;    /* confirmado */
+  --risco: #B3261E;      /* prioridade 1 */
+  --aviso: #9A6A00;      /* prioridade 2 (texto sobre claro) */
+  --papel: #F7F9FB;
+  --linha: #D5DCE5;
+  --texto-suave: #4A5A70;
+  font-family: "Atkinson Hyperlegible", system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--noite);
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--papel); }
+h1, h2, h3 { line-height: 1.2; margin: 0; }
+h1 { font-size: 1.75rem; }
+h2 { font-size: 1.25rem; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--luz); outline-offset: 3px; }
+button { font: inherit; cursor: pointer; }
+
+/* Barra superior da central */
+.topo { background: var(--noite); color: #fff; display: flex; align-items: center; gap: 1.5rem; padding: .75rem 2rem; }
+.marca { font-weight: 700; font-size: 1.25rem; display: flex; align-items: center; gap: .5rem; text-decoration: none; }
+.marca::before { content: ""; width: .9rem; height: .9rem; border-radius: 50%; background: var(--luz); box-shadow: 0 0 0 4px rgba(242,177,52,.25); }
+.topo nav { display: flex; gap: 1.25rem; font-size: .95rem; }
+.topo nav a { text-decoration: none; opacity: .8; }
+.topo nav a[aria-current] { opacity: 1; border-bottom: 3px solid var(--luz); }
+.topo .quem { margin-left: auto; font-size: .9rem; opacity: .8; }
+
+/* Selo "simulado" — integrações não são reais no MVP */
+.selo-simulado { display: inline-block; font-size: .8rem; border: 2px dashed currentColor; border-radius: 4px; padding: 0 .4rem; }
+
+/* Barra de autonomia: bateria x duração estimada */
+.autonomia { display: grid; gap: .25rem; }
+.autonomia .trilho { position: relative; height: 14px; background: #E6EBF1; border-radius: 7px; overflow: visible; }
+.autonomia .carga { height: 100%; border-radius: 7px; background: var(--luz); }
+.autonomia .marco { position: absolute; top: -5px; bottom: -5px; width: 3px; background: var(--noite); }
+.autonomia .legenda { font-size: .85rem; color: var(--texto-suave); }
+
+.prio { display: inline-flex; align-items: center; gap: .35rem; font-weight: 700; font-size: .9rem; }
+.prio::before { content: ""; width: .75rem; height: .75rem; border-radius: 2px; }
+.prio-1 { color: var(--risco); } .prio-1::before { background: var(--risco); }
+.prio-2 { color: var(--aviso); } .prio-2::before { background: var(--luz); }
+.prio-3 { color: var(--texto-suave); } .prio-3::before { background: var(--linha); }
+
+.status { font-size: .85rem; font-weight: 700; padding: .1rem .5rem; border-radius: 999px; white-space: nowrap; }
+.st-pendente { background: #FCEBD0; color: #7A5200; }
+.st-confirmado { background: #DDF0EA; color: var(--cuidado); }
+
+.botao { border: 0; border-radius: 8px; padding: .75rem 1.25rem; font-weight: 700; }
+.botao-principal { background: var(--luz); color: var(--noite); }
+.botao-secundario { background: transparent; border: 2px solid currentColor; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }

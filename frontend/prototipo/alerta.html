@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1B2A41">
+<title>LuzVital — Alerta (protótipo)</title>
+<link rel="stylesheet" href="estilo.css">
+<style>
+  body { background: var(--noite); color: #fff; min-height: 100vh; }
+  main { max-width: 26rem; margin: 0 auto; padding: 1.5rem 1.25rem 2rem; display: grid; gap: 1.5rem; }
+  .marca { color: #fff; font-size: 1rem; }
+  .quando { font-size: .95rem; opacity: .8; margin: .25rem 0 0; }
+  h1 { font-size: 1.9rem; }
+  .tempo { background: var(--noite-2); border-radius: 12px; padding: 1.25rem; display: grid; gap: .75rem; }
+  .tempo .rotulo { margin: 0; font-size: 1rem; opacity: .85; }
+  .tempo .valor { font-size: 3rem; font-weight: 700; line-height: 1; color: var(--luz); }
+  .tempo .valor small { font-size: 1.1rem; font-weight: 400; color: #fff; opacity: .85; }
+  .autonomia .trilho { background: #0f1a2b; }
+  .autonomia .marco { background: #fff; }
+  .autonomia .legenda { color: #c9d3e0; }
+  .acoes { display: grid; gap: .75rem; }
+  .acoes .botao { width: 100%; padding: 1.1rem; font-size: 1.15rem; }
+  .botao-secundario { color: #fff; }
+  .equipe { margin: 0; font-size: .95rem; opacity: .85; }
+  .samu { border-top: 1px solid #3a4f6f; padding-top: 1.25rem; font-size: .95rem; }
+  .samu a { display: inline-block; margin-top: .5rem; font-size: 1.4rem; font-weight: 700; color: var(--luz); }
+  .confirmado { display: none; background: var(--cuidado); border-radius: 12px; padding: 1rem 1.25rem; }
+  .confirmado p { margin: .25rem 0 0; }
+  body.feito .confirmado { display: block; }
+  body.feito #confirmar { display: none; }
+</style>
+</head>
+<body>
+<main>
+  <div>
+    <span class="marca">LuzVital</span>
+    <p class="quando">Hoje, 14h06 · <span class="selo-simulado">simulado</span></p>
+  </div>
+
+  <h1>Caiu a energia na casa da Dona Lúcia</h1>
+
+  <section class="tempo" aria-labelledby="t-rotulo">
+    <p id="t-rotulo" class="rotulo">Oxigênio de reserva estimado</p>
+    <p class="valor">2h50 <small>restantes</small></p>
+    <div class="autonomia">
+      <div class="trilho" role="img" aria-label="Reserva de 3 horas, menor que as 4 horas estimadas de falta de energia">
+        <div class="carga" style="width:71%"></div><span class="marco" style="left:100%"></span>
+      </div>
+      <span class="legenda">A falta de energia pode durar 4h</span>
+    </div>
+  </section>
+
+  <section class="confirmado" role="status" aria-live="polite">
+    <strong>Você confirmou às 14h11.</strong>
+    <p>A equipe e os outros contatos já sabem que você vai ajudar.</p>
+  </section>
+
+  <div class="acoes">
+    <button id="confirmar" class="botao botao-principal" onclick="document.body.classList.add('feito')">Confirmar que vou ajudar</button>
+    <button class="botao botao-secundario">Registrar o que fiz</button>
+  </div>
+
+  <p class="equipe">Equipe Vida em Casa já confirmou. Paulo ainda não respondeu.</p>
+
+  <section class="samu">
+    Se ela tiver falta de ar ou piorar, ligue para o SAMU.
+    <br><a href="tel:192">Ligar 192</a>
+  </section>
+</main>
+</body>
+</html>
