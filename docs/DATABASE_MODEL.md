@@ -1,6 +1,6 @@
 # Modelo de dados — LuzVital
 
-**Status:** proposta v1 (13/11/2026) para revisão do Felipe (Database Design).
+**Status:** proposta v1 (13/11/2026) para revisão do Alexandre (responsável por Database Design).
 Depois de aprovada, esta proposta vira o diagrama lógico no **Oracle Data Modeler**, e o diagrama passa a ser a fonte oficial.
 Toda mudança aqui afeta: `database/*.sql`, camada `model`/`dao` do backend, DER e diagrama de classes do PDF de DDD, `docs/API_CONTRACT.md` e o notebook de Data Science.
 
@@ -174,7 +174,7 @@ Calculada pelo backend (BO) quando os alertas são criados, usando o equipamento
 | Data Science | Usa `duracao_estimada_min` e `autonomia_bateria_min` como conceitos |
 | Dynamic Programming | Usa `autonomia_bateria_min` e `prioridade` na distribuição de kits |
 
-## 8. Para o Felipe revisar
+## 8. Pontos para revisar
 
 - [ ] As 8 tabelas e as decisões da seção 3 fazem sentido?
 - [ ] Os nomes seguem o padrão ensinado em aula (prefixos como `T_` ou `nm_`/`dt_`)? Se o padrão for outro, ajustar **antes** de começar o backend.

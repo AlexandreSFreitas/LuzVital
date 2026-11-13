@@ -34,9 +34,9 @@
 
 | Nome | RM | Responsabilidade principal |
 |---|---|---|
-| Alexandre Freitas Silva | 566278 | Coordenação geral, backend Java, Agile, Data Science e pitch |
+| Alexandre Freitas Silva | 566278 | Coordenação geral, backend Java, Database Design, Agile, Data Science e pitch |
 | Arthur Gaspare Gil | 555746 | AR-VR |
-| Felipe Rodrigues Gomes Ribeiro | 562482 | Database Design, Dynamic Programming e Network |
+| Felipe Rodrigues Gomes Ribeiro | 562482 | Dynamic Programming e Network |
 
 Todos os integrantes participam e sabem explicar o projeto inteiro (regra "Todo mundo constrói" da GS).
 

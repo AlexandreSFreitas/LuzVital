@@ -93,4 +93,4 @@ Não declare algo como pronto sem ter rodado a verificação correspondente.
 
 ## Equipe
 
-Alexandre Freitas Silva (566278) — geral, backend, Agile, Data Science, pitch · Felipe Rodrigues Gomes Ribeiro (562482) — Database, Dynamic Programming, Network · Arthur Gaspare Gil (555746) — AR-VR. Número da equipe (X da rede 192.168.X.0/24): **pendente**.
+Alexandre Freitas Silva (566278) — geral, backend, Database, Agile, Data Science, pitch · Felipe Rodrigues Gomes Ribeiro (562482) — Dynamic Programming, Network · Arthur Gaspare Gil (555746) — AR-VR. Número da equipe (X da rede 192.168.X.0/24): **pendente**.
