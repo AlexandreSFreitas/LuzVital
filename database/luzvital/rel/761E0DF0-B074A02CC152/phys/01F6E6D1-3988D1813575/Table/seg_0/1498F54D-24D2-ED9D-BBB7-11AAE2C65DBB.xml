@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="equipamento" directorySegmentName="seg_0" id="1498F54D-24D2-ED9D-BBB7-11AAE2C65DBB">
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="categoria" id="1C0F3FDB-1A0F-C92D-1222-42020A2E9E29">
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="nome" id="2571C88E-96AB-630B-6923-A026DADC3D28">
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="consumo_watts" id="2B5C9954-D86B-27A3-98CB-837ADC91980E">
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="suporte_vida" id="63AA75B8-F6F3-9DC1-D586-10B0E64B1786">
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<defaultValue>&apos;N&apos;</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="id_equipamento" id="71E64C11-904D-8872-2DBF-825E74995EC1">
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="pk_equipamento" id="19300E80-965D-3823-9996-99304E20E5E6">
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.storage.oracle.TableCheckConstraintOracle">
+<TableCheckConstraint name="ck_equipamento_consumo" id="C13ED7D3-2298-8A20-A98B-EEC64BD5C3E5">
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<nameChanged>true</nameChanged>
+</TableCheckConstraint>
+<TableCheckConstraint name="ck_equipamento_suporte_vida" id="CF080F0E-EE61-F843-7F89-98C1C307A332">
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<nameChanged>true</nameChanged>
+</TableCheckConstraint>
+<TableCheckConstraint name="ck_equipamento_categoria" id="D714216F-714D-51CD-0CB9-D284510F115F">
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<nameChanged>true</nameChanged>
+</TableCheckConstraint>
+</tableCheckConstraints>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="uq_equipamento_nome" id="EC6E9073-7920-C3C5-8E8B-6A863BE5AF51">
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev20c>

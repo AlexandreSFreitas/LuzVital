@@ -42,13 +42,15 @@ Marque `[x]` somente quando o artefato existir **e** tiver sido conferido.
 
 - [ ] PDF: capa (integrantes em ordem alfabética, RM, nome da equipe e da solução), sumário, objetivo e escopo, principais funcionalidades (10)
 - [ ] PDF: diagrama do modelo lógico no **Oracle Data Modeler** com tabelas, atributos, PKs, FKs, relacionamentos e cardinalidades (20)
-- [ ] `ddl.sql`: CREATE/ALTER com todas as tabelas e constraints (20)
-- [ ] `dml.sql`: INSERTs com **no mínimo 5 linhas por tabela** (exceções justificadas) (20)
-- [ ] `dql.sql`: 3 consultas (30)
-  - [ ] INNER JOIN com duas tabelas
-  - [ ] INNER JOIN com função de grupo e GROUP BY
-  - [ ] LEFT OUTER JOIN com WHERE e ORDER BY
+- [x] `ddl.sql`: CREATE/ALTER com todas as tabelas e constraints (20)
+- [x] `dml.sql`: INSERTs com **no mínimo 5 linhas por tabela** (exceções justificadas) (20)
+- [x] `dql.sql`: 3 consultas (30)
+  - [x] INNER JOIN com duas tabelas
+  - [x] INNER JOIN com função de grupo e GROUP BY
+  - [x] LEFT OUTER JOIN com WHERE e ORDER BY
 - [ ] Sem links para diagramas em nuvem
+
+> 13/11: scripts rodados do zero no Oracle da FIAP sem erro (9 tabelas, 9 PK, 9 FK, 4 UNIQUE; 5 a 11 linhas por tabela; DQL com 6, 7 e 11 linhas). Diagrama exportado em `database/luzvital_logico.png` (falta colocar no PDF).
 
 ## Domain Driven Design - Java — ZIP pelo Portal do Aluno
 

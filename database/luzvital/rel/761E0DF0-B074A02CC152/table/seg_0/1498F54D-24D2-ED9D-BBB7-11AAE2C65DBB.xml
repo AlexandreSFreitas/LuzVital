@@ -1,0 +1,132 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1498F54D-24D2-ED9D-BBB7-11AAE2C65DBB" name="equipamento">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[Catálogo de tipos de equipamento médico e seu consumo]]></commentInRDBMS>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>F9B63D6B-840B-3C2A-FAE0-37E74623053E</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_equipamento" id="71E64C11-904D-8872-2DBF-825E74995EC1">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>4DD56D64-EF20-1C4E-C817-0468FA278CF0</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B019BD06-94A5-8590-4043-855C600541D6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="nome" id="2571C88E-96AB-630B-6923-A026DADC3D28">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>27C63C64-48C7-276E-66A9-CDAF81FD7504</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>BD72C62E-B2B8-C27A-1734-42DA945BE074</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="categoria" id="1C0F3FDB-1A0F-C92D-1222-42020A2E9E29">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>9D39B342-0E17-3386-4180-C2566892A4B3</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D638DEA2-ED17-814A-0A91-9C61F19C9385</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="consumo_watts" id="2B5C9954-D86B-27A3-98CB-837ADC91980E">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>A4990F0A-40FD-90C8-D0AD-AB99114190CB</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>23F83E80-72CF-5D64-2D37-53D824031C86</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="suporte_vida" id="63AA75B8-F6F3-9DC1-D586-10B0E64B1786">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[S/N conforme cadastro ou fabricante; não é avaliação clínica]]></commentInRDBMS>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>E464CA2F-23AA-B9F6-8480-333815A2877D</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>30CF0216-3722-24F4-D80E-3E58730F6F41</domain>
+<defaultValue>&apos;N&apos;</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="19300E80-965D-3823-9996-99304E20E5E6" name="pk_equipamento">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>A938B8C8-DA73-67E3-F72D-86C9E99BF6B9</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="71E64C11-904D-8872-2DBF-825E74995EC1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EC6E9073-7920-C3C5-8E8B-6A863BE5AF51" name="uq_equipamento_nome">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>D0C2FE41-0650-3F84-2A00-BA7446BDE23D</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2571C88E-96AB-630B-6923-A026DADC3D28"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="ck_equipamento_categoria" directorySegmentName="seg_0" id="D714216F-714D-51CD-0CB9-D284510F115F">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>1E9FFCA4-92BB-D9F4-84E8-ADE46531E8D5</importedID>
+<rule><![CDATA[categoria IN ('RESPIRATORIO', 'ALIMENTACAO', 'MONITORAMENTO', 'OUTRO')]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="ck_equipamento_consumo" directorySegmentName="seg_0" id="C13ED7D3-2298-8A20-A98B-EEC64BD5C3E5">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>41253F9C-5103-958F-8D2F-03608710CACA</importedID>
+<rule><![CDATA[consumo_watts > 0]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="ck_equipamento_suporte_vida" directorySegmentName="seg_0" id="CF080F0E-EE61-F843-7F89-98C1C307A332">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>AF87C9C2-EF04-EA91-D67B-CD56956D942E</importedID>
+<rule><![CDATA[suporte_vida IN ('S', 'N')]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

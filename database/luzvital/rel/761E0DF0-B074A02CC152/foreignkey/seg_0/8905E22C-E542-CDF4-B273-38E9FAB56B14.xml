@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="8905E22C-E542-CDF4-B273-38E9FAB56B14" containerWithKeyObject="2D895382-553A-96EB-73D1-646DE9A9F981" localFKIndex="F70C6A00-F105-B9DB-894D-EFC670A783FA" name="fk_paciente_regiao">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>42855F4D-30AF-6564-2631-6F682516C9F3</importedID>
+<referredTableLongName>regiao</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>57156118-A9DE-0962-D687-5AE7C0934AD2</referredTableID>
+<keyObject>0042C9F2-2AB6-FD9A-5951-E4DDD5DA749C</keyObject>
+<referredKeyID>0042C9F2-2AB6-FD9A-5951-E4DDD5DA749C</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_regiao</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

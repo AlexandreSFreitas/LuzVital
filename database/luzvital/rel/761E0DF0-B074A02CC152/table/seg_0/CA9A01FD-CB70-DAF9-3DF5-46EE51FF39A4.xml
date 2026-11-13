@@ -1,0 +1,202 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CA9A01FD-CB70-DAF9-3DF5-46EE51FF39A4" name="alerta">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[Aviso gerado para um contato de um paciente afetado, com a confirmação]]></commentInRDBMS>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>07297843-0D3A-C60E-DEE7-C64D1186F3F7</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_alerta" id="A167B016-8ED1-DF0F-CDD5-CDE2C94D3344">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>EF3C52A6-3052-FEF4-E837-634070E7A7B2</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B019BD06-94A5-8590-4043-855C600541D6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="id_interrupcao" id="3BBB25BF-9388-ED2B-24B5-DFADF83C8753">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>01886DB5-3CF7-6D0D-A0A1-B1A4D60A455B</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B019BD06-94A5-8590-4043-855C600541D6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7B4F1A59-023A-FBD9-9813-6A0CC63C2994" referredColumn="9ECE176A-1C7A-1717-4B59-240CEDC45EB6"/>
+</associations>
+</Column>
+<Column name="id_paciente" id="5D30D9A5-83C7-65EA-8D29-78413FDEA581">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>D5545FC5-F7D1-DBF3-452C-665DA9BDD407</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B019BD06-94A5-8590-4043-855C600541D6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E1FF5441-188E-36E6-BB2D-5A06AAB4EBE6" referredColumn="1F17A3A6-CB46-4C06-844D-A748900C8546"/>
+</associations>
+</Column>
+<Column name="id_contato" id="CF19ABBA-EF1E-B2FA-3FE3-21A6F1E479C1">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>E062AC49-E73D-C6F9-D687-07CF65787D40</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B019BD06-94A5-8590-4043-855C600541D6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E1FF5441-188E-36E6-BB2D-5A06AAB4EBE6" referredColumn="901578E4-B9F3-1F8A-9E4D-E175AAE7E19E"/>
+</associations>
+</Column>
+<Column name="prioridade" id="40FC491B-A22E-C4D2-7670-2382FF84DD68">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[1 a 3, regra operacional acadêmica (não é índice clínico)]]></commentInRDBMS>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>983EA8DF-51EE-4F91-1720-EF92FD256750</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>EB56E174-FB86-29E7-710A-EB4FBF4FD486</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="status" id="AA2BE2DA-72F6-87B9-2599-0949AA3CDDC1">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>5FE594BC-EB75-2C65-6F50-9BF30E2B5F06</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>34BE8515-636C-618A-6AAE-2BF79C4828D3</domain>
+<defaultValue>&apos;PENDENTE&apos;</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_criacao" id="7ED3B8B4-207D-A76D-593B-88F645AE2AA5">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>B37A5CED-EB69-E136-89E1-FC6B804098FB</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<domain>8B231D45-3C85-EC2D-70C1-A7744DD82A72</domain>
+<defaultValue>SYSTIMESTAMP</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_confirmacao" id="C4210961-E418-D1AD-63BC-E1EA3EE6596D">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>65F39215-BA17-855A-44FB-430CD68F0622</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<domain>8B231D45-3C85-EC2D-70C1-A7744DD82A72</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E7B36057-E405-EB66-5E5D-11D845C2F283" name="pk_alerta">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>F8C433C8-271E-2C5D-294A-C7D8E5311F10</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A167B016-8ED1-DF0F-CDD5-CDE2C94D3344"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="66B52E44-14E5-877B-FBCE-A05AB60CFA47" name="uq_alerta">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>95F7D100-7AC3-EA21-0C40-988413B3696A</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3BBB25BF-9388-ED2B-24B5-DFADF83C8753"/>
+<colUsage columnID="5D30D9A5-83C7-65EA-8D29-78413FDEA581"/>
+<colUsage columnID="CF19ABBA-EF1E-B2FA-3FE3-21A6F1E479C1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EB910FDB-5697-F168-AF08-F16029D4A290" name="fk_alerta_interrupcao">
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3BBB25BF-9388-ED2B-24B5-DFADF83C8753"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FE65E55E-B98E-BE5F-011D-EBC399F5EA78" name="fk_alerta_pac_contato">
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5D30D9A5-83C7-65EA-8D29-78413FDEA581"/>
+<colUsage columnID="CF19ABBA-EF1E-B2FA-3FE3-21A6F1E479C1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="ck_alerta_prioridade" directorySegmentName="seg_0" id="C5392049-1EBD-DC79-0891-CB4EA2460DD1">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>A88DB346-7422-DB0C-171F-11FD0A6FB134</importedID>
+<rule><![CDATA[prioridade BETWEEN 1 AND 3]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="ck_alerta_status" directorySegmentName="seg_0" id="D9802218-78DF-946D-E04F-4EDC206AEBCF">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>CB593EE9-B357-C3C6-6BD7-3648E5C4E073</importedID>
+<rule><![CDATA[status IN ('PENDENTE', 'CONFIRMADO', 'SEM_RESPOSTA')]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="ck_alerta_confirmacao" directorySegmentName="seg_0" id="382B38AD-8AAF-441C-3064-C29D36FD1537">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>942153B5-C037-D844-C93D-93C1453A355E</importedID>
+<rule><![CDATA[status <> 'CONFIRMADO' OR data_confirmacao IS NOT NULL]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

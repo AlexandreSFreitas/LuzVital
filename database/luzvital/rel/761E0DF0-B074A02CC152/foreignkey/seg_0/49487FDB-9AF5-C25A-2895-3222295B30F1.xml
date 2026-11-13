@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="49487FDB-9AF5-C25A-2895-3222295B30F1" containerWithKeyObject="5575AEC5-3BA4-3B99-55B4-EDE98ED4CCAF" localFKIndex="ADAC1536-0CD0-C162-B782-01E60EE86278" name="fk_interrupcao_regiao">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>6E177B80-7E2A-A260-435B-2059BC8A0A66</importedID>
+<referredTableLongName>regiao</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>57156118-A9DE-0962-D687-5AE7C0934AD2</referredTableID>
+<keyObject>0042C9F2-2AB6-FD9A-5951-E4DDD5DA749C</keyObject>
+<referredKeyID>0042C9F2-2AB6-FD9A-5951-E4DDD5DA749C</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_regiao</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

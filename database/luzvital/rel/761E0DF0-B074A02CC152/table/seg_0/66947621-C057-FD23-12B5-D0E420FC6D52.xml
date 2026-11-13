@@ -1,0 +1,129 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="66947621-C057-FD23-12B5-D0E420FC6D52" name="paciente_contato">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[Rede de apoio do paciente, com a ordem de acionamento]]></commentInRDBMS>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>09724A97-FF99-3167-9A17-D23DA875B428</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_paciente" id="1F17A3A6-CB46-4C06-844D-A748900C8546">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>2CFD30F5-47AC-6261-63EE-C06866DA83F8</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B019BD06-94A5-8590-4043-855C600541D6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="08DBA4CC-E960-A3BF-03F3-A12A09715463" referredColumn="194574A8-E551-9434-FC31-E5DD0650F5C1"/>
+</associations>
+</Column>
+<Column name="id_contato" id="901578E4-B9F3-1F8A-9E4D-E175AAE7E19E">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>82C3E2D7-C41E-E0AE-B12E-EB6E667AC7F8</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B019BD06-94A5-8590-4043-855C600541D6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9ECC04D0-0CA7-2E05-E571-9BD07C7E4745" referredColumn="7D68E077-55E4-3AF4-6D09-CBA593549FCD"/>
+</associations>
+</Column>
+<Column name="ordem_acionamento" id="362A9216-27D3-31E2-BA30-B3D9C81F3BC1">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[1 = acionar primeiro]]></commentInRDBMS>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>BB9A8643-1D77-27ED-17DC-18E387E75BFB</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>0C86C3A4-7A94-4D15-BBD4-FDD146CFD969</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="vinculo" id="D82C17AE-A3DE-A26F-C085-37F55CD95ACD">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>6187327E-A23D-3499-E1B1-B507B365A80D</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>22FD7A82-6C26-BFE3-DB63-79FC0D794C85</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DF9BD2E3-4225-825F-2451-F0E78503347B" name="pk_paciente_contato">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>18D8EBA1-278D-3CDE-634A-27AB3846EAFA</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1F17A3A6-CB46-4C06-844D-A748900C8546"/>
+<colUsage columnID="901578E4-B9F3-1F8A-9E4D-E175AAE7E19E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="683E71B9-A35D-05CF-A770-D7A9D819615A" name="uq_pac_contato_ordem">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>CDD9C430-BC3F-2255-64F6-2C6FA4263F33</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1F17A3A6-CB46-4C06-844D-A748900C8546"/>
+<colUsage columnID="362A9216-27D3-31E2-BA30-B3D9C81F3BC1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6371740B-9713-77CB-AF5E-66868055A2F3" name="fk_pac_contato_contato">
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="901578E4-B9F3-1F8A-9E4D-E175AAE7E19E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E5CD871E-22ED-1AAC-69EA-B7C241B8A18B" name="fk_pac_contato_paciente">
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1F17A3A6-CB46-4C06-844D-A748900C8546"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="ck_pac_contato_ordem" directorySegmentName="seg_0" id="FF4C533F-F89E-A939-E8AD-90EE0EA1F68A">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>567526DB-77FC-AF6E-C04A-41836A6E1713</importedID>
+<rule><![CDATA[ordem_acionamento >= 1]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="4E7AF725-E9E0-03E4-FD0E-4B717FDEB363" containerWithKeyObject="AE3BD89A-8B21-19C7-075A-E591A9DF5237" localFKIndex="E2FDCB5E-3981-8818-F718-34101EC3A388" name="fk_pac_equip_equipamento">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>1ABB8D22-B268-DE8E-8F15-1EBFB91AF9A1</importedID>
+<referredTableLongName>equipamento</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>1498F54D-24D2-ED9D-BBB7-11AAE2C65DBB</referredTableID>
+<keyObject>19300E80-965D-3823-9996-99304E20E5E6</keyObject>
+<referredKeyID>19300E80-965D-3823-9996-99304E20E5E6</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_equipamento</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

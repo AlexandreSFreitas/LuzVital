@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="761E0DF0-D079-29D2-2848-B074A02CC152" mainViewID="1583A9C0-E8EA-2518-FBD6-41BEBDDA32B0">
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:07:38 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>01F6E6D1-21D0-CFBD-ABDD-3988D1813575</selectedRDBMSSite>
+<importDDLFileStamps>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>ddl.sql</fileName>
+<pathName>C:\Users\Alexa\LuzVital\database</pathName>
+<dbType>17</dbType>
+</importDDLFileStamp>
+</importDDLFileStamps>
+</relationalModel>

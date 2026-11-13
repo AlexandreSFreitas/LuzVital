@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="luzvital" id="29F7E4A9-8ECB-530B-4E24-1132BE8CD4B7" version="3.5">
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:07:37 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>29F7E4A9-8ECB-530B-4E24-1132BE8CD4B7</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="0AC82A18-CAD9-B387-109A-27F879CB77AF">
+<designStoragePath>C:\ddl</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

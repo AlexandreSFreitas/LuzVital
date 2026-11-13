@@ -1,0 +1,131 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AE3BD89A-8B21-19C7-075A-E591A9DF5237" name="paciente_equipamento">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[Equipamento usado pelo paciente, com a autonomia da bateria daquela unidade]]></commentInRDBMS>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>BCCE6E82-995D-4F2B-9849-0C6DD3162257</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_paciente_equipamento" id="98D28D6C-C992-5FAC-38F3-1315254E62BB">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>7468140A-4855-7C96-4783-7F5AA6CE268D</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B019BD06-94A5-8590-4043-855C600541D6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="id_paciente" id="A82860C7-5DE2-4640-4AB9-8192826F436C">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>B43FD341-7446-0BAD-DDB2-945F8CE86429</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B019BD06-94A5-8590-4043-855C600541D6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="413CE0AE-E99D-F50C-501B-5C4AB11485FE" referredColumn="194574A8-E551-9434-FC31-E5DD0650F5C1"/>
+</associations>
+</Column>
+<Column name="id_equipamento" id="F9EE4358-768D-CDE8-120E-98C583F98DE5">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>4E4E5B9C-4D20-1F58-48A3-04689A94908B</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>B019BD06-94A5-8590-4043-855C600541D6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4E7AF725-E9E0-03E4-FD0E-4B717FDEB363" referredColumn="71E64C11-904D-8872-2DBF-825E74995EC1"/>
+</associations>
+</Column>
+<Column name="autonomia_bateria_min" id="AA545065-D78D-A014-FAE1-DB4F0A5328DC">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[Minutos de bateria da unidade; 0 = sem bateria]]></commentInRDBMS>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>EFF4C554-EE19-1AE3-F9D4-AAA29D400D19</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>0D1D0335-9701-E43F-11A5-BE7550E699BC</domain>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fonte_alternativa" id="DE38E619-9372-A07F-0CDB-F0F6075909EF">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>0ACFD1D9-FC81-11E8-6C09-C56A203522EC</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>F1F7D2A1-6A34-BBB3-07E6-702E72AC7E99</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7EA005A4-B44B-4A4F-F808-7D52F63CE3B3" name="pk_paciente_equipamento">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>2C29D87C-3A9C-397B-4574-A0DD7F077D24</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="98D28D6C-C992-5FAC-38F3-1315254E62BB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E2FDCB5E-3981-8818-F718-34101EC3A388" name="fk_pac_equip_equipamento">
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F9EE4358-768D-CDE8-120E-98C583F98DE5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A65361F4-CC30-756E-8794-04CC1F9EC23A" name="fk_pac_equip_paciente">
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A82860C7-5DE2-4640-4AB9-8192826F436C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="ck_pac_equip_autonomia" directorySegmentName="seg_0" id="9BA68151-580C-6767-E786-7A562D5E1DEB">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>C950A160-185A-FFEC-8EB3-7B9947325C68</importedID>
+<rule><![CDATA[autonomia_bateria_min >= 0]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

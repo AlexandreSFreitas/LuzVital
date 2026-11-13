@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A7A9328E-0504-7DD7-DE45-9F93FA58A63F" containerWithKeyObject="FA4C2EA4-3844-8A99-0EE1-E5C5C7D830BD" localFKIndex="CA3BF723-880B-62FD-F52F-84AFE601BF21" name="fk_acao_apoio_alerta">
+<sourceDDLFile>ddl.sql</sourceDDLFile>
+<createdBy>Alexa</createdBy>
+<createdTime>2026-11-13 05:08:50 UTC</createdTime>
+<ownerDesignName>luzvital</ownerDesignName>
+<importedID>3DF2E9D4-7B66-B82C-16C3-FC45226FB25C</importedID>
+<referredTableLongName>alerta</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>CA9A01FD-CB70-DAF9-3DF5-46EE51FF39A4</referredTableID>
+<keyObject>E7B36057-E405-EB66-5E5D-11D845C2F283</keyObject>
+<referredKeyID>E7B36057-E405-EB66-5E5D-11D845C2F283</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_alerta</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

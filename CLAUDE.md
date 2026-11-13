@@ -89,7 +89,7 @@ Não declare algo como pronto sem ter rodado a verificação correspondente.
 - Java: Microsoft OpenJDK 21 (`JAVA_HOME` do usuário).
 - Oracle: credenciais da FIAP **funcionando** (13/11). Local em Docker é opcional, mas a entrega de DDD exige o **servidor Oracle da FIAP** e deploy no **render.com**. Planeje a troca por variáveis de ambiente.
 - Frontend: tecnologia não definida.
-- Oracle Data Modeler: **ainda não instalado** (necessário para o diagrama lógico de Database Design).
+- Oracle Data Modeler: **instalado** (13/11). Diagrama gerado importando `database/ddl.sql` (passo a passo em `database/README.md`).
 
 ## Equipe
 
