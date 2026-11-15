@@ -61,10 +61,10 @@ Documentação (PDF único, 30 pontos):
 - [ ] Instruções de execução: ferramentas, versões (JDK 21, Oracle), link do GitHub, link do deploy, passo a passo (5)
 
 Parte técnica (70 pontos):
-- [ ] Camada model alinhada ao banco (**servidor Oracle da FIAP**) (10)
-- [ ] Camadas DAO e BO (10)
-- [ ] Controller com GET, POST, PUT e DELETE (10)
-- [ ] Tratamento de exceções (10)
+- [ ] Camada model alinhada ao banco (**servidor Oracle da FIAP**) (10) — em andamento: 7 de 9 tabelas no `model`; falta conferir contra o Oracle da FIAP
+- [ ] Camadas DAO e BO (10) — em andamento: regiões, pacientes e registro de interrupção
+- [ ] Controller com GET, POST, PUT e DELETE (10) — em andamento: `/regioes` e `/pacientes` completos
+- [x] Tratamento de exceções (10) — `GlobalExceptionHandler`, conferido por testes e pela API rodando (14/11)
 - [ ] Deploy no **render.com** funcionando (30)
 - [ ] ZIP com PDF, link do GitHub e link do deploy
 - [ ] ⚠️ **Nenhum commit depois do prazo** (zera a parte técnica)

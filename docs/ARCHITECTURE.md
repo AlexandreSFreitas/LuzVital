@@ -13,7 +13,7 @@ A rede onde a solução roda fisicamente é projetada no Packet Tracer (`network
 
 ## Backend (Domain Driven Design - Java)
 
-- Java 21, Spring Boot, Maven Wrapper.
+- Java 21, Spring Boot 4.1.2, Maven Wrapper. Pacote base `br.com.luzvital` (veja `backend/README.md`).
 - Camadas exigidas em aula:
 
 | Camada | Responsabilidade |
