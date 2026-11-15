@@ -76,3 +76,11 @@ curl -X POST http://localhost:8080/api/interrupcoes -H "Content-Type: applicatio
 ```
 
 Confira no SQL Developer que os alertas da nova interrupção foram gravados (`SELECT * FROM alerta WHERE id_interrupcao = <id>`). Repetir o POST de região deve dar 409, e o DELETE de um paciente com contatos também.
+
+**Conferido no Oracle da FIAP em 15/11/2026:** `GET /api/regioes`, `POST /api/regioes` (201), `POST /api/pacientes` (201, CEP normalizado e `dataCadastro` do banco) e `POST /api/interrupcoes` na região 1 (1 paciente afetado, 2 alertas de prioridade 1 gravados na mesma transação).
+
+### Problemas comuns
+
+- **500 com `jdbcUrl, ${DB_URL}` no log:** as variáveis não chegaram à API. No Git Bash use `export DB_URL="..."` (sem espaços em volta do `=`) e suba a API **no mesmo terminal**, depois de definir as variáveis.
+- **400 "Corpo da requisição inválido" com acentos no `curl`:** o terminal do Windows não envia os acentos em UTF-8. Teste sem acento ou use Postman/Insomnia.
+- Os testes manuais gravam de verdade no banco. Para voltar ao estado do `dml.sql`, rode `ddl.sql` e `dml.sql` de novo.
