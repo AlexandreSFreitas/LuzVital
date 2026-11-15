@@ -35,7 +35,7 @@ Este arquivo orienta o Claude Code neste repositório. Ele é curto de propósit
 | `dynamic-programming/` | Dynamic Programming | Python (memoização, tabulação, grafos) |
 | `network/` | Network Architect Solutions | Cisco Packet Tracer (.pkt) |
 | `ar-vr/` | AR-VR Modelling And Simulation | Vídeo de 30 a 60 s no YouTube |
-| `frontend/` | Protótipos e telas (Agile e DDD) | **Ainda não definida.** Não escolha framework sem perguntar |
+| `frontend/` | Protótipo de Agile e documentação do site. **O site em si fica em `backend/src/main/resources/static/`** (servido pelo Spring Boot) | **HTML5, CSS3 e JavaScript puro** (decidido em 15/11). Sem frameworks nem bibliotecas sem autorização |
 | `pitch/` | Agile (vídeo de até 3 min) e Testing | Roteiro e storyboard |
 | `disciplines/` | Empacotamento final de cada entrega | PDFs, ZIPs (fora do Git) |
 | `docs/` | Documentação central | Markdown |
@@ -88,7 +88,7 @@ Não declare algo como pronto sem ter rodado a verificação correspondente.
 
 - Java: Microsoft OpenJDK 21 (`JAVA_HOME` do usuário).
 - Oracle: credenciais da FIAP **funcionando** (13/11). Local em Docker é opcional, mas a entrega de DDD exige o **servidor Oracle da FIAP** e deploy no **render.com**. Planeje a troca por variáveis de ambiente.
-- Frontend: tecnologia não definida.
+- Frontend: HTML/CSS/JS puro em `backend/src/main/resources/static/` (site em `/`, guia da API em `/api.html`; veja `frontend/README.md`).
 - Oracle Data Modeler: **instalado** (13/11). Diagrama gerado importando `database/ddl.sql` (passo a passo em `database/README.md`).
 
 ## Equipe

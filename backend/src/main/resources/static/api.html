@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>API da LuzVital — guia para avaliação</title>
+  <meta name="description" content="Rotas da API REST da LuzVital (Java 21, Spring Boot, Oracle) e um testador simples de requisições.">
+  <meta name="theme-color" content="#155EEF">
+  <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/api.css">
+  <script src="js/api.js" defer></script>
+</head>
+<body class="api-pagina">
+  <a class="pular" href="#conteudo">Pular para o conteúdo principal</a>
+
+  <header class="cabecalho rolou">
+    <div class="container cabecalho__linha">
+      <a class="marca" href="index.html" aria-label="LuzVital — voltar ao site">
+        <svg class="marca__simbolo" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+          <g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"><circle cx="24" cy="24" r="10"/><path d="M39.5 24H45M34.96 34.96l3.89 3.89M24 39.5V45M13.04 34.96l-3.89 3.89M8.5 24H3M13.04 13.04L9.15 9.15M24 8.5V3M34.96 13.04l3.89-3.89"/></g>
+          <circle cx="24" cy="24" r="5" fill="currentColor"/>
+        </svg>
+        <span class="marca__nome">Luz<span>Vital</span></span>
+        <span class="marca__api">API</span>
+      </a>
+      <a class="botao botao--secundario botao--compacto" href="index.html">Voltar ao site</a>
+    </div>
+  </header>
+
+  <main id="conteudo" tabindex="-1" class="api">
+    <section class="container api__intro" aria-labelledby="api-titulo">
+      <p class="sobretitulo">Para avaliadores</p>
+      <h1 id="api-titulo">API REST da LuzVital</h1>
+      <p class="lead">Java 21, Spring Boot e Oracle (servidor da FIAP). Camadas model, DAO (JDBC puro), BO, controller e tratamento de exceções.</p>
+      <dl class="api__fatos">
+        <div><dt>Endereço base</dt><dd><code data-base>/api</code></dd></div>
+        <div><dt>Formato</dt><dd>JSON, campos em camelCase</dd></div>
+        <div><dt>Datas</dt><dd>ISO 8601 (<code>2026-11-15</code>, <code>2026-11-15T14:05:00</code>)</dd></div>
+      </dl>
+    </section>
+
+    <section class="container" aria-labelledby="rotas-titulo">
+      <h2 id="rotas-titulo">Rotas</h2>
+      <p class="api__dica">Clique em <strong>Testar</strong> para levar a rota ao testador, mais abaixo.</p>
+
+      <div class="tabela-rolagem" role="region" aria-labelledby="rotas-titulo" tabindex="0">
+        <table class="rotas">
+          <thead>
+            <tr><th scope="col">Método</th><th scope="col">Caminho</th><th scope="col">O que faz</th><th scope="col">Respostas</th><th scope="col"><span class="sr-only">Ação</span></th></tr>
+          </thead>
+          <tbody data-rotas></tbody>
+        </table>
+      </div>
+
+      <h3 class="api__sub">Formato dos erros</h3>
+      <p>Todo erro devolve o mesmo formato, sem expor SQL nem detalhes internos:</p>
+      <pre class="codigo"><code>{ "status": 404, "erro": "Paciente não encontrado", "timestamp": "2026-11-15T14:05:00-03:00" }</code></pre>
+      <ul class="codigos">
+        <li><strong>400</strong> campo inválido ou faltando</li>
+        <li><strong>404</strong> recurso não existe</li>
+        <li><strong>409</strong> conflito (ex.: remover paciente que já tem alertas; use <code>PUT</code> com <code>"ativo": false</code>)</li>
+        <li><strong>500</strong> erro inesperado (detalhe só no log do servidor)</li>
+      </ul>
+    </section>
+
+    <section class="container" id="testador" aria-labelledby="testador-titulo">
+      <h2 id="testador-titulo">Testador</h2>
+      <div class="aviso-simulacao" role="note">
+        <svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.2"/></svg>
+        <p><strong>Atenção:</strong> as requisições vão para o banco de verdade. <code>POST</code>, <code>PUT</code> e <code>DELETE</code> alteram dados. Use só dados fictícios.</p>
+      </div>
+      <p class="api__alerta-origem" data-aviso-origem hidden>Esta página foi aberta como arquivo. Para testar, abra-a pelo endereço do servidor (por exemplo <code>https://seu-app.onrender.com/api.html</code>) ou informe abaixo o endereço do servidor local.</p>
+
+      <form class="testador" data-testador novalidate>
+        <div class="testador__linha">
+          <div class="campo campo--metodo">
+            <label for="t-metodo">Método</label>
+            <select id="t-metodo" name="metodo">
+              <option>GET</option><option>POST</option><option>PUT</option><option>DELETE</option>
+            </select>
+          </div>
+          <div class="campo campo--caminho">
+            <label for="t-caminho">Caminho</label>
+            <input id="t-caminho" name="caminho" type="text" value="/api/regioes" autocomplete="off" spellcheck="false" required>
+          </div>
+        </div>
+        <div class="campo" data-campo-servidor>
+          <label for="t-servidor">Servidor <span class="opcional">(deixe vazio para usar este mesmo endereço)</span></label>
+          <input id="t-servidor" name="servidor" type="url" placeholder="ex.: http://localhost:8080" autocomplete="off" spellcheck="false">
+        </div>
+        <div class="campo" data-campo-corpo>
+          <label for="t-corpo">Corpo JSON</label>
+          <textarea id="t-corpo" name="corpo" rows="8" spellcheck="false" aria-describedby="t-corpo-dica"></textarea>
+          <p class="campo__dica" id="t-corpo-dica">Usado só em POST e PUT.</p>
+        </div>
+        <label class="confirmar-exclusao" data-confirmar-exclusao hidden>
+          <input type="checkbox" name="confirmaExclusao"> Confirmo que quero apagar este registro
+        </label>
+        <div class="acoes">
+          <button class="botao botao--primario" type="submit" data-enviar>Enviar requisição</button>
+          <button class="botao botao--secundario" type="button" data-copiar>Copiar como curl</button>
+        </div>
+      </form>
+
+      <section class="resposta" aria-labelledby="resposta-titulo">
+        <h3 id="resposta-titulo">Resposta</h3>
+        <p class="resposta__status" data-status aria-live="polite">Nenhuma requisição enviada ainda.</p>
+        <pre class="codigo codigo--resposta" tabindex="0" aria-label="Corpo da resposta"><code data-resposta></code></pre>
+      </section>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape__base">
+      <p>LuzVital · Global Solution 2026.2 · FIAP. Dados de teste devem ser fictícios. <a href="index.html">Voltar ao site</a></p>
+    </div>
+  </footer>
+</body>
+</html>

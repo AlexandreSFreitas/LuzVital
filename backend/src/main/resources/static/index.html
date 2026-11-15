@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LuzVital — A energia pode acabar. O cuidado não.</title>
+  <meta name="description" content="LuzVital conecta pacientes que dependem de equipamentos médicos elétricos em casa à sua rede de apoio quando falta energia. Projeto acadêmico CitizenTech — FIAP.">
+  <meta name="theme-color" content="#155EEF">
+  <link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/inter-regular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="assets/fonts/interdisplay-bold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="js/main.js" defer></script>
+  <script src="js/simulacao.js" defer></script>
+</head>
+<body>
+  <!-- Ícones próprios (traço 1.8, grade de 24 px). Usados com <use href="#i-..."> -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-seta" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-fechar" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="i-raio" viewBox="0 0 24 24"><path d="M13 2L5 14h6l-1 8 8-12h-6l1-8z"/></symbol>
+    <symbol id="i-raio-off" viewBox="0 0 24 24"><path d="M13 2l-2.6 3.9M8.3 9L5 14h6l-1 8 4.4-6.6M16 12.5L19 10h-6l.6-4.5M3 3l18 18"/></symbol>
+    <symbol id="i-tomada" viewBox="0 0 24 24"><path d="M9 2v5M15 2v5M6 7h12v4a6 6 0 0 1-12 0V7zM12 17v5"/></symbol>
+    <symbol id="i-bateria" viewBox="0 0 24 24"><rect x="2" y="7" width="17" height="10" rx="2.5"/><path d="M22 10.5v3M6 10.5v3M9.5 10.5v3"/></symbol>
+    <symbol id="i-relogio" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-pessoas" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5M16 4.8a3.3 3.3 0 0 1 0 6.4M18.5 14.8c1.7.7 2.8 2.4 3 5.2"/></symbol>
+    <symbol id="i-paciente" viewBox="0 0 24 24"><circle cx="12" cy="7" r="3.5"/><path d="M5 21v-1.5A6.5 6.5 0 0 1 11.5 13h1A6.5 6.5 0 0 1 19 19.5V21M12 16.5v3M10.5 18h3"/></symbol>
+    <symbol id="i-aparelho" viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="3"/><rect x="9" y="6" width="6" height="4" rx="1"/><path d="M9 14h6M9 17h6"/></symbol>
+    <symbol id="i-mapa" viewBox="0 0 24 24"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+    <symbol id="i-busca" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.3-4.3"/></symbol>
+    <symbol id="i-sino" viewBox="0 0 24 24"><path d="M6 10a6 6 0 0 1 12 0c0 5 2 6.5 2 6.5H4S6 15 6 10zM10 20a2 2 0 0 0 4 0"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.3l2.7 2.7L16.2 9.5"/></symbol>
+    <symbol id="i-lista" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2.5"/><path d="M9 3h6v3H9zM8.5 11h7M8.5 15h5"/></symbol>
+    <symbol id="i-escudo" viewBox="0 0 24 24"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.4-7.5 9.5-4.3-1.1-7.5-4.9-7.5-9.5V6L12 3z"/><path d="M9 12l2.2 2.2L15.5 10"/></symbol>
+    <symbol id="i-cadeado" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5M12 14.5v2.5"/></symbol>
+    <symbol id="i-olho" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-dados" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></symbol>
+    <symbol id="i-telefone" viewBox="0 0 24 24"><path d="M5 3.5h3.2l1.6 4.2-2.1 1.4a11 11 0 0 0 7.2 7.2l1.4-2.1 4.2 1.6V19a1.6 1.6 0 0 1-1.6 1.6C10.8 20.6 3.4 13.2 3.4 5.1 3.4 4.2 4.1 3.5 5 3.5z"/></symbol>
+    <symbol id="i-casa" viewBox="0 0 24 24"><path d="M3.5 10.5L12 4l8.5 6.5M6 9v11h12V9M10 20v-5h4v5"/></symbol>
+    <symbol id="i-maos" viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.4-7.5-10A4.3 4.3 0 0 1 12 8a4.3 4.3 0 0 1 7.5 2.5c0 5.6-7.5 10-7.5 10z"/></symbol>
+    <symbol id="i-maleta" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2.5"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M12 10.5v6M9 13.5h6"/></symbol>
+    <symbol id="i-grafico" viewBox="0 0 24 24"><path d="M3 12h4l2.5-6 4 12 2.5-6H21"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.6v.2"/></symbol>
+    <symbol id="i-reiniciar" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4.5h4.5"/></symbol>
+  </svg>
+
+  <a class="pular" href="#conteudo">Pular para o conteúdo principal</a>
+
+  <header class="cabecalho" data-cabecalho>
+    <div class="container cabecalho__linha">
+      <a class="marca" href="#inicio" aria-label="LuzVital — voltar ao início">
+        <svg class="marca__simbolo" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+          <g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"><circle cx="24" cy="24" r="10"/><path d="M39.5 24H45M34.96 34.96l3.89 3.89M24 39.5V45M13.04 34.96l-3.89 3.89M8.5 24H3M13.04 13.04L9.15 9.15M24 8.5V3M34.96 13.04l3.89-3.89"/></g>
+          <circle cx="24" cy="24" r="5" fill="currentColor"/>
+        </svg>
+        <span class="marca__nome">Luz<span>Vital</span></span>
+      </a>
+
+      <nav class="nav" aria-label="Principal">
+        <button class="nav__botao" type="button" aria-expanded="false" aria-controls="menu-principal" data-menu-botao>
+          <svg class="icone" aria-hidden="true"><use href="#i-menu"/></svg>
+          <span class="nav__botao-texto">Menu</span>
+        </button>
+        <ul class="nav__lista" id="menu-principal" data-menu>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre o LuzVital</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#para-quem">Para quem</a></li>
+          <li><a href="#demonstracao">Demonstração</a></li>
+          <li><a href="#duvidas">Dúvidas</a></li>
+          <li class="nav__cta-movel"><a class="botao botao--primario" href="#demonstracao">Ver demonstração</a></li>
+        </ul>
+      </nav>
+
+      <a class="botao botao--primario botao--compacto cabecalho__cta" href="#demonstracao">Ver demonstração</a>
+    </div>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+
+    <!-- HERO -->
+    <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+      <div class="hero__grade" aria-hidden="true"></div>
+      <div class="container hero__conteudo">
+        <div class="hero__texto">
+          <p class="selo"><svg class="icone" aria-hidden="true"><use href="#i-grafico"/></svg> Cuidado domiciliar conectado</p>
+          <h1 id="hero-titulo">Quando a energia acaba, <span class="destaque">o cuidado</span> precisa continuar.</h1>
+          <p class="hero__lead">O LuzVital conecta tecnologia e cuidado para ajudar a proteger pessoas que dependem de equipamentos médicos elétricos em casa.</p>
+          <p class="hero__apoio">Quando falta energia num bairro, a plataforma identifica quem pode ter sido afetado e avisa a rede de apoio de cada paciente: família, cuidadores e equipe de saúde.</p>
+          <div class="acoes">
+            <a class="botao botao--primario" href="#como-funciona">Conheça o funcionamento <svg class="icone" aria-hidden="true"><use href="#i-seta"/></svg></a>
+            <a class="botao botao--secundario" href="#demonstracao">Ver demonstração</a>
+          </div>
+          <ul class="hero__notas" aria-label="Importante saber">
+            <li><svg class="icone" aria-hidden="true"><use href="#i-telefone"/></svg> Não substitui o SAMU 192</li>
+            <li><svg class="icone" aria-hidden="true"><use href="#i-escudo"/></svg> Demonstração com dados fictícios</li>
+          </ul>
+        </div>
+
+        <figure class="hero__visual">
+          <img src="assets/images/casa-energia.svg" width="560" height="480"
+               alt="Ilustração: uma senhora descansa numa poltrona em casa, ligada a um concentrador de oxigênio conectado à tomada. Pela janela, um dia de sol.">
+          <div class="cartao-flutuante cartao-flutuante--status" aria-hidden="true">
+            <span class="ponto ponto--ok"></span>
+            <div><strong>Energia normal</strong><small>Jardim Ângela · exemplo</small></div>
+          </div>
+          <div class="cartao-flutuante cartao-flutuante--rede" aria-hidden="true">
+            <small>Rede de apoio</small>
+            <div class="avatares"><span>M</span><span>P</span><span>E</span></div>
+            <strong>3 contatos, em ordem</strong>
+          </div>
+          <figcaption class="sr-only">Os cartões sobre a ilustração são exemplos de como o LuzVital mostra a situação de um paciente.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- PROBLEMA -->
+    <section class="secao secao--suave" id="problema" aria-labelledby="problema-titulo">
+      <div class="container problema">
+        <figure class="problema__visual revelar">
+          <img src="assets/images/casa-sem-energia.svg" width="560" height="480" loading="lazy"
+               alt="Ilustração: a mesma sala à noite, sem energia. O concentrador de oxigênio está apagado e um celular no chão acende com um aviso.">
+        </figure>
+        <div class="problema__texto">
+          <p class="sobretitulo">O problema</p>
+          <h2 id="problema-titulo">Para algumas pessoas, ficar sem energia é muito mais do que um transtorno.</h2>
+          <p class="lead">Há pacientes que dependem de aparelhos ligados na tomada para respirar, se alimentar ou ser monitorados em casa. Quando a luz cai, cada minuto conta, e a família nem sempre fica sabendo a tempo.</p>
+          <ul class="pontos">
+            <li class="ponto-card revelar">
+              <span class="icone-bolha"><svg class="icone" aria-hidden="true"><use href="#i-tomada"/></svg></span>
+              <div><h3>Aparelhos que não podem parar</h3><p>Concentradores de oxigênio, ventiladores e bombas de alimentação dependem de energia elétrica.</p></div>
+            </li>
+            <li class="ponto-card revelar">
+              <span class="icone-bolha"><svg class="icone" aria-hidden="true"><use href="#i-bateria"/></svg></span>
+              <div><h3>Reserva com tempo contado</h3><p>Baterias e cilindros duram algumas horas. Faltas de energia podem durar bem mais.</p></div>
+            </li>
+            <li class="ponto-card revelar">
+              <span class="icone-bolha"><svg class="icone" aria-hidden="true"><use href="#i-pessoas"/></svg></span>
+              <div><h3>Ninguém sabe quem já está indo</h3><p>Família, cuidadores e equipe de saúde se avisam por mensagens soltas e perdem tempo.</p></div>
+            </li>
+          </ul>
+          <p class="fato">
+            <strong>3,1 milhões</strong> de unidades consumidoras ficaram sem energia num único dia na Grande São Paulo, depois do temporal de outubro de 2024.
+            <a href="https://eixos.com.br/?p=314604" rel="noopener" target="_blank">Fonte: eixos<span class="sr-only"> (abre em nova aba)</span></a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- O QUE É -->
+    <section class="secao" id="sobre" aria-labelledby="sobre-titulo">
+      <div class="container">
+        <header class="secao__cabeca">
+          <p class="sobretitulo">O que é o LuzVital</p>
+          <h2 id="sobre-titulo">Tecnologia que conecta informação, pessoas e cuidado.</h2>
+          <p class="lead">O LuzVital organiza o que importa numa falta de energia: quem é o paciente, de quais aparelhos ele depende, quanto tempo a reserva aguenta e quem deve ser avisado.</p>
+        </header>
+        <ul class="cards cards--3">
+          <li class="card revelar"><span class="icone-bolha"><svg class="icone" aria-hidden="true"><use href="#i-paciente"/></svg></span><h3>Cadastro de pacientes</h3><p>Dados essenciais e endereço com região, para saber quem está em cada bairro.</p></li>
+          <li class="card revelar"><span class="icone-bolha"><svg class="icone" aria-hidden="true"><use href="#i-aparelho"/></svg></span><h3>Equipamentos médicos</h3><p>Quais aparelhos o paciente usa e quanto tempo a bateria de cada um dura.</p></li>
+          <li class="card revelar"><span class="icone-bolha"><svg class="icone" aria-hidden="true"><use href="#i-raio-off"/></svg></span><h3>Interrupções de energia</h3><p>Registro de faltas de energia por região. Nesta versão, registradas à mão ou simuladas.</p></li>
+          <li class="card revelar"><span class="icone-bolha"><svg class="icone" aria-hidden="true"><use href="#i-busca"/></svg></span><h3>Quem pode ser afetado</h3><p>O sistema cruza a região da ocorrência com os pacientes cadastrados ali.</p></li>
+          <li class="card revelar"><span class="icone-bolha"><svg class="icone" aria-hidden="true"><use href="#i-sino"/></svg></span><h3>Rede de apoio avisada</h3><p>Alertas para família, cuidadores e equipe, na ordem de acionamento combinada.</p></li>
+          <li class="card revelar"><span class="icone-bolha"><svg class="icone" aria-hidden="true"><use href="#i-lista"/></svg></span><h3>Acompanhamento</h3><p>Quem confirmou, quem ainda não respondeu e o que foi feito depois do alerta.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA -->
+    <section class="secao secao--suave" id="como-funciona" aria-labelledby="como-titulo">
+      <div class="container">
+        <header class="secao__cabeca">
+          <p class="sobretitulo">Como funciona</p>
+          <h2 id="como-titulo">Como o LuzVital funciona na prática?</h2>
+          <p class="lead">Cinco etapas, do cadastro ao acompanhamento.</p>
+        </header>
+        <ol class="etapas">
+          <li class="etapa revelar">
+            <span class="etapa__numero" aria-hidden="true">1</span>
+            <span class="etapa__icone"><svg class="icone" aria-hidden="true"><use href="#i-paciente"/></svg></span>
+            <h3><span class="sr-only">Etapa 1: </span>Cadastro</h3>
+            <p>Paciente, equipamentos, autonomia da bateria, contatos e região ficam registrados.</p>
+          </li>
+          <li class="etapa revelar">
+            <span class="etapa__numero" aria-hidden="true">2</span>
+            <span class="etapa__icone"><svg class="icone" aria-hidden="true"><use href="#i-raio-off"/></svg></span>
+            <h3><span class="sr-only">Etapa 2: </span>Monitoramento</h3>
+            <p>Uma interrupção de energia é informada para uma região. Hoje, de forma manual ou simulada.</p>
+          </li>
+          <li class="etapa revelar">
+            <span class="etapa__numero" aria-hidden="true">3</span>
+            <span class="etapa__icone"><svg class="icone" aria-hidden="true"><use href="#i-busca"/></svg></span>
+            <h3><span class="sr-only">Etapa 3: </span>Identificação</h3>
+            <p>A plataforma encontra os pacientes ativos daquela região e ordena quem precisa de atenção primeiro.</p>
+          </li>
+          <li class="etapa revelar">
+            <span class="etapa__numero" aria-hidden="true">4</span>
+            <span class="etapa__icone"><svg class="icone" aria-hidden="true"><use href="#i-sino"/></svg></span>
+            <h3><span class="sr-only">Etapa 4: </span>Alertas</h3>
+            <p>Cada contato de apoio recebe um alerta, na ordem de acionamento definida.</p>
+          </li>
+          <li class="etapa revelar">
+            <span class="etapa__numero" aria-hidden="true">5</span>
+            <span class="etapa__icone"><svg class="icone" aria-hidden="true"><use href="#i-check"/></svg></span>
+            <h3><span class="sr-only">Etapa 5: </span>Acompanhamento</h3>
+            <p>Quem pode ajudar confirma com um toque. Todos veem quem já assumiu e o que foi feito.</p>
+          </li>
+        </ol>
+        <p class="nota-regra"><svg class="icone" aria-hidden="true"><use href="#i-info"/></svg><span>A ordem de prioridade é uma <strong>regra operacional</strong> baseada na autonomia dos aparelhos e na duração estimada da falta de energia. Ela não é uma avaliação clínica.</span></p>
+      </div>
+    </section>
+
+    <!-- DEMONSTRAÇÃO -->
+    <section class="secao demo" id="demonstracao" aria-labelledby="demo-titulo">
+      <div class="container">
+        <header class="secao__cabeca">
+          <p class="sobretitulo">Demonstração</p>
+          <h2 id="demo-titulo">Veja o LuzVital em ação.</h2>
+          <p class="lead">Simule uma falta de energia num bairro e acompanhe, passo a passo, o que a central veria.</p>
+        </header>
+
+        <div class="aviso-simulacao" role="note">
+          <svg class="icone" aria-hidden="true"><use href="#i-info"/></svg>
+          <p><strong>Simulação com dados fictícios.</strong> Nada aqui é monitoramento real: nenhuma mensagem é enviada, não há integração com a distribuidora de energia e os números não são indicadores de desempenho.</p>
+        </div>
+
+        <div class="app" data-simulacao>
+          <div class="app__barra">
+            <span class="app__pontos" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="app__titulo">LuzVital · Central Zona Sul</span>
+            <span class="etiqueta etiqueta--simulacao">Simulação · dados fictícios</span>
+          </div>
+
+          <div class="app__corpo">
+            <aside class="app__lateral" aria-label="Seções do painel (ilustrativo)">
+              <ul>
+                <li class="ativo"><svg class="icone" aria-hidden="true"><use href="#i-grafico"/></svg>Painel</li>
+                <li><svg class="icone" aria-hidden="true"><use href="#i-paciente"/></svg>Pacientes</li>
+                <li><svg class="icone" aria-hidden="true"><use href="#i-sino"/></svg>Alertas</li>
+                <li><svg class="icone" aria-hidden="true"><use href="#i-mapa"/></svg>Regiões</li>
+              </ul>
+              <p class="app__lateral-nota">Menu ilustrativo</p>
+            </aside>
+
+            <div class="app__principal">
+              <div class="painel-topo">
+                <div>
+                  <p class="painel-topo__regiao"><svg class="icone" aria-hidden="true"><use href="#i-mapa"/></svg> Jardim Ângela, São Paulo <span class="exemplo">exemplo</span></p>
+                  <p class="estado" data-estado data-tom="ok">
+                    <svg class="icone" aria-hidden="true"><use href="#i-raio" data-estado-icone/></svg>
+                    <span data-estado-texto>Energia normal na região</span>
+                  </p>
+                </div>
+                <p class="relogio"><svg class="icone" aria-hidden="true"><use href="#i-relogio"/></svg> <span data-relogio>14h00</span> <span class="exemplo">horário simulado</span></p>
+              </div>
+
+              <fieldset class="duracao" data-duracao>
+                <legend>Duração estimada da falta de energia</legend>
+                <div class="duracao__opcoes">
+                  <label><input type="radio" name="duracao" value="120"> 2 horas</label>
+                  <label><input type="radio" name="duracao" value="240" checked> 4 horas</label>
+                  <label><input type="radio" name="duracao" value="360"> 6 horas</label>
+                </div>
+                <p class="duracao__dica">Mude a duração para ver como a prioridade dos pacientes muda.</p>
+              </fieldset>
+
+              <div class="controles">
+                <button class="botao botao--alerta" type="button" data-simular>
+                  <svg class="icone" aria-hidden="true"><use href="#i-raio-off"/></svg> Simular interrupção de energia
+                </button>
+                <button class="botao botao--fantasma" type="button" data-encerrar hidden>
+                  <svg class="icone" aria-hidden="true"><use href="#i-raio"/></svg> Energia voltou: encerrar
+                </button>
+                <button class="botao botao--fantasma" type="button" data-reiniciar hidden>
+                  <svg class="icone" aria-hidden="true"><use href="#i-reiniciar"/></svg> Reiniciar simulação
+                </button>
+              </div>
+
+              <dl class="metricas">
+                <div class="metrica"><dt>Pacientes cadastrados</dt><dd data-m="cadastrados">5</dd></div>
+                <div class="metrica"><dt>Potencialmente afetados</dt><dd data-m="afetados">0</dd></div>
+                <div class="metrica"><dt>Alertas emitidos</dt><dd data-m="alertas">0</dd></div>
+                <div class="metrica"><dt>Confirmados</dt><dd data-m="confirmados">0</dd></div>
+              </dl>
+
+              <ol class="progresso" aria-label="Etapas da simulação" data-progresso>
+                <li data-passo="ocorrencia">Ocorrência</li>
+                <li data-passo="identificacao">Identificação</li>
+                <li data-passo="alertas">Alertas</li>
+                <li data-passo="acompanhamento">Acompanhamento</li>
+              </ol>
+
+              <div class="painel-vazio" data-vazio>
+                <svg class="icone" aria-hidden="true"><use href="#i-raio"/></svg>
+                <p><strong>Tudo normal por aqui.</strong><br>Clique em “Simular interrupção de energia” para começar.</p>
+              </div>
+
+              <section class="afetados" aria-labelledby="afetados-titulo" data-afetados hidden>
+                <div class="afetados__cabeca">
+                  <h3 id="afetados-titulo">Pacientes da região, por prioridade</h3>
+                  <p class="tempo-1a" data-primeira hidden></p>
+                </div>
+                <ul class="lista-pacientes" data-lista></ul>
+                <p class="nota-pequena">Prioridade por regra operacional, não é avaliação clínica. Em emergência médica, ligue para o <a href="tel:192">SAMU 192</a>.</p>
+              </section>
+
+              <section class="historico" aria-labelledby="historico-titulo" data-historico hidden>
+                <h3 id="historico-titulo">Linha do tempo</h3>
+                <ol class="historico__lista" data-log></ol>
+              </section>
+            </div>
+          </div>
+        </div>
+
+        <p class="sr-only" aria-live="polite" data-anuncio></p>
+      </div>
+    </section>
+
+    <!-- PARA QUEM -->
+    <section class="secao secao--suave" id="para-quem" aria-labelledby="quem-titulo">
+      <div class="container">
+        <header class="secao__cabeca">
+          <p class="sobretitulo">Para quem é</p>
+          <h2 id="quem-titulo">Feito para toda a rede de cuidado.</h2>
+          <p class="lead">Cada pessoa tem um papel. O LuzVital ajuda todas a saber o que está acontecendo.</p>
+        </header>
+        <ul class="publicos">
+          <li class="publico revelar">
+            <span class="publico__ilustra publico__ilustra--1"><svg class="icone" aria-hidden="true"><use href="#i-paciente"/></svg></span>
+            <h3>Pacientes eletrodependentes</h3>
+            <p>Não precisam operar nada. O aviso vai para quem pode ajudar.</p>
+          </li>
+          <li class="publico revelar">
+            <span class="publico__ilustra publico__ilustra--2"><svg class="icone" aria-hidden="true"><use href="#i-casa"/></svg></span>
+            <h3>Familiares e responsáveis</h3>
+            <p>Ficam sabendo da falta de energia e podem avisar, com um toque, que estão indo.</p>
+          </li>
+          <li class="publico revelar">
+            <span class="publico__ilustra publico__ilustra--3"><svg class="icone" aria-hidden="true"><use href="#i-maos"/></svg></span>
+            <h3>Cuidadores</h3>
+            <p>Veem quanto tempo a reserva de cada aparelho aguenta e quem já foi avisado.</p>
+          </li>
+          <li class="publico revelar">
+            <span class="publico__ilustra publico__ilustra--4"><svg class="icone" aria-hidden="true"><use href="#i-maleta"/></svg></span>
+            <h3>Equipes de home care</h3>
+            <p>Cadastram pacientes e aparelhos e acompanham os alertas de todos numa tela.</p>
+          </li>
+          <li class="publico revelar">
+            <span class="publico__ilustra publico__ilustra--5"><svg class="icone" aria-hidden="true"><use href="#i-pessoas"/></svg></span>
+            <h3>Profissionais de acompanhamento</h3>
+            <p>Têm o histórico do que foi feito em cada ocorrência, para apoiar decisões.</p>
+          </li>
+        </ul>
+        <p class="nota-centro">O LuzVital organiza informação e comunicação. Ele não garante atendimento, não faz diagnóstico e não substitui serviços de saúde ou de emergência.</p>
+      </div>
+    </section>
+
+    <!-- PRIVACIDADE -->
+    <section class="secao secao--escura" id="privacidade" aria-labelledby="priv-titulo">
+      <div class="container privacidade">
+        <div class="privacidade__texto">
+          <p class="sobretitulo">Privacidade e segurança</p>
+          <h2 id="priv-titulo">Dados de saúde pedem cuidado redobrado.</h2>
+          <p class="lead">Informações sobre a saúde e o endereço de uma pessoa são sensíveis. Por isso, o projeto segue estes princípios desde o início.</p>
+        </div>
+        <ul class="principios">
+          <li><svg class="icone" aria-hidden="true"><use href="#i-dados"/></svg><div><h3>Só o necessário</h3><p>Guardamos apenas o que ajuda a agir numa falta de energia. Nada de prontuário ou CPF.</p></div></li>
+          <li><svg class="icone" aria-hidden="true"><use href="#i-cadeado"/></svg><div><h3>Controle de acesso</h3><p>Login e perfis de acesso estão planejados para a próxima versão.</p></div></li>
+          <li><svg class="icone" aria-hidden="true"><use href="#i-olho"/></svg><div><h3>Uso responsável</h3><p>Os dados servem só para avisar a rede de apoio do próprio paciente.</p></div></li>
+          <li><svg class="icone" aria-hidden="true"><use href="#i-escudo"/></svg><div><h3>Privacidade na demonstração</h3><p>Todos os dados são fictícios e nada é salvo no seu navegador.</p></div></li>
+          <li><svg class="icone" aria-hidden="true"><use href="#i-lista"/></svg><div><h3>LGPD como referência</h3><p>A Lei Geral de Proteção de Dados orienta o projeto. Esta versão acadêmica não tem certificação formal.</p></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="secao" id="duvidas" aria-labelledby="faq-titulo">
+      <div class="container faq">
+        <header class="secao__cabeca secao__cabeca--esquerda">
+          <p class="sobretitulo">Dúvidas</p>
+          <h2 id="faq-titulo">Perguntas frequentes</h2>
+          <p class="lead">Respostas diretas sobre o que o LuzVital faz hoje e o que ainda é plano.</p>
+        </header>
+        <div class="acordeao" data-acordeao>
+          <h3><button type="button" aria-expanded="false" aria-controls="faq-1" id="faq-1-b">O que é o LuzVital?<svg class="icone" aria-hidden="true"><use href="#i-chevron"/></svg></button></h3>
+          <div id="faq-1" role="region" aria-labelledby="faq-1-b" hidden><p>É uma plataforma que cruza faltas de energia com os pacientes eletrodependentes cadastrados na região e avisa a rede de apoio de cada um. É um projeto acadêmico da FIAP, desenvolvido na Global Solution 2026.</p></div>
+
+          <h3><button type="button" aria-expanded="false" aria-controls="faq-2" id="faq-2-b">Quem pode utilizar a plataforma?<svg class="icone" aria-hidden="true"><use href="#i-chevron"/></svg></button></h3>
+          <div id="faq-2" role="region" aria-labelledby="faq-2-b" hidden><p>Equipes de home care, que cadastram os pacientes, e os contatos de apoio: familiares, cuidadores e profissionais de saúde. O paciente não precisa usar o sistema.</p></div>
+
+          <h3><button type="button" aria-expanded="false" aria-controls="faq-3" id="faq-3-b">O LuzVital substitui os serviços de emergência?<svg class="icone" aria-hidden="true"><use href="#i-chevron"/></svg></button></h3>
+          <div id="faq-3" role="region" aria-labelledby="faq-3-b" hidden><p><strong>Não.</strong> O LuzVital avisa a rede de apoio, mas não envia ambulâncias nem faz triagem. Em emergência médica, ligue para o <a href="tel:192">SAMU 192</a>.</p></div>
+
+          <h3><button type="button" aria-expanded="false" aria-controls="faq-4" id="faq-4-b">Como o sistema identifica uma interrupção de energia?<svg class="icone" aria-hidden="true"><use href="#i-chevron"/></svg></button></h3>
+          <div id="faq-4" role="region" aria-labelledby="faq-4-b" hidden><p>Nesta versão, a interrupção é registrada por um operador ou simulada para testes. A identificação automática depende das fontes de dados e da infraestrutura de monitoramento disponíveis, e ainda não está implementada.</p></div>
+
+          <h3><button type="button" aria-expanded="false" aria-controls="faq-5" id="faq-5-b">O LuzVital funciona com dispositivos IoT?<svg class="icone" aria-hidden="true"><use href="#i-chevron"/></svg></button></h3>
+          <div id="faq-5" role="region" aria-labelledby="faq-5-b" hidden><p>Ainda não. Um pequeno dispositivo na tomada que avisa quando a energia some é uma possibilidade futura. Ele exigiria avaliação elétrica, testes de segurança e uma forma de comunicação que funcione sem o Wi-Fi da casa.</p></div>
+
+          <h3><button type="button" aria-expanded="false" aria-controls="faq-6" id="faq-6-b">As informações dos pacientes são protegidas?<svg class="icone" aria-hidden="true"><use href="#i-chevron"/></svg></button></h3>
+          <div id="faq-6" role="region" aria-labelledby="faq-6-b" hidden><p>O projeto guarda o mínimo necessário e usa somente dados fictícios nesta fase. Login e perfis de acesso estão planejados para a próxima versão, antes de qualquer uso com pessoas reais.</p></div>
+
+          <h3><button type="button" aria-expanded="false" aria-controls="faq-7" id="faq-7-b">O sistema já tem integração com a distribuidora de energia?<svg class="icone" aria-hidden="true"><use href="#i-chevron"/></svg></button></h3>
+          <div id="faq-7" role="region" aria-labelledby="faq-7-b" hidden><p>Não. Essa integração depende de um acordo formal com a distribuidora. Por enquanto, as interrupções são informadas manualmente ou simuladas.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" aria-labelledby="cta-titulo">
+      <div class="container cta__caixa">
+        <svg class="cta__sol" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+          <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="24" cy="24" r="10"/><path d="M39.5 24H45M34.96 34.96l3.89 3.89M24 39.5V45M13.04 34.96l-3.89 3.89M8.5 24H3M13.04 13.04L9.15 9.15M24 8.5V3M34.96 13.04l3.89-3.89"/></g>
+        </svg>
+        <h2 id="cta-titulo">A energia pode acabar. O cuidado não.</h2>
+        <p>Conheça uma proposta de tecnologia desenvolvida para conectar pessoas, informação e apoio em momentos em que cada minuto pode importar.</p>
+        <div class="acoes acoes--centro">
+          <a class="botao botao--claro" href="#demonstracao">Ver a demonstração</a>
+          <a class="botao botao--contorno-claro" href="#inicio">Voltar ao início</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape__grade">
+      <div class="rodape__marca">
+        <a class="marca marca--rodape" href="#inicio" aria-label="LuzVital — voltar ao início">
+          <svg class="marca__simbolo" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+            <g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"><circle cx="24" cy="24" r="10"/><path d="M39.5 24H45M34.96 34.96l3.89 3.89M24 39.5V45M13.04 34.96l-3.89 3.89M8.5 24H3M13.04 13.04L9.15 9.15M24 8.5V3M34.96 13.04l3.89-3.89"/></g>
+            <circle cx="24" cy="24" r="5" fill="currentColor"/>
+          </svg>
+          <span class="marca__nome">Luz<span>Vital</span></span>
+        </a>
+        <p>Monitoramento e apoio a pacientes eletrodependentes quando falta energia.</p>
+      </div>
+      <nav aria-label="Rodapé">
+        <h2 class="rodape__titulo">Navegação</h2>
+        <ul>
+          <li><a href="#sobre">Sobre o LuzVital</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#demonstracao">Demonstração</a></li>
+          <li><a href="#privacidade">Privacidade</a></li>
+          <li><a href="#duvidas">Dúvidas</a></li>
+          <li><a href="api.html">API: guia para avaliadores</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="rodape__titulo">Projeto acadêmico</h2>
+        <p>Global Solution 2026.2 · CitizenTech<br>Engenharia de Software · FIAP</p>
+        <p><a href="api.html">Rotas da API e testador</a></p>
+        <ul class="equipe">
+          <li>Alexandre Freitas Silva · RM 566278</li>
+          <li>Arthur Gaspare Gil · RM 555746</li>
+          <li>Felipe Rodrigues Gomes Ribeiro · RM 562482</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="rodape__titulo">Créditos e avisos</h2>
+        <p>Ilustrações, ícones e logo: criação própria da equipe (SVG).</p>
+        <p>Fonte Inter, de Rasmus Andersson e colaboradores, sob a licença <a href="assets/fonts/OFL.txt">SIL Open Font License 1.1</a>.</p>
+        <p>A demonstração usa apenas dados fictícios. Pessoas e situações são exemplos.</p>
+      </div>
+    </div>
+    <div class="container rodape__base">
+      <p>© <span data-ano>2026</span> LuzVital. Em emergência médica, ligue <a href="tel:192">192 (SAMU)</a>.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -3,7 +3,7 @@
 ## Visão geral
 
 ```text
-[Frontend (a definir)] --HTTP/JSON--> [API Spring Boot (render.com)] --JDBC--> [Oracle]
+[Site HTML/CSS/JS servido pelo próprio Spring Boot em /] --HTTP/JSON--> [API Spring Boot /api (render.com)] --JDBC--> [Oracle]
                                               |
                                   [Python: análise de dados e algoritmo PD]
                                   (consomem CSV exportado / dados simulados)
@@ -33,7 +33,7 @@ A rede onde a solução roda fisicamente é projetada no Packet Tracer (`network
 
 | Decisão | Status |
 |---|---|
-| Tecnologia do frontend | Protótipo em HTML/CSS puro (`frontend/prototipo/`). **Atualizar para o MVP oficial** ligado à API Java quando o backend estiver pronto |
+| Tecnologia do frontend | **Decidido (15/11): HTML5, CSS3 e JavaScript puro**, sem frameworks. Arquivos em `backend/src/main/resources/static/` (um único deploy) |
 | JDBC puro vs. JPA no DAO | **Decidido: JDBC puro (DAO manual)** |
 | Fonte dos dados para Data Science | A definir (pública ou simulada) |
 | Problema de Programação Dinâmica | A definir (ex.: rota de visita a pacientes por grafo; priorização por autonomia) |
