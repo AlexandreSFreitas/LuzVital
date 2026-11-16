@@ -1,0 +1,24 @@
+# Autorizações e fontes do pitch — LuzVital
+
+Regra: **só entra no vídeo o que estiver com status "Autorizado" ou "Próprio/Licenciado".** Guardem o comprovante (print do e-mail ou da mensagem) numa pasta fora do Git, porque pode conter dados pessoais.
+
+| Material | Onde entra | Detentor dos direitos | Status | O que foi liberado / condição | Crédito exigido |
+|---|---|---|---|---|---|
+| Documentário "De Volta para Casa (Back Home)" | Cenas 2a, 2b, 2c | ONG produtora — *preencher nome* | **Autorizado (parcial)** — 15/11/2026 | *Listar cada trecho: início–fim e descrição* | *Como a ONG pediu para ser creditada* |
+| Reportagem sobre a bebê Sibely (abertura) | Cena 1b, opção A | Emissora ou veículo — *identificar qual reportagem* | **Pendente** | A autorização do documentário **não** cobre este material | Nome do veículo |
+| Fato da abertura em texto (opção B) | Cena 1b, opção B | — (fato noticiado, texto próprio) | Próprio | Citar a fonte: Mais Goiás, "Bebê levada à UTI por ficar 15h sem energia com problema cardíaco morre em Goiânia" | "Fonte: Mais Goiás" |
+| Foto da bebê ou da família | **Não usar** | Família (arquivo pessoal) | Não solicitado | Só com autorização expressa da família | — |
+| Imagens de reportagens de apagões em SP | Cena 2a (se usadas) | Emissoras ou agências | **Pendente** | Se não houver autorização, usar imagens do documentário ou filmagem própria | — |
+| Narração | Todo o vídeo | Equipe | Próprio | — | Nomes na tela de créditos |
+| Telas do protótipo e animações | Blocos 3 a 5 | Equipe | Próprio | Dados fictícios | — |
+| Cenas atuadas (celular, casa escura) | 5a, 7a | Equipe | Próprio | Se aparecer alguém de fora da equipe, pedir autorização de imagem | — |
+| Música e som do aparelho | Todo o vídeo | Banco de áudio — *preencher* | **Pendente** | Usar faixa com licença clara (por exemplo, a Biblioteca de Áudio do YouTube) | Conforme a licença |
+| Ícones dos ODS | Cena 6 | ONU | Uso educacional | Seguir as diretrizes de uso dos ícones dos ODS da ONU | — |
+
+## Trechos autorizados do documentário
+
+| # | Início | Fim | Duração | O que aparece | Cena do roteiro |
+|---|---|---|---|---|---|
+| 1 | | | | | |
+| 2 | | | | | |
+| 3 | | | | | |
