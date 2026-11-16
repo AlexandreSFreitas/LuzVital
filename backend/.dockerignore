@@ -1,0 +1,12 @@
+target/
+.env
+.env.*
+*.env
+**/wallet/
+*.pem
+*.key
+*.p12
+*.jks
+.idea/
+.vscode/
+*.iml
