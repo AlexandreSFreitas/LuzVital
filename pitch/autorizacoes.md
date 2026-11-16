@@ -5,15 +5,23 @@ Regra: **só entra no vídeo o que estiver com status "Autorizado" ou "Próprio/
 | Material | Onde entra | Detentor dos direitos | Status | O que foi liberado / condição | Crédito exigido |
 |---|---|---|---|---|---|
 | Documentário "De Volta para Casa (Back Home)" | Cenas 2a, 2b, 2c | ONG produtora — *preencher nome* | **Autorizado (parcial)** — 15/11/2026 | *Listar cada trecho: início–fim e descrição* | *Como a ONG pediu para ser creditada* |
-| Reportagem sobre a bebê Sibely (abertura) | Cena 1b, opção A | Emissora ou veículo — *identificar qual reportagem* | **Pendente** | A autorização do documentário **não** cobre este material | Nome do veículo |
-| Fato da abertura em texto (opção B) | Cena 1b, opção B | — (fato noticiado, texto próprio) | Próprio | Citar a fonte: Mais Goiás, "Bebê levada à UTI por ficar 15h sem energia com problema cardíaco morre em Goiânia" | "Fonte: Mais Goiás" |
+| Reportagem sobre a bebê Sibely (abertura) | Cena 1b (8 s, só o jornalista) | Emissora ou veículo — *preencher* | **Uso com crédito, sem autorização formal** (decisão da equipe, 15/11/2026) | Trecho curto, sem imagens da bebê. A autorização do documentário **não** cobre este material; se possível, pedir à emissora | Nome do veículo e data, na tela durante o trecho e nos créditos |
+| Fato da abertura em texto (plano B, se a emissora pedir para retirar) | Cena 1b | — (fato noticiado, texto próprio) | Próprio | Citar a fonte: Mais Goiás, "Bebê levada à UTI por ficar 15h sem energia com problema cardíaco morre em Goiânia" | "Fonte: Mais Goiás" |
 | Foto da bebê ou da família | **Não usar** | Família (arquivo pessoal) | Não solicitado | Só com autorização expressa da família | — |
-| Imagens de reportagens de apagões em SP | Cena 2a (se usadas) | Emissoras ou agências | **Pendente** | Se não houver autorização, usar imagens do documentário ou filmagem própria | — |
+| Imagens de reportagens de apagões em SP | Cena 2a (cortes de 2–3 s) | Emissoras ou agências — *listar cada uma* | **Uso com crédito, sem autorização formal** (decisão da equipe, 15/11/2026) | Só repórteres e cenas de rua; nenhum paciente identificável | Veículo e data em cada corte e nos créditos |
 | Narração | Todo o vídeo | Equipe | Próprio | — | Nomes na tela de créditos |
 | Telas do protótipo e animações | Blocos 3 a 5 | Equipe | Próprio | Dados fictícios | — |
 | Cenas atuadas (celular, casa escura) | 5a, 7a | Equipe | Próprio | Se aparecer alguém de fora da equipe, pedir autorização de imagem | — |
 | Música e som do aparelho | Todo o vídeo | Banco de áudio — *preencher* | **Pendente** | Usar faixa com licença clara (por exemplo, a Biblioteca de Áudio do YouTube) | Conforme a licença |
 | Ícones dos ODS | Cena 6 | ONU | Uso educacional | Seguir as diretrizes de uso dos ícones dos ODS da ONU | — |
+
+## Reportagens usadas
+
+| # | Veículo | Data | Título / link | Início–fim usado | Cena |
+|---|---|---|---|---|---|
+| 1 | | | Reportagem sobre a bebê (abertura) | 8 s | 1b |
+| 2 | | | | | 2a |
+| 3 | | | | | 2a |
 
 ## Trechos autorizados do documentário
 

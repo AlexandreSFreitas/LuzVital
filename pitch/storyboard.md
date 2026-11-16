@@ -5,8 +5,9 @@ Um quadro por cena do `roteiro.md`. A paleta segue o protótipo: escuro (azul-no
 | # | Tempo | Quadro (o que se vê) | Movimento / transição | Clima |
 |---|---|---|---|---|
 | 1a | 0:00 | Preto total | Só o som do aparelho, ritmado | Silêncio tenso |
-| 1b | 0:04 | Reportagem (opção A) **ou** textos brancos, centralizados, um por vez (opção B) | Fade entre os cartões; o som do aparelho para no cartão "Ficou cerca de 15 horas sem energia em casa." | Luto, respeito. Sem música |
-| 2a | 0:18 | Ruas e casas escuras depois de temporal | Cortes de 2–3 s | A música entra baixa |
+| 1b | 0:04 | Reportagem: só o jornalista, 8 s, crédito no canto inferior | Corte seco na entrada e na saída | Luto, respeito. Sem música |
+| 1c | 0:12 | Preto; cartão "Ela tinha 11 meses." | O som do aparelho volta e para | Silêncio |
+| 2a | 0:18 | Reportagens de apagões: ruas e casas escuras, repórteres | Cortes de 2–3 s, crédito do veículo em cada corte | A música entra baixa |
 | 2b | 0:33 | Depoimento do documentário, plano médio | Sem cortes no meio da fala | Escuta |
 | 2c | 0:45 | Mãos improvisando: bateria de carro, extensão, gerador; termina num celular tocando | Cortes rápidos (1–2 s), acelerando | Urgência |
 | 3 | 0:58 | Tela escura; um ponto âmbar acende no centro | Zoom lento no ponto | Virada: esperança |

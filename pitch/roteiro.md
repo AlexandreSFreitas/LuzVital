@@ -12,7 +12,7 @@ Regras deste roteiro:
 
 | Bloco | Início | Fim | Duração |
 |---|---|---|---|
-| 1. Abertura: a perda | 0:00 | 0:18 | 18 s |
+| 1. Abertura: a perda (reportagem de 8 s) | 0:00 | 0:18 | 18 s |
 | 2. Não é um caso isolado | 0:18 | 0:58 | 40 s |
 | 3. A pergunta | 0:58 | 1:08 | 10 s |
 | 4. A LuzVital | 1:08 | 1:36 | 28 s |
@@ -26,8 +26,9 @@ Regras deste roteiro:
 | # | Tempo | Imagem | Áudio / narração (texto falado) | Texto na tela / legenda | Fonte da imagem |
 |---|---|---|---|---|---|
 | 1a | 0:00–0:04 | Tela preta. Som baixo e ritmado de um aparelho respiratório | — | — | Som de banco com licença |
-| 1b | 0:04–0:18 | **Opção A (preferida):** trecho da reportagem sobre a Sibely. **Opção B:** tela escura com textos aparecendo devagar; o som do aparelho para; silêncio | — (só o som da reportagem, na opção A) | Opção B, um cartão por vez: "Piranhas, Goiás." / "Uma bebê de 11 meses dependia de um aparelho na tomada para respirar." / "Ficou cerca de 15 horas sem energia em casa." / "Ela não resistiu." · rodapé: *Fonte: Mais Goiás* | A: **autorização da emissora pendente** · B: texto próprio, fato citado com fonte |
-| 2a | 0:18–0:33 | Montagem rápida: ruas escuras após temporal, casas sem luz | **N1:** "Ela não é um caso isolado. Quando falta energia, um respirador, um concentrador de oxigênio, uma bomba de alimentação param junto." | Legenda da narração | Documentário (trecho autorizado) ou imagens próprias |
+| 1b | 0:04–0:12 | **Trecho da reportagem sobre a bebê (8 s):** só o jornalista em quadro, do início ao fim da fala dele. A bebê **não** aparece | Som original da reportagem | Crédito no canto inferior durante todo o trecho: *Reportagem: [veículo/emissora], [data]* · legenda da fala | Reportagem — ver `autorizacoes.md` |
+| 1c | 0:12–0:18 | Tela escura. O som do aparelho volta por um instante e para. Silêncio | — | "Ela tinha 11 meses." | Texto próprio |
+| 2a | 0:18–0:33 | Montagem rápida (cortes de 2–3 s) de **reportagens de apagões**: ruas escuras após temporal, casas sem luz, famílias improvisando. Só repórteres e cenas de rua; nenhum paciente identificável sem autorização | **N1:** "Ela não é um caso isolado. Quando falta energia, um respirador, um concentrador de oxigênio, uma bomba de alimentação param junto." | Legenda da narração + crédito do veículo em cada corte | Reportagens (ver `autorizacoes.md`) e documentário |
 | 2b | 0:33–0:45 | **Trecho do documentário "De Volta para Casa":** depoimento de familiar ou cuidador | Voz original do depoimento | Legenda do depoimento + crédito no canto: *"De Volta para Casa" — [ONG]* | Documentário (**autorizado**: ver trechos em `autorizacoes.md`) |
 | 2c | 0:45–0:58 | Cortes rápidos de improviso: bateria de carro, extensão, gerador. Termina num celular tocando sem resposta | **N2:** "Mesmo no cadastro da distribuidora, ninguém sabe ao certo quem foi afetado, quem precisa de ajuda primeiro e quem já está indo." | Legenda | Documentário (autorizado) ou recriação filmada pela equipe |
 | 3 | 0:58–1:08 | Tela escura. Uma pequena luz âmbar acende no centro | **N3:** "E se, no momento em que a energia acabasse, alguém já soubesse que aquela pessoa precisava de ajuda?" | Mesma frase na tela, devagar | Animação própria |
