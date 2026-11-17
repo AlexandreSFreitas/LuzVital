@@ -20,7 +20,7 @@ Regra: **só entra no vídeo o que estiver com status "Autorizado" ou "Próprio/
 | # | Veículo | Data | Título / link | Início–fim usado | Cena |
 |---|---|---|---|---|---|
 | 1 | JA 2ª Edição — TV Anhanguera (publicado no g1 Goiás) | *data de exibição: conferir no g1* | "Morre bebê que dependia de aparelho para respirar e ficou horas sem energia, em Goiânia" | 8,5 s (fala do apresentador; a bebê não aparece) | 1b |
-| 2 | Jornal Nacional — TV Globo | *data de exibição: conferir* | "Um apagão atingiu parte da cidade de São Paulo…" | Áudio 0:00–0:05 (sem imagem) · placa da Av. Paulista 0:34–0:36,5 · helicóptero 0:40–0:45 | 2a |
+| 2 | Jornal Nacional — TV Globo | *data de exibição: conferir* | "Um apagão atingiu parte da cidade de São Paulo…" | Áudio 0:00–0:05,8 (sem imagem) · placa da Av. Paulista 0:34–0:36,5 (sem áudio) · helicóptero 0:40–0:45 (sem áudio) | 2a |
 | 3 | | | | | 2a |
 
 ## Trechos autorizados do documentário
