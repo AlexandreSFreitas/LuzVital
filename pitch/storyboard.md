@@ -11,19 +11,20 @@ Um quadro por cena do `roteiro.md`. A paleta segue o protótipo: escuro (azul-no
 | 2b | 0:33 | Documentário: duas imagens fortes em preto e branco (4:44 e 4:51) | Corte seco entre as duas | Peso, silêncio |
 | 2c | 0:45 | Mãos improvisando: bateria de carro, extensão, gerador; termina num celular tocando | Cortes rápidos (1–2 s), acelerando | Urgência |
 | 3 | 0:58 | Tela escura; um ponto âmbar acende no centro | Zoom lento no ponto | Virada: esperança |
-| 4a | 1:08 | O ponto âmbar vira o topo do site LuzVital, parado | Fusão lenta | Virada: esperança |
-| 4b | 1:18 | Site: as 5 etapas de "Como funciona" | Rolagem lenta, sem mouse | Clareza, calma |
-| 5a | 1:36 | Site: demonstração; um clique e o painel se preenche | Um único clique; deixar a animação acontecer | Sistema agindo |
-| 5b | 1:56 | Mão segurando o celular com o site; termina no aviso do SAMU 192 | Plano fechado, filmado com outro celular | Cuidado ao alcance da mão |
-| 6 | 2:10 | Documentário: equipes de home care chegando às casas → ícones ODS 3, 9, 10, 11 em linha | Fade | Propósito |
-| 7a | 2:35 | Documentário: a médica descontraída falando do "pratinho" e entrando na casa | Sem cortes no meio da fala | Leveza, sorriso |
-| 7b | 2:45 | Abraço de mãe e filha → a médica rindo com a paciente; a frase final aparece | Fusões lentas | Fechamento humano |
-| 7c | 2:51 | Créditos em fundo escuro | Rolagem lenta | — |
+| 4a | 1:08 | Topo do site LuzVital | Fusão lenta a partir do ponto âmbar | Virada: esperança |
+| 4b | 1:14 | Site: "Tecnologia que conecta informação, pessoas e cuidado" | Rolagem gravada | Clareza |
+| 4c | 1:24 | Site: as 5 etapas de "Como funciona" | Rolagem gravada | Clareza |
+| 5a | 1:29 | Site: a demonstração se preenchendo | Sem cortes | Sistema agindo |
+| 5b | 1:51 | Site: "Feito para toda a rede de cuidado" | Corte para o documentário | Ponte para as pessoas |
+| 6 | 1:55 | Documentário: equipes de home care chegando às casas → ícones ODS 3, 9, 10, 11 em linha | Fade | Propósito |
+| 7a | 2:20 | Documentário: a médica descontraída falando do "pratinho" e entrando na casa | Sem cortes no meio da fala | Leveza, sorriso |
+| 7b | 2:30 | Abraço de mãe e filha → a médica rindo com a paciente; a frase final aparece | Fusões lentas | Fechamento humano |
+| 7c | 2:36 | Créditos em fundo escuro | Rolagem lenta | — |
 
 ## O que gravar (lista para a equipe)
 
 - [x] Narração N1, N2, N3, N9 e N11 (recebidas e tratadas em 16/11)
-- [ ] Gravações do site T1–T4 (ver "Gravações de tela" no roteiro)
+- [x] Gravação do site (rolagem completa, recebida em 16/11) — T4 cancelada
 - [ ] Casa ou quarto escuro e a luz acendendo na janela (pode ser à noite, com um abajur âmbar)
 - [ ] Equipe no computador (cena 6)
 - [ ] Mãos com extensão ou bateria (cena 2c), se o documentário não tiver esse trecho

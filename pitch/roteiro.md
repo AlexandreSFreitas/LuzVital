@@ -19,7 +19,7 @@ Configuração: 1920×1080, 30 fps (OBS, ou Win+Alt+R no Windows). Navegador em 
 | T1 | Topo do site parado (página recém-carregada) | ~15 s |
 | T2 | Rolagem lenta pela seção "Como funciona", da etapa 1 à 5 | ~25 s |
 | T3 | Seção "Demonstração": um clique em "Simular interrupção de energia" e esperar a lista e as confirmações aparecerem. Opcional: trocar a duração para 6 horas antes do clique | ~30 s |
-| T4 | **Filmar com outro celular** a mão segurando o celular com o site aberto na demonstração (fica mais humano que uma gravação de tela do celular) | ~20 s |
+| ~~T4~~ (cancelada em 16/11) | **Filmar com outro celular** a mão segurando o celular com o site aberto na demonstração (fica mais humano que uma gravação de tela do celular) | ~20 s |
 | T5 (opcional) | Seção final do site "A energia pode acabar. O cuidado não.", parada (alternativa à casa escura na cena 7b) | ~10 s |
 
 ## Tempo por bloco
@@ -29,11 +29,11 @@ Configuração: 1920×1080, 30 fps (OBS, ou Win+Alt+R no Windows). Navegador em 
 | 1. Abertura: a perda (reportagem de 8 s) | 0:00 | 0:18 | 18 s |
 | 2. Não é um caso isolado | 0:18 | 0:58 | 40 s |
 | 3. A pergunta | 0:58 | 1:08 | 10 s |
-| 4. A LuzVital (site, sem narração) | 1:08 | 1:36 | 28 s |
-| 5. Funcionando (site e celular, sem narração) | 1:36 | 2:10 | 34 s |
-| 6. O que muda | 2:10 | 2:35 | 25 s |
-| 7. Fechamento e créditos | 2:35 | 2:59 | 24 s |
-| **Total** | | | **2:59** |
+| 4. A LuzVital (site, sem narração) | 1:08 | 1:29 | 21 s |
+| 5. Funcionando (site, sem narração) | 1:29 | 1:55 | 26 s |
+| 6. O que muda | 1:55 | 2:20 | 25 s |
+| 7. Fechamento e créditos | 2:20 | 2:44 | 24 s |
+| **Total** | | | **2:44** |
 
 ## Cenas
 
@@ -46,20 +46,21 @@ Configuração: 1920×1080, 30 fps (OBS, ou Win+Alt+R no Windows). Navegador em 
 | 2b | 0:33–0:42 | **Documentário:** `doc_02_imagem_forte` (4:44–4:49, 5 s) e depois `doc_03_imagem_casal` (4:51–4:55, 4 s). Imagens em preto e branco, sem narração por cima | Som original do documentário, baixo | Crédito no canto: *"De Volta para Casa" — [ONG]* | Documentário "De Volta para Casa" (autorizado) |
 | 2c | 0:42–0:58 | **0:42–0:48:** `doc_06_consumo_aparelhos` (paciente falando do alto consumo de energia dos aparelhos, termina em "dispendioso"). **0:48–0:53:** `doc_07_mesmo_homem` (o mesmo homem, foto em P&B, em sequência). **0:53–0:58:** improviso de reportagem ou celular tocando sem resposta | Fala original do doc_06; depois, a partir de 0:48, **N2** (gravada, 6,7 s de fala): "Mesmo no cadastro da distribuidora, ninguém sabe ao certo quem foi afetado, quem precisa de ajuda primeiro e quem já está indo." | Legenda da fala e da narração + crédito | Documentário "De Volta para Casa" (autorizado) + reportagens |
 | 3 | 0:58–1:08 | Tela escura. Uma pequena luz âmbar acende no centro | **N3** (gravada, 4,8 s de fala): "E se, no momento em que a energia acabasse, alguém já soubesse…" | Na tela, a frase **completa** aparece devagar e termina depois da voz: "…que aquela pessoa precisava de ajuda?" | Animação própria |
-| 4a | 1:08–1:18 | **Site (tela T1):** o ponto âmbar se dissolve no topo do site LuzVital; a página aparece parada, sem mouse | Só música | O título do próprio site | Gravação de tela do site |
-| 4b | 1:18–1:36 | **Site (tela T2):** rolagem lenta pela seção "Como o LuzVital funciona na prática?", as 5 etapas | Só música | As etapas do site (cadastro → acompanhamento) | Gravação de tela do site |
-| 5a | 1:36–1:56 | **Site (tela T3):** na seção "Veja o LuzVital em ação", clicar em "Simular interrupção de energia" e deixar o painel se preencher (pacientes por prioridade, alertas, confirmações) | Só música | "Simulação com dados fictícios" (já aparece no site) | Gravação de tela do site |
-| 5b | 1:56–2:10 | **Celular (tela T4):** mão segurando o celular com o site aberto na demonstração; termina no aviso "Em emergência médica, ligue para o SAMU 192" | Só música | — | Filmagem própria |
-| 6 | 2:10–2:35 | **2:10–2:20:** `doc_01_equipes_indo_as_casas`. **2:20–2:25:** `doc_05_medico_familia`. **2:25–2:31:** `doc_08_filho_notebook_familiar_acamado`. **2:31–2:35:** ícones dos ODS 3, 9, 10 e 11 | **N9** (gravada, 5,7 s de fala), começando em 2:12: "Não devolve a energia, não substitui o SAMU. Encurta o tempo até alguém saber e agir." | ODS 3 · 9 · 10 · 11 · crédito do documentário | Documentário "De Volta para Casa" (autorizado) + ícones ODS |
-| 7a | 2:35–2:45 | **Documentário:** `doc_04b_medica_so_a_fala` (4:56–5:06): a médica, descontraída, falando do "pratinho" e entrando na casa do paciente. Alívio depois do peso do vídeo | Som original da fala | Legenda da fala + crédito | Documentário "De Volta para Casa" (autorizado) |
-| 7b | 2:45–2:51 | **2:45–2:48:** `doc_09_mae_e_filha_abraco`. **2:48–2:51:** `doc_10_medica_rindo_com_paciente` | **N11** (gravada, 3,9 s de fala): "A energia pode acabar. O cuidado não." | "A energia pode acabar. O cuidado não." | Documentário "De Volta para Casa" (autorizado) |
-| 7c | 2:51–2:59 | Créditos em tela escura | Música baixa | Equipe (nomes e RMs) · "De Volta para Casa" — [ONG], trechos usados com autorização · Reportagens: veículos e datas · Música: [licença] · "Demonstração com dados fictícios" | — |
+| 4a | 1:08–1:14 | `site_01_pagina_inicial` (6 s): o ponto âmbar se dissolve no topo do site | Só música | O título do próprio site | Gravação do site |
+| 4b | 1:14–1:24 | `site_03_o_que_e_luzvital` (10 s): "Tecnologia que conecta informação, pessoas e cuidado." | Só música | Texto do site | Gravação do site |
+| 4c | 1:24–1:29 | `site_04_como_funciona` (5 s): as 5 etapas | Só música | Texto do site | Gravação do site |
+| 5a | 1:29–1:51 | `site_05_demonstracao` (22 s): a simulação de falta de energia, o painel se preenchendo | Só música | "Simulação com dados fictícios" (já aparece no site) | Gravação do site |
+| 5b | 1:51–1:55 | `site_06_para_quem_e` (3,5 s): "Feito para toda a rede de cuidado." | Só música | Texto do site | Gravação do site |
+| 6 | 1:55–2:20 | **1:55–2:05:** `doc_01_equipes_indo_as_casas`. **2:05–2:10:** `doc_05_medico_familia`. **2:10–2:16:** `doc_08_filho_notebook_familiar_acamado`. **2:16–2:20:** ícones dos ODS 3, 9, 10 e 11 | **N9** (gravada, 5,7 s de fala), começando em 1:57: "Não devolve a energia, não substitui o SAMU. Encurta o tempo até alguém saber e agir." | ODS 3 · 9 · 10 · 11 · crédito do documentário | Documentário "De Volta para Casa" (autorizado) + ícones ODS |
+| 7a | 2:20–2:30 | `doc_04b_medica_so_a_fala` (4:56–5:06): a médica, descontraída, falando do "pratinho" e entrando na casa do paciente. Alívio depois do peso do vídeo | Som original da fala | Legenda da fala + crédito | Documentário "De Volta para Casa" (autorizado) |
+| 7b | 2:30–2:36 | **2:30–2:33:** `doc_09_mae_e_filha_abraco`. **2:33–2:36:** `doc_10_medica_rindo_com_paciente` | **N11** (gravada, 3,9 s de fala): "A energia pode acabar. O cuidado não." | "A energia pode acabar. O cuidado não." | Documentário "De Volta para Casa" (autorizado) |
+| 7c | 2:36–2:44 | Créditos em tela escura (opcional: abrir com `site_09_parte_final_quadro`, o bloco azul "A energia pode acabar. O cuidado não." do site) | Música baixa | Equipe (nomes e RMs) · "De Volta para Casa" — [ONG], trechos usados com autorização · Reportagens: JA 2ª Edição (TV Anhanguera/g1) e Jornal Nacional (TV Globo), com datas · Música: [licença] · "Demonstração com dados fictícios" | — |
 
 ## Narração
 
 | Trecho | Palavras | Tempo da cena | Ritmo necessário |
 |---|---|---|---|
-| Conferido com `python pitch/verificar_roteiro.py` (16/11): total 2:59; ritmo máximo 2,14 palavras/s (cena 4a) | | | Limite: ~2,5 palavras/s (≈150/min) |
+| Conferido com `python pitch/verificar_roteiro.py` (16/11): total 2:44; ritmo máximo 2,14 palavras/s (cena 4a) | | | Limite: ~2,5 palavras/s (≈150/min) |
 
 **Dica de gravação:** gravem a narração **antes** de editar, num lugar silencioso, com o celular a um palmo da boca. O ritmo deve ser calmo; neste vídeo, pausa vale mais que pressa.
 
