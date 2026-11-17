@@ -12,7 +12,7 @@ Regra: **só entra no vídeo o que estiver com status "Autorizado" ou "Próprio/
 | Narração | Todo o vídeo | Equipe | Próprio | — | Nomes na tela de créditos |
 | Telas do protótipo e animações | Blocos 3 a 5 | Equipe | Próprio | Dados fictícios | — |
 | Cenas atuadas (celular, casa escura) | 5a, 7a | Equipe | Próprio | Se aparecer alguém de fora da equipe, pedir autorização de imagem | — |
-| Música e som do aparelho | Todo o vídeo | Equipe | **Próprio** (16/11/2026) | Trilha e som do aparelho **gerados por síntese** em `pitch/trilha/gerar_trilha.py`, sem samples nem trechos de terceiros | "Trilha original: equipe LuzVital" |
+| Música e som do aparelho | Todo o vídeo | Equipe | **Próprio** (16/11/2026) | Trilha e som do aparelho **gerados por síntese** em `pitch/trilha/gerar_trilha.py`, sem samples nem trechos de terceiros | "Trilha original e sons ilustrativos: equipe LuzVital" |
 | Ícones dos ODS | Cena 6 | ONU | Uso educacional | Seguir as diretrizes de uso dos ícones dos ODS da ONU | — |
 
 ## Reportagens usadas

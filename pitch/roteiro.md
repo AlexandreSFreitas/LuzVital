@@ -81,6 +81,15 @@ Gerados por `python pitch/trilha/gerar_trilha.py` (arquivos em `pitch/trilha/sai
 | 2:27–2:37 | Baixa | Fala da médica |
 | 2:37–2:51 | Resolve no acorde final e some | N11 e créditos |
 
+### Sons extras para a abertura (opcionais; a equipe escolhe)
+
+| Arquivo | Duração | Onde pode entrar |
+|---|---|---|
+| `aparelho_desligando.wav` | 6 s | Cena 1c (0:12–0:18): um ciclo normal, o seguinte perde força, o motor para, um clique e silêncio. Substitui o trecho de 0:12 do `aparelho_respiratorio_timeline.wav` |
+| `bebe_chorando_com_aparelhos_ilustrativo.wav` | 6 s | Antes da reportagem (exigiria abrir 0:00–0:04 com ele, cortando para 4 s), **baixo e distante** |
+
+⚠️ O choro é **sintetizado e ilustrativo**: não é a bebê da reportagem. Se for usado, citar "sons ilustrativos" nos créditos e evitar que pareça uma recriação dos últimos momentos dela.
+
 ## Checklist de publicação (YouTube)
 
 - [ ] Duração final ≤ 3:00 (conferir no editor, não no roteiro)
