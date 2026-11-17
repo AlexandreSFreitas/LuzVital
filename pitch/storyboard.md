@@ -17,7 +17,7 @@ Um quadro por cena do `roteiro.md`. A paleta segue o protótipo: escuro (azul-no
 | 5b | 1:56 | Mão segurando o celular com o site; termina no aviso do SAMU 192 | Plano fechado, filmado com outro celular | Cuidado ao alcance da mão |
 | 6 | 2:10 | Documentário: equipes de home care chegando às casas → ícones ODS 3, 9, 10, 11 em linha | Fade | Propósito |
 | 7a | 2:35 | Documentário: a médica descontraída falando do "pratinho" e entrando na casa | Sem cortes no meio da fala | Leveza, sorriso |
-| 7b | 2:45 | A casa escura do início; a janela acende em âmbar; a frase final aparece | Fade lento até a frase | Fechamento humano |
+| 7b | 2:45 | Abraço de mãe e filha → a médica rindo com a paciente; a frase final aparece | Fusões lentas | Fechamento humano |
 | 7c | 2:51 | Créditos em fundo escuro | Rolagem lenta | — |
 
 ## O que gravar (lista para a equipe)

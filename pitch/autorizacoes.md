@@ -31,3 +31,10 @@ Regra: **só entra no vídeo o que estiver com status "Autorizado" ou "Próprio/
 | 2 | 4:44 | 4:49 | 5 s | Imagem forte em preto e branco: paciente acamado (`doc_02`) | 2b |
 | 3 | 4:51 | 4:55 | 4 s | Imagem em preto e branco: casal no quarto (`doc_03`) | 2b |
 | 4 | 4:48 | 5:06 | 18 s | Sequência completa até a médica; versão curta só com a fala, 4:56–5:06 (`doc_04b`) | 7a |
+| | | | | **Segundo vídeo do documentário (YouTube mDCT-XaKgHc)** | |
+| 5 | 0:02 | 0:07,5 | 5,5 s | Médico com paciente e familiar, foto em P&B (`doc_05`) | 6 |
+| 6 | 0:20,8 | 0:26,8 | 6 s | Paciente falando do alto consumo de energia dos aparelhos, até "dispendioso" (`doc_06`) | 2c |
+| 7 | 0:50 | 0:55,5 | 5,5 s | O mesmo homem com os aparelhos, foto em P&B (`doc_07`) | 2c |
+| 8 | 1:15 | 1:21 | 6 s | Filho no notebook com familiar acamado no quadro (`doc_08`) | 6 |
+| 9 | 2:41 | 2:46 | 5 s | Mãe e filha abraçadas na cozinha (`doc_09`) | 7b |
+| 10 | 2:47,5 | 2:51 | 3,5 s | A médica do "pratinho" rindo com a paciente (`doc_10`) | 7b |
