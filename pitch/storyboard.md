@@ -11,11 +11,10 @@ Um quadro por cena do `roteiro.md`. A paleta segue o protótipo: escuro (azul-no
 | 2b | 0:33 | Documentário: duas imagens fortes em preto e branco (4:44 e 4:51) | Corte seco entre as duas | Peso, silêncio |
 | 2c | 0:45 | Mãos improvisando: bateria de carro, extensão, gerador; termina num celular tocando | Cortes rápidos (1–2 s), acelerando | Urgência |
 | 3 | 0:58 | Tela escura; um ponto âmbar acende no centro | Zoom lento no ponto | Virada: esperança |
-| 4a | 1:08 | O ponto vira o logo; depois, a tela de cadastro (Dona Lúcia, fictícia) | Gravação de tela com zoom suave nos campos de bateria e "Quem avisar" | Clareza |
-| 4b | 1:22 | Mapa simples da Zona Sul; o Jardim Ângela escurece; 4 pontos acendem em âmbar | Animação 2D (pode ser feita no CapCut) | Sistema agindo |
-| 5a | 1:36 | Mão segurando o celular com a tela de alerta; o polegar toca "Confirmar que vou ajudar" | Plano fechado; a confirmação aparece em verde | Alívio |
-| 5b | 1:52 | Painel da central no notebook | Câmera desliza devagar de cima para baixo | Controle |
-| 5c | 2:03 | Close em "Ligar 192" | Corte seco | Responsabilidade |
+| 4a | 1:08 | O ponto âmbar vira o topo do site LuzVital, parado | Fusão lenta | Virada: esperança |
+| 4b | 1:18 | Site: as 5 etapas de "Como funciona" | Rolagem lenta, sem mouse | Clareza, calma |
+| 5a | 1:36 | Site: demonstração; um clique e o painel se preenche | Um único clique; deixar a animação acontecer | Sistema agindo |
+| 5b | 1:56 | Mão segurando o celular com o site; termina no aviso do SAMU 192 | Plano fechado, filmado com outro celular | Cuidado ao alcance da mão |
 | 6 | 2:10 | Documentário: equipes de home care chegando às casas → ícones ODS 3, 9, 10, 11 em linha | Fade | Propósito |
 | 7a | 2:35 | Documentário: a médica descontraída falando do "pratinho" e entrando na casa | Sem cortes no meio da fala | Leveza, sorriso |
 | 7b | 2:45 | A casa escura do início; a janela acende em âmbar; a frase final aparece | Fade lento até a frase | Fechamento humano |
@@ -23,9 +22,9 @@ Um quadro por cena do `roteiro.md`. A paleta segue o protótipo: escuro (azul-no
 
 ## O que gravar (lista para a equipe)
 
-- [ ] Narração N1–N11 (um integrante ou divididos; a N11 pode ser falada por todos)
-- [ ] Gravação de tela: cadastro, alerta (no celular), painel (no notebook)
-- [ ] Plano fechado da mão confirmando o alerta no celular
+- [x] Narração N3, N9 e N11 (recebidas em 16/11)
+- [ ] Narração N1 e N2, ou trocar por cartões de texto
+- [ ] Gravações do site T1–T4 (ver "Gravações de tela" no roteiro)
 - [ ] Casa ou quarto escuro e a luz acendendo na janela (pode ser à noite, com um abajur âmbar)
 - [ ] Equipe no computador (cena 6)
 - [ ] Mãos com extensão ou bateria (cena 2c), se o documentário não tiver esse trecho

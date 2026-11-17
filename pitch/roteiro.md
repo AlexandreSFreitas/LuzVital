@@ -3,10 +3,24 @@
 **Formato:** documental, humano, sem tom de venda. **Duração máxima: 3:00.** A narração é feita por integrantes da equipe (exigência de Agile).
 **Linha narrativa:** perda real → é recorrente → a pergunta → a LuzVital → o que muda → fechamento.
 
+**Direção (16/11):** o pitch é **sentimental, não técnico**. Mostra o site, **não** mostra a API. Pouca narração; imagem, silêncio e música carregam a emoção.
+
 Regras deste roteiro:
 - Nenhuma imagem de terceiros entra sem autorização registrada em `autorizacoes.md`. Cada cena indica a sua fonte.
 - Respeito às pessoas reais: sem closes de sofrimento, sem música de suspense exagerada, sem foto de criança sem autorização da família.
 - A demonstração usa **dados fictícios** e mostra o selo "simulado".
+
+## Gravações de tela (site)
+
+Configuração: 1920×1080, 30 fps (OBS, ou Win+Alt+R no Windows). Navegador em tela cheia (F11), zoom 100%, sem barra de favoritos, notificações desligadas. Gravem cada tomada **separada**, com 3 s sobrando antes e depois. Mouse parado ou fora da tela, exceto no clique da T3. Rolagem **lenta**, com a seta do teclado ou a roda do mouse bem devagar.
+
+| Tomada | O que gravar | Duração bruta |
+|---|---|---|
+| T1 | Topo do site parado (página recém-carregada) | ~15 s |
+| T2 | Rolagem lenta pela seção "Como funciona", da etapa 1 à 5 | ~25 s |
+| T3 | Seção "Demonstração": um clique em "Simular interrupção de energia" e esperar a lista e as confirmações aparecerem. Opcional: trocar a duração para 6 horas antes do clique | ~30 s |
+| T4 | **Filmar com outro celular** a mão segurando o celular com o site aberto na demonstração (fica mais humano que uma gravação de tela do celular) | ~20 s |
+| T5 (opcional) | Seção final do site "A energia pode acabar. O cuidado não.", parada (alternativa à casa escura na cena 7b) | ~10 s |
 
 ## Tempo por bloco
 
@@ -15,8 +29,8 @@ Regras deste roteiro:
 | 1. Abertura: a perda (reportagem de 8 s) | 0:00 | 0:18 | 18 s |
 | 2. Não é um caso isolado | 0:18 | 0:58 | 40 s |
 | 3. A pergunta | 0:58 | 1:08 | 10 s |
-| 4. A LuzVital | 1:08 | 1:36 | 28 s |
-| 5. Funcionando | 1:36 | 2:10 | 34 s |
+| 4. A LuzVital (site, sem narração) | 1:08 | 1:36 | 28 s |
+| 5. Funcionando (site e celular, sem narração) | 1:36 | 2:10 | 34 s |
 | 6. O que muda | 2:10 | 2:35 | 25 s |
 | 7. Fechamento e créditos | 2:35 | 2:59 | 24 s |
 | **Total** | | | **2:59** |
@@ -32,11 +46,10 @@ Regras deste roteiro:
 | 2b | 0:33–0:42 | **Documentário:** `doc_02_imagem_forte` (4:44–4:49, 5 s) e depois `doc_03_imagem_casal` (4:51–4:55, 4 s). Imagens em preto e branco, sem narração por cima | Som original do documentário, baixo | Crédito no canto: *"De Volta para Casa" — [ONG]* | Documentário "De Volta para Casa" (autorizado) |
 | 2c | 0:42–0:58 | Cortes rápidos de improviso: bateria de carro, extensão, gerador (reportagens). Termina num celular tocando sem resposta | **N2:** "Mesmo no cadastro da distribuidora, ninguém sabe ao certo quem foi afetado, quem precisa de ajuda primeiro e quem já está indo." | Legenda + crédito do veículo em cada corte | Reportagens (ver `autorizacoes.md`) ou recriação filmada pela equipe |
 | 3 | 0:58–1:08 | Tela escura. Uma pequena luz âmbar acende no centro | **N3:** "E se, no momento em que a energia acabasse, alguém já soubesse que aquela pessoa precisava de ajuda?" | Mesma frase na tela, devagar | Animação própria |
-| 4a | 1:08–1:22 | A luz âmbar vira o logo LuzVital → tela de cadastro do paciente | **N4:** "Esta é a LuzVital. A equipe de home care cadastra o paciente, os aparelhos que ele usa, quanto tempo a bateria aguenta e quem deve ser avisado, em que ordem." | "Dados fictícios" | Gravação de tela do protótipo |
-| 4b | 1:22–1:36 | Animação simples: mapa do bairro, uma região apaga, os pontos dos pacientes acendem em âmbar | **N5:** "Quando falta energia numa região, a LuzVital encontra os pacientes cadastrados ali e avisa a rede de apoio de cada um." | "Interrupção simulada" | Animação própria |
-| 5a | 1:36–1:52 | Celular na mão (atuação da equipe): tela de alerta → toque em "Confirmar que vou ajudar" | **N6:** "A Mariana recebe o aviso: caiu a energia na casa da mãe, e o oxigênio de reserva dura menos que a falta de luz. Um toque, e todos sabem que ela está indo." | — | Gravação própria + protótipo |
-| 5b | 1:52–2:03 | Painel da central, câmera devagar pela lista por prioridade | **N7:** "Na central, a equipe vê quem precisa de ajuda primeiro, quem já confirmou e quem ainda não respondeu." | "Prioridade por regra operacional, não clínica" | Gravação de tela |
-| 5c | 2:03–2:10 | Close no "Ligar 192" da tela de alerta | **N8:** "Em emergência médica, a orientação é sempre a mesma: ligar 192." | "SAMU 192" | Gravação de tela |
+| 4a | 1:08–1:18 | **Site (tela T1):** o ponto âmbar se dissolve no topo do site LuzVital; a página aparece parada, sem mouse | Só música | O título do próprio site | Gravação de tela do site |
+| 4b | 1:18–1:36 | **Site (tela T2):** rolagem lenta pela seção "Como o LuzVital funciona na prática?", as 5 etapas | Só música | As etapas do site (cadastro → acompanhamento) | Gravação de tela do site |
+| 5a | 1:36–1:56 | **Site (tela T3):** na seção "Veja o LuzVital em ação", clicar em "Simular interrupção de energia" e deixar o painel se preencher (pacientes por prioridade, alertas, confirmações) | Só música | "Simulação com dados fictícios" (já aparece no site) | Gravação de tela do site |
+| 5b | 1:56–2:10 | **Celular (tela T4):** mão segurando o celular com o site aberto na demonstração; termina no aviso "Em emergência médica, ligue para o SAMU 192" | Só música | — | Filmagem própria |
 | 6 | 2:10–2:35 | **Documentário:** `doc_01_equipes_indo_as_casas` (1:58–2:08, 10 s), equipes de home care chegando às casas. Depois os ícones dos ODS 3, 9, 10 e 11 | **N9:** "A LuzVital não devolve a energia e não substitui o SAMU. Ela encurta o tempo entre a luz cair e alguém responsável saber e agir. É isso que vamos medir: o tempo até a primeira confirmação." | "Indicador: tempo até a primeira confirmação" · ODS 3 · 9 · 10 · 11 · crédito do documentário | Documentário "De Volta para Casa" (autorizado) + ícones ODS |
 | 7a | 2:35–2:45 | **Documentário:** `doc_04b_medica_so_a_fala` (4:56–5:06): a médica, descontraída, falando do "pratinho" e entrando na casa do paciente. Alívio depois do peso do vídeo | Som original da fala | Legenda da fala + crédito | Documentário "De Volta para Casa" (autorizado) |
 | 7b | 2:45–2:51 | Corte para a casa escura do início; uma luz âmbar acende na janela | **N11 (todos juntos ou um integrante):** "A energia pode acabar. O cuidado não." | "A energia pode acabar. O cuidado não." | Gravação própria |
