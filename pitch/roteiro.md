@@ -66,6 +66,8 @@ Configuração: 1920×1080, 30 fps (OBS, ou Win+Alt+R no Windows). Navegador em 
 
 ## Montagem (17/11)
 
+Versão 2 (17/11): placa da Paulista e helicóptero passam durante o áudio do JN; a N1 vai para as fotos do documentário; na pergunta, uma lâmpada apagada acende quando aparece "que aquela pessoa precisava de ajuda?"; a partir da médica, a trilha do próprio documentário segue até o fim e abaixa sob a N11 ("A energia pode acabar, mas o cuidado não."). Duração: **2:44,8**; áudio −16,8 LUFS, pico −1,6 dBFS.
+
 Primeira versão montada com `python pitch/montagem/montar_pitch.py PASTA_DOS_CLIPES PASTA_DE_SAIDA` (o vídeo e os clipes ficam fora do Git). Duração: **2:51,9**. A ordem real das cenas e as durações estão na lista `SEGMENTOS` do script, que passa a ser a referência da edição. Diferenças em relação à tabela acima: a cena 1c tem 7 s (som do aparelho desligando), o helicóptero roda a 80% da velocidade para cobrir a N1, e as fotos do documentário entram sem o áudio original.
 
 Pendências da montagem: legendas das falas originais (reportagem da abertura, homem do documentário, médica), nome da ONG nos créditos.

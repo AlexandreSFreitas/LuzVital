@@ -2,7 +2,8 @@
 
 Uso:  python pitch/montagem/montar_pitch.py PASTA_DOS_CLIPES PASTA_DE_SAIDA
 
-PASTA_DOS_CLIPES tem os arquivos doc_*.mp4, rep_*.mp4/wav, site_*.mp4 e narracao_*.wav
+PASTA_DOS_CLIPES tem os arquivos doc_*.mp4, rep_*.mp4/wav, site_*.mp4, narracao_*.wav
+e doc_original_*.mp4 (o vídeo completo do documentário, para a trilha do fechamento)
 (material de terceiros: fica FORA do Git). A trilha vem de pitch/trilha/saida/.
 Requer: ffmpeg, Pillow e a fonte Inter.
 
@@ -72,15 +73,44 @@ def legenda(txt):
     return img
 
 
-def luz_ambar():
-    """Ponto de luz âmbar com brilho (cena da pergunta)."""
+def lampada(acesa):
+    """Lâmpada incandescente. Apagada: vidro escuro e filamento quase sem brilho. Acesa: âmbar com halo."""
     img = tela()
+    cx, cy, r = W // 2, 250, 112
+    if acesa:
+        halo = tela()
+        dh = ImageDraw.Draw(halo)
+        for rr, a in [(330, 40), (230, 70), (160, 120)]:
+            dh.ellipse((cx - rr, cy - rr, cx + rr, cy + rr), fill=AMBAR + (a,))
+        img = Image.alpha_composite(img, halo.filter(ImageFilter.GaussianBlur(60)))
+    else:
+        halo = tela()
+        ImageDraw.Draw(halo).ellipse((cx - 70, cy - 70, cx + 70, cy + 70), fill=AMBAR + (28,))
+        img = Image.alpha_composite(img, halo.filter(ImageFilter.GaussianBlur(40)))
     d = ImageDraw.Draw(img)
-    cx, cy = W // 2, 330
-    for r, a in [(150, 26), (95, 50), (55, 95)]:
-        d.ellipse((cx - r, cy - r, cx + r, cy + r), fill=AMBAR + (a,))
-    img = img.filter(ImageFilter.GaussianBlur(26))
-    ImageDraw.Draw(img).ellipse((cx - 20, cy - 20, cx + 20, cy + 20), fill=AMBAR + (255,))
+    # vidro: bulbo + pescoço
+    pesc = [(cx - 62, cy + 88), (cx + 62, cy + 88), (cx + 44, cy + 160), (cx - 44, cy + 160)]
+    if acesa:
+        d.polygon(pesc, fill=(255, 214, 120, 255))
+        for k in range(14):  # gradiente do centro (quase branco) para a borda (âmbar)
+            rr = r - k * 7
+            mix = k / 13
+            cor = tuple(int(AMBAR[c] * (1 - mix) + (255, 248, 225)[c] * mix) for c in range(3))
+            d.ellipse((cx - rr, cy - rr, cx + rr, cy + rr), fill=cor + (255,))
+    else:
+        d.polygon(pesc, fill=(48, 58, 76, 230), outline=(112, 124, 142, 255))
+        d.ellipse((cx - r, cy - r, cx + r, cy + r), fill=(48, 58, 76, 230), outline=(112, 124, 142, 255), width=4)
+        d.rectangle((cx - 40, cy + 84, cx + 40, cy + 92), fill=(48, 58, 76, 230))
+    # filamento
+    fil = [(cx - 34, cy + 120), (cx - 30, cy + 20), (cx - 18, cy - 6), (cx - 6, cy + 14), (cx + 6, cy - 6),
+           (cx + 18, cy + 14), (cx + 30, cy - 6), (cx + 34, cy + 120)]
+    d.line(fil, fill=(255, 252, 240, 255) if acesa else (150, 92, 44, 210), width=5 if acesa else 4, joint="curve")
+    # rosca (base metálica)
+    base = (186, 192, 202) if acesa else (104, 112, 126)
+    for k in range(4):
+        y = cy + 160 + k * 22
+        d.rounded_rectangle((cx - 46, y, cx + 46, y + 18), 6, fill=base + (255,))
+    d.ellipse((cx - 18, cy + 244, cx + 18, cy + 266), fill=(70, 74, 82, 255))
     return img
 
 
@@ -142,7 +172,7 @@ def segmento(i, dur, video=None, audio=None, a_ini=0.0, lento=1.0, v_ini=0.0, ov
     video: arquivo ou None (fundo liso). audio: None (silêncio), "src" (o do próprio clipe) ou um arquivo.
     overlays: [(png, inicio, fim, fade)] sobre o trecho. fin/fout: fade do vídeo a partir do preto.
     """
-    saida = TMP / f"seg_{i:02d}.mp4"
+    saida = TMP / f"seg_{i}.mp4"
     if os.environ.get("REUSAR") and saida.exists():  # REUSAR=1 aproveita trechos já gerados
         return saida
     ins, fc = [], []
@@ -186,16 +216,16 @@ def segmento(i, dur, video=None, audio=None, a_ini=0.0, lento=1.0, v_ini=0.0, ov
 C_DOC = png("c_doc", credito('Documentário "De Volta para Casa (Back Home)"'))
 C_JA = png("c_ja", credito("JA 2ª Edição — TV Anhanguera / g1"))
 C_JN = png("c_jn", credito("Jornal Nacional — TV Globo"))
-C_JN_AUDIO = png("c_jn_audio", texto_centro(["Áudio: Jornal Nacional — TV Globo"], 980, 28, "Medium", cor=(200, 208, 220)))
 C_RGE = png("c_rge", credito("Vídeo: CPFL Energia / RGE", "esq"))
 C_R7 = png("c_r7", credito("Portal R7"))
 T_11 = png("t_11", texto_centro(["Ela tinha 11 meses."], 495, 68, "Medium"))
-LUZ = png("luz", luz_ambar())
-T_P1 = png("t_p1", texto_centro(["E se, no momento em que a energia acabasse,", "alguém já soubesse"], 520, 56, "Medium"))
-T_P2 = png("t_p2", texto_centro(["que aquela pessoa precisava de ajuda?"], 690, 56, "SemiBold", cor=AMBAR))
+LAMP_OFF = png("lamp_off", lampada(False))
+LAMP_ON = png("lamp_on", lampada(True))
+T_P1 = png("t_p1", texto_centro(["E se, no momento em que a luz apagasse,", "alguém já soubesse"], 600, 56, "Medium"))
+T_P2 = png("t_p2", texto_centro(["que aquela pessoa precisava de ajuda?"], 770, 56, "SemiBold", cor=AMBAR))
 ODS = png("ods", cartao_ods())
 CRED = png("cred", cartao_creditos())
-FINAL = png("final", texto_centro(["A energia pode acabar.", "O cuidado não."], 760, 84, "Bold", sombra=True))
+FINAL = png("final", texto_centro(["A energia pode acabar,", "mas o cuidado não."], 760, 84, "Bold", sombra=True))
 
 AP = TRILHA / "aparelho_respiratorio_timeline.wav"
 doc = lambda d: [(C_DOC, 0.3, d - 0.2, 0.4)]  # noqa: E731
@@ -208,11 +238,11 @@ SEGMENTOS = [
                overlays=[(C_JA, 0.4, 8.3, 0.3)]), "reportagem"),
     (7.0, dict(audio=TRILHA / "aparelho_desligando.wav", afade=0.05, overlays=[(T_11, 4.3, 7.0, 0.9)]), "onze_meses"),
     # 2. Não é um caso isolado
-    (5.8, dict(audio=CLIPS / "rep_02_JN_apagao_audio_0m00-0m05s8.wav", overlays=[(C_JN_AUDIO, 0.3, 5.6, 0.4)]), "jn_audio"),
-    (2.55, dict(video="rep_03_JN_placa_av_paulista_0m34-0m36_sem_audio.mp4", overlays=[(C_JN, 0.2, 2.5, 0.2)]), "N1"),
-    (6.25, dict(video="rep_04_JN_helicoptero_bairros_0m40-0m45_sem_audio.mp4", lento=1.25, fout=0.5,
-                overlays=[(C_JN, 0.0, 6.0, 0.3)]), "helicoptero"),
-    (5.0, dict(video="doc_02_imagem_forte_4m44-4m49.mp4", fin=0.5, overlays=doc(5.0)), "fotos"),
+    (2.55, dict(video="rep_03_JN_placa_av_paulista_0m34-0m36_sem_audio.mp4", fin=0.3,
+                overlays=[(C_JN, 0.2, 2.55, 0.2)]), "jn"),
+    (5.0, dict(video="rep_04_JN_helicoptero_bairros_0m40-0m45_sem_audio.mp4", fout=0.5,
+               overlays=[(C_JN, 0.0, 4.8, 0.3)]), "helicoptero"),
+    (5.0, dict(video="doc_02_imagem_forte_4m44-4m49.mp4", fin=0.5, overlays=doc(5.0)), "N1"),
     (4.0, dict(video="doc_03_imagem_casal_4m51-4m55.mp4", fout=0.5, overlays=doc(4.0)), "foto_casal"),
     (6.0, dict(video="doc_06_consumo_aparelhos_0m21-0m26.mp4", audio="src", overlays=doc(6.0)), "fala_consumo"),
     (7.2, dict(video="rep_05_RGE_senhora_oxigenio_gasto_corte_da_equipe.mp4", audio="src",
@@ -220,7 +250,8 @@ SEGMENTOS = [
     (5.5, dict(video="doc_07_mesmo_homem_aparelhos_0m54.mp4", overlays=doc(5.5)), "N2"),
     (4.0, dict(video="rep_06_R7_manchete_filho_aparelhos.mp4", fout=0.6, overlays=[(C_R7, 0.3, 3.6, 0.3)]), "r7"),
     # 3. A pergunta
-    (10.0, dict(overlays=[(LUZ, 0.3, 10.0, 1.6), (T_P1, 0.8, 9.8, 0.8), (T_P2, 5.4, 9.8, 1.0)], fout=0.5), "N3"),
+    (10.0, dict(overlays=[(LAMP_OFF, 0.2, 6.3, 0.8), (LAMP_ON, 5.5, 10.0, 0.7), (T_P1, 0.8, 9.8, 0.8),
+                       (T_P2, 5.5, 9.8, 0.7)], fout=0.5), "N3"),
     # 4 e 5. A LuzVital (site, só música)
     (6.1, dict(video="site_01_pagina_inicial.mp4", fin=0.8), "site"),
     (10.0, dict(video="site_03_o_que_e_luzvital.mp4"), "site_o_que_e"),
@@ -233,7 +264,7 @@ SEGMENTOS = [
     (6.0, dict(video="doc_08_filho_notebook_familiar_acamado_1m18.mp4", fout=0.4, overlays=doc(6.0)), "filho"),
     (4.0, dict(overlays=[(ODS, 0.0, 4.0, 0.5)]), "ods"),
     # 7. Fechamento
-    (9.5, dict(video="doc_04b_medica_so_a_fala_4m56-5m06.mp4", audio="src", fin=0.3, overlays=doc(9.5)), "medica"),
+    (9.5, dict(video="doc_04b_medica_so_a_fala_4m56-5m06.mp4", fin=0.3, overlays=doc(9.5)), "medica"),
     (3.0, dict(video="doc_09_mae_e_filha_abraco_2m44.mp4", v_ini=1.0, overlays=doc(3.0)), "N11"),
     (3.5, dict(video="doc_10_medica_rindo_com_paciente_2m48.mp4", fout=0.8, overlays=doc(3.3)), "riso"),
     (8.0, dict(overlays=[(CRED, 0.3, 7.8, 0.7)]), "creditos"),
@@ -257,7 +288,7 @@ if __name__ == "__main__":
     inicio, t, partes = {}, 0.0, []
     for i, (dur, kw, marca) in enumerate(SEGMENTOS):
         inicio[marca] = t
-        partes.append(segmento(i, dur, **kw))
+        partes.append(segmento(marca, dur, **kw))
         t += dur
     total = t
     lista = TMP / "lista.txt"
@@ -287,17 +318,44 @@ if __name__ == "__main__":
             ta = tb
     sobre(FINAL, inicio["N11"] + 0.5, inicio["creditos"] - 0.2, 0.8)
 
+    # narrações num barramento; uma cópia serve de chave para abaixar as trilhas quando alguém fala
     for arq, t0 in falas:
         ins.extend(["-i", CLIPS / arq])
-        fc.append(f"[{n}:a]aresample=48000,aformat=channel_layouts=stereo,adelay={int(t0 * 1000)}:all=1[n{n}]")
-        mix.append(f"[n{n}]")
+        fc.append(f"[{n}:a]aresample=48000,aformat=channel_layouts=stereo,adelay={int(t0 * 1000)}:all=1,apad[n{n}]")
         n += 1
-    # a trilha foi composta para o roteiro (música entra em 0:18); aqui ela entra junto com o áudio do JN
-    atraso_trilha = inicio["jn_audio"] - 18.0
+    nomes = "".join(f"[n{j}]" for j in range(n - len(falas), n))
+    fc.append(f"{nomes}amix=inputs={len(falas)}:normalize=0:duration=longest,asplit=3[voz][chave1][chave2]")
+    mix.append("[voz]")
+    # áudio do JN (sem imagem própria) sobre a placa da Paulista e o helicóptero
+    ins.extend(["-i", CLIPS / "rep_02_JN_apagao_audio_0m00-0m05s8.wav"])
+    fc.append(f"[{n}:a]aresample=48000,aformat=channel_layouts=stereo,adelay={int(inicio['jn'] * 1000)}:all=1[jn]")
+    mix.append("[jn]")
+    n += 1
+    # trilha sintética: composta para o roteiro (música em 0:18, fotos fortes em 0:34); o trecho entre o
+    # helicóptero e as fotos foi encurtado, então ela entra em duas partes, e some quando a médica aparece
+    desloc = inicio["jn"] - 18.0
+    fim_a = inicio["N1"] - desloc
+    trilha_fotos = 32.6
+    fim_trilha = inicio["medica"] + 2.0
     ins.extend(["-i", TRILHA / "trilha_dramatica_timeline.wav"])
-    fc.append(f"[{n}:a]aresample=48000,aformat=channel_layouts=stereo,adelay={int(atraso_trilha * 1000)}:all=1,volume=1.0[m]")
-    mix.append("[m]")
-    fc.append(f"{''.join(mix)}amix=inputs={len(mix)}:normalize=0:duration=first,alimiter=limit=0.89[a]")
+    fc.append(f"[{n}:a]aresample=48000,aformat=channel_layouts=stereo,asplit=2[ta][tb]")
+    fc.append(f"[ta]atrim=0:{fim_a},afade=t=out:st={fim_a - 0.4}:d=0.4,adelay={int(desloc * 1000)}:all=1[ta2]")
+    fc.append(f"[tb]atrim=start={trilha_fotos},asetpts=PTS-STARTPTS,afade=t=in:d=0.4,"
+              f"adelay={int(inicio['N1'] * 1000)}:all=1,afade=t=out:st={fim_trilha}:d=2.5[tb2]")
+    fc.append("[ta2][tb2]amix=inputs=2:normalize=0[tr]")
+    fc.append("[tr][chave1]sidechaincompress=threshold=0.03:ratio=4:attack=80:release=700[trd]")
+    mix.append("[trd]")
+    n += 1
+    # trilha do documentário a partir da fala da médica (4:56,5) até o fim; abaixa sob a narração final
+    fonte_doc = sorted(CLIPS.glob("doc_original_*.mp4"))
+    dur_doc = total - inicio["medica"]
+    ins.extend(["-ss", 296.5, "-t", dur_doc, "-i", fonte_doc[0]])
+    fc.append(f"[{n}:a]aresample=48000,aformat=channel_layouts=stereo,afade=t=in:d=0.3,"
+              f"afade=t=out:st={dur_doc - 3}:d=3,adelay={int(inicio['medica'] * 1000)}:all=1[dm]")
+    fc.append("[dm][chave2]sidechaincompress=threshold=0.02:ratio=10:attack=60:release=900[dmd]")
+    mix.append("[dmd]")
+    n += 1
+    fc.append(f"{''.join(mix)}amix=inputs={len(mix)}:normalize=0:duration=first,volume=2.5dB,alimiter=limit=0.7:level=disabled[a]")
 
     final = OUT / "LuzVital_pitch.mp4"
     run([*ins, "-filter_complex", ";".join(fc), "-map", v, "-map", "[a]", "-t", total,
