@@ -8,7 +8,7 @@ Um quadro por cena do `roteiro.md`. A paleta segue o protótipo: escuro (azul-no
 | 1b | 0:04 | Reportagem: só o jornalista, 8 s, crédito no canto inferior | Corte seco na entrada e na saída | Luto, respeito. Sem música |
 | 1c | 0:12 | Preto; cartão "Ela tinha 11 meses." | O som do aparelho volta e para | Silêncio |
 | 2a | 0:18 | Reportagens de apagões: ruas e casas escuras, repórteres | Cortes de 2–3 s, crédito do veículo em cada corte | A música entra baixa |
-| 2b | 0:33 | Depoimento do documentário, plano médio | Sem cortes no meio da fala | Escuta |
+| 2b | 0:33 | Documentário: duas imagens fortes em preto e branco (4:44 e 4:51) | Corte seco entre as duas | Peso, silêncio |
 | 2c | 0:45 | Mãos improvisando: bateria de carro, extensão, gerador; termina num celular tocando | Cortes rápidos (1–2 s), acelerando | Urgência |
 | 3 | 0:58 | Tela escura; um ponto âmbar acende no centro | Zoom lento no ponto | Virada: esperança |
 | 4a | 1:08 | O ponto vira o logo; depois, a tela de cadastro (Dona Lúcia, fictícia) | Gravação de tela com zoom suave nos campos de bateria e "Quem avisar" | Clareza |
@@ -16,9 +16,10 @@ Um quadro por cena do `roteiro.md`. A paleta segue o protótipo: escuro (azul-no
 | 5a | 1:36 | Mão segurando o celular com a tela de alerta; o polegar toca "Confirmar que vou ajudar" | Plano fechado; a confirmação aparece em verde | Alívio |
 | 5b | 1:52 | Painel da central no notebook | Câmera desliza devagar de cima para baixo | Controle |
 | 5c | 2:03 | Close em "Ligar 192" | Corte seco | Responsabilidade |
-| 6 | 2:10 | Equipe trabalhando no computador → ícones ODS 3, 9, 10, 11 em linha | Fade | Propósito |
-| 7a | 2:35 | A mesma casa escura da 2a; a janela acende em âmbar; a frase final aparece | Fade lento até a frase | Fechamento humano |
-| 7b | 2:47 | Créditos em fundo escuro | Rolagem lenta | — |
+| 6 | 2:10 | Documentário: equipes de home care chegando às casas → ícones ODS 3, 9, 10, 11 em linha | Fade | Propósito |
+| 7a | 2:35 | Documentário: a médica descontraída falando do "pratinho" e entrando na casa | Sem cortes no meio da fala | Leveza, sorriso |
+| 7b | 2:45 | A casa escura do início; a janela acende em âmbar; a frase final aparece | Fade lento até a frase | Fechamento humano |
+| 7c | 2:51 | Créditos em fundo escuro | Rolagem lenta | — |
 
 ## O que gravar (lista para a equipe)
 

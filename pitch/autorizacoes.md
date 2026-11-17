@@ -27,6 +27,7 @@ Regra: **só entra no vídeo o que estiver com status "Autorizado" ou "Próprio/
 
 | # | Início | Fim | Duração | O que aparece | Cena do roteiro |
 |---|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
+| 1 | 1:58 | 2:08 | 10 s | Médicos e enfermeiras chegando às casas de pacientes de home care (`doc_01`) | 6 |
+| 2 | 4:44 | 4:49 | 5 s | Imagem forte em preto e branco: paciente acamado (`doc_02`) | 2b |
+| 3 | 4:51 | 4:55 | 4 s | Imagem em preto e branco: casal no quarto (`doc_03`) | 2b |
+| 4 | 4:48 | 5:06 | 18 s | Sequência completa até a médica; versão curta só com a fala, 4:56–5:06 (`doc_04b`) | 7a |
