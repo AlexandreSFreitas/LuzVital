@@ -5,7 +5,7 @@ Regra: **só entra no vídeo o que estiver com status "Autorizado" ou "Próprio/
 | Material | Onde entra | Detentor dos direitos | Status | O que foi liberado / condição | Crédito exigido |
 |---|---|---|---|---|---|
 | Documentário "De Volta para Casa (Back Home)" | Cenas 2a, 2b, 2c | ONG produtora — *preencher nome* | **Autorizado (parcial)** — 15/11/2026 | *Listar cada trecho: início–fim e descrição* | *Como a ONG pediu para ser creditada* |
-| Reportagem sobre a bebê Sibely (abertura) | Cena 1b (8 s, só o jornalista) | TV Anhanguera / g1 (JA 2ª Edição) | **Uso com crédito, sem autorização formal** (decisão da equipe, 15/11/2026) | Trecho curto, sem imagens da bebê. A autorização do documentário **não** cobre este material; se possível, pedir à emissora | Nome do veículo e data, na tela durante o trecho e nos créditos |
+| Reportagem sobre a bebê Sibely (abertura) | Cena 1b (8 s, só o jornalista) | TV Anhanguera / g1 (JA 2ª Edição) | **Uso com crédito, sem autorização formal** (decisão da equipe, 15/11/2026) | Trecho curto, sem imagens da bebê. A autorização do documentário **não** cobre este material; se possível, pedir à emissora | Nome do veículo na tela durante o trecho e nos créditos (as datas não serão citadas: a maioria das reportagens não traz data) |
 | Fato da abertura em texto (plano B, se a emissora pedir para retirar) | Cena 1b | — (fato noticiado, texto próprio) | Próprio | Citar a fonte: Mais Goiás, "Bebê levada à UTI por ficar 15h sem energia com problema cardíaco morre em Goiânia" | "Fonte: Mais Goiás" |
 | Foto da bebê ou da família | **Não usar** | Família (arquivo pessoal) | Não solicitado | Só com autorização expressa da família | — |
 | Imagens de reportagens de apagões em SP | Cena 2a (cortes de 2–3 s) | Emissoras ou agências — *listar cada uma* | **Uso com crédito, sem autorização formal** (decisão da equipe, 15/11/2026) | Só repórteres e cenas de rua; nenhum paciente identificável | Veículo e data em cada corte e nos créditos |
@@ -21,7 +21,8 @@ Regra: **só entra no vídeo o que estiver com status "Autorizado" ou "Próprio/
 |---|---|---|---|---|---|
 | 1 | JA 2ª Edição — TV Anhanguera (publicado no g1 Goiás) | *data de exibição: conferir no g1* | "Morre bebê que dependia de aparelho para respirar e ficou horas sem energia, em Goiânia" | 8,5 s (fala do apresentador; a bebê não aparece) | 1b |
 | 2 | Jornal Nacional — TV Globo | *data de exibição: conferir* | "Um apagão atingiu parte da cidade de São Paulo…" | Áudio 0:00–0:05,8 (sem imagem) · placa da Av. Paulista 0:34–0:36,5 (sem áudio) · helicóptero 0:40–0:45 (sem áudio) | 2a |
-| 3 | | | | | 2a |
+| 3 | R7 (Notícias R7, São Paulo) | sem data na página | "Parentes de pacientes lamentam apagão em SP: 'Meu filho precisa de aparelhos ligados para sobreviver'" | Print da manchete (4 s com zoom lento) | 2c |
+| 4 | CPFL Energia / RGE (vídeo institucional "UTI Domiciliar") | sem data | "UTI Domiciliar CPFL RGE: um projeto que transformou centenas de vidas" (YouTube wHlAK0mSaKg) | 0:45–0:53, senhora que usa oxigênio 16 h por dia | 2c |
 
 ## Trechos autorizados do documentário
 

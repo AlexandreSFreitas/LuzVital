@@ -9,17 +9,17 @@ Um quadro por cena do `roteiro.md`. A paleta segue o protótipo: escuro (azul-no
 | 1c | 0:12 | Preto; cartão "Ela tinha 11 meses." | O som do aparelho volta e para | Silêncio |
 | 2a | 0:18 | Reportagens de apagões: ruas e casas escuras, repórteres | Cortes de 2–3 s, crédito do veículo em cada corte | A música entra baixa |
 | 2b | 0:33 | Documentário: duas imagens fortes em preto e branco (4:44 e 4:51) | Corte seco entre as duas | Peso, silêncio |
-| 2c | 0:45 | Mãos improvisando: bateria de carro, extensão, gerador; termina num celular tocando | Cortes rápidos (1–2 s), acelerando | Urgência |
-| 3 | 0:58 | Tela escura; um ponto âmbar acende no centro | Zoom lento no ponto | Virada: esperança |
-| 4a | 1:08 | Topo do site LuzVital | Fusão lenta a partir do ponto âmbar | Virada: esperança |
-| 4b | 1:14 | Site: "Tecnologia que conecta informação, pessoas e cuidado" | Rolagem gravada | Clareza |
-| 4c | 1:24 | Site: as 5 etapas de "Como funciona" | Rolagem gravada | Clareza |
-| 5a | 1:29 | Site: a demonstração se preenchendo | Sem cortes | Sistema agindo |
-| 5b | 1:51 | Site: "Feito para toda a rede de cuidado" | Corte para o documentário | Ponte para as pessoas |
-| 6 | 1:55 | Documentário: equipes de home care chegando às casas → ícones ODS 3, 9, 10, 11 em linha | Fade | Propósito |
-| 7a | 2:20 | Documentário: a médica descontraída falando do "pratinho" e entrando na casa | Sem cortes no meio da fala | Leveza, sorriso |
-| 7b | 2:30 | Abraço de mãe e filha → a médica rindo com a paciente; a frase final aparece | Fusões lentas | Fechamento humano |
-| 7c | 2:36 | Créditos em fundo escuro | Rolagem lenta | — |
+| 2c | 0:42 | Homem falando do consumo → senhora do oxigênio ("gasta bastante") → foto do homem com os aparelhos → manchete do R7 | Cortes no fim das falas; zoom lento na manchete | Peso do custo de viver ligado à tomada |
+| 3 | 1:05 | Tela escura; um ponto âmbar acende no centro | Zoom lento no ponto | Virada: esperança |
+| 4a | 1:15 | Topo do site LuzVital | Fusão lenta a partir do ponto âmbar | Virada: esperança |
+| 4b | 1:21 | Site: "Tecnologia que conecta informação, pessoas e cuidado" | Rolagem gravada | Clareza |
+| 4c | 1:31 | Site: as 5 etapas de "Como funciona" | Rolagem gravada | Clareza |
+| 5a | 1:36 | Site: a demonstração se preenchendo | Sem cortes | Sistema agindo |
+| 5b | 1:58 | Site: "Feito para toda a rede de cuidado" | Corte para o documentário | Ponte para as pessoas |
+| 6 | 2:02 | Documentário: equipes de home care chegando às casas → ícones ODS 3, 9, 10, 11 em linha | Fade | Propósito |
+| 7a | 2:27 | Documentário: a médica descontraída falando do "pratinho" e entrando na casa | Sem cortes no meio da fala | Leveza, sorriso |
+| 7b | 2:37 | Abraço de mãe e filha → a médica rindo com a paciente; a frase final aparece | Fusões lentas | Fechamento humano |
+| 7c | 2:43 | Créditos em fundo escuro | Rolagem lenta | — |
 
 ## O que gravar (lista para a equipe)
 
