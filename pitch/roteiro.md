@@ -64,6 +64,12 @@ Configuração: 1920×1080, 30 fps (OBS, ou Win+Alt+R no Windows). Navegador em 
 
 **Dica de gravação:** gravem a narração **antes** de editar, num lugar silencioso, com o celular a um palmo da boca. O ritmo deve ser calmo; neste vídeo, pausa vale mais que pressa.
 
+## Montagem (17/11)
+
+Primeira versão montada com `python pitch/montagem/montar_pitch.py PASTA_DOS_CLIPES PASTA_DE_SAIDA` (o vídeo e os clipes ficam fora do Git). Duração: **2:51,9**. A ordem real das cenas e as durações estão na lista `SEGMENTOS` do script, que passa a ser a referência da edição. Diferenças em relação à tabela acima: a cena 1c tem 7 s (som do aparelho desligando), o helicóptero roda a 80% da velocidade para cobrir a N1, e as fotos do documentário entram sem o áudio original.
+
+Pendências da montagem: legendas das falas originais (reportagem da abertura, homem do documentário, médica), nome da ONG nos créditos.
+
 ## Trilha e som do aparelho
 
 Gerados por `python pitch/trilha/gerar_trilha.py` (arquivos em `pitch/trilha/saida/`, fora do Git). Os dois WAV de "timeline" têm 2:51 e já estão **alinhados ao roteiro**: coloquem no início da linha do tempo, em 0:00.
@@ -81,14 +87,9 @@ Gerados por `python pitch/trilha/gerar_trilha.py` (arquivos em `pitch/trilha/sai
 | 2:27–2:37 | Baixa | Fala da médica |
 | 2:37–2:51 | Resolve no acorde final e some | N11 e créditos |
 
-### Sons extras para a abertura (opcionais; a equipe escolhe)
+### Som da cena 1c
 
-| Arquivo | Duração | Onde pode entrar |
-|---|---|---|
-| `aparelho_desligando.wav` | 6 s | Cena 1c (0:12–0:18): um ciclo normal, o seguinte perde força, o motor para, um clique e silêncio. Substitui o trecho de 0:12 do `aparelho_respiratorio_timeline.wav` |
-| `bebe_chorando_com_aparelhos_ilustrativo.wav` | 6 s | Antes da reportagem (exigiria abrir 0:00–0:04 com ele, cortando para 4 s), **baixo e distante** |
-
-⚠️ O choro é **sintetizado e ilustrativo**: não é a bebê da reportagem. Se for usado, citar "sons ilustrativos" nos créditos e evitar que pareça uma recriação dos últimos momentos dela.
+`aparelho_desligando.wav` (6 s): um ciclo normal, o seguinte perde força, o motor para, um clique e silêncio. Usado na cena 1c, depois da reportagem. O choro de bebê sintetizado foi **descartado** pela equipe (17/11).
 
 ## Checklist de publicação (YouTube)
 

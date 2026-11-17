@@ -192,7 +192,7 @@ if __name__ == "__main__":
     print("ok:", *sorted(p.name for p in OUT.glob("*.wav")))
 
 
-# ---------- sons extras (16/11): aparelho desligando e choro de bebê ilustrativo ----------
+# ---------- som extra (16/11): aparelho desligando ----------
 def aparelho_desligando():
     """~6 s (cabe na cena 1c): um ciclo normal; o seguinte começa mais lento e mais grave,
     o motor desacelera, clique de desligar e silêncio."""
@@ -213,38 +213,6 @@ def aparelho_desligando():
     return reverb(y, 0.2)
 
 
-def choro_bebe(dur=6.0):
-    """Choro de bebê ilustrativo por síntese (fonte harmônica + formantes), com o aparelho ao fundo."""
-    out = np.zeros(int(dur * SR))
-    t0 = 0.25
-    while t0 < dur - 1.0:
-        d = rng.uniform(0.7, 1.1)  # um "uáá"
-        n = int(d * SR)
-        tt = np.arange(n) / SR
-        f0 = 480 + 90 * np.sin(np.pi * tt / d) + 12 * np.sin(2 * np.pi * 6.5 * tt)  # sobe e desce, com vibrato
-        f0 *= 1 + 0.01 * rng.normal(size=n).cumsum() / np.sqrt(np.arange(1, n + 1))  # leve instabilidade
-        fase = 2 * np.pi * np.cumsum(f0) / SR
-        src = sum(np.sin(h * fase) / h ** 0.9 for h in range(1, 14))
-        voz = sum(g * bandpass(src, lo, hi) for g, lo, hi in [(1.0, 900, 1500), (0.6, 2200, 3200), (0.3, 3800, 5200)])
-        env = np.minimum(1, tt / 0.06) * np.minimum(1, (d - tt) / 0.15) * (0.85 + 0.15 * np.sin(np.pi * tt / d))
-        a = int(t0 * SR)
-        out[a:a + n] += voz[:len(out) - a] * env[:len(out) - a]
-        # respiração entre os choros
-        g = int(0.25 * SR)
-        b = a + n + int(0.05 * SR)
-        if b + g < len(out):
-            out[b:b + g] += 0.15 * bandpass(rng.normal(0, 1, g), 800, 3000) * np.sin(np.linspace(0, np.pi, g))
-        t0 += d + rng.uniform(0.4, 0.6)
-    out = out / (np.max(np.abs(out)) + 1e-9)
-    # o aparelho ao fundo e o choro "do outro cômodo" (mais distante = menos agudos e mais reverb)
-    fundo = np.concatenate([ciclo_aparelho(), ciclo_aparelho()])[:len(out)]
-    out = reverb(lowpass(out, 4500), 0.35) * 1.0 + fundo * 0.35
-    fade = int(1.0 * SR)
-    out[-fade:] *= np.linspace(1, 0, fade)
-    return out
-
-
 if __name__ == "__main__":
     salvar("aparelho_desligando.wav", aparelho_desligando(), -6)
-    salvar("bebe_chorando_com_aparelhos_ilustrativo.wav", choro_bebe(), -6)
-    print("ok: aparelho_desligando.wav, bebe_chorando_com_aparelhos_ilustrativo.wav")
+    print("ok: aparelho_desligando.wav")
