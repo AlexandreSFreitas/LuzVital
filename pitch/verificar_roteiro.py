@@ -22,7 +22,7 @@ for linha in texto.splitlines():
     m = re.match(r"\|\s*(\w+)\s*\|\s*(\d:\d\d)–(\d:\d\d)\s*\|(.*)", linha)
     if m:
         cena, ini, fim, resto = m.groups()
-        falas = re.findall(r"\*\*N\d+[^*]*\*\*\s*\"([^\"]+)\"", resto)
+        falas = re.findall(r"\*\*N\d+[^*]*\*\*[^\"|]*\"([^\"]+)\"", resto)
         cenas.append((cena, seg(ini), seg(fim), falas))
 
 erros = 0
