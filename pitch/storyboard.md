@@ -22,8 +22,7 @@ Um quadro por cena do `roteiro.md`. A paleta segue o protótipo: escuro (azul-no
 
 ## O que gravar (lista para a equipe)
 
-- [x] Narração N3, N9 e N11 (recebidas em 16/11)
-- [ ] Narração N1 e N2, ou trocar por cartões de texto
+- [x] Narração N1, N2, N3, N9 e N11 (recebidas e tratadas em 16/11)
 - [ ] Gravações do site T1–T4 (ver "Gravações de tela" no roteiro)
 - [ ] Casa ou quarto escuro e a luz acendendo na janela (pode ser à noite, com um abajur âmbar)
 - [ ] Equipe no computador (cena 6)
