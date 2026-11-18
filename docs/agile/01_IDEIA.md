@@ -6,12 +6,12 @@ Item 1 da entrega de Agile Methodology (10 pontos). Fonte de verdade do texto qu
 
 ## 1.1 O problema
 
-Na Grande São Paulo, faltas de energia longas se repetem. Em outubro de 2024, um temporal deixou **3,1 milhões** de unidades sem energia num único dia [1]. Quase dois dias depois, ainda havia moradores sem luz [2]. Em dezembro de 2025, um ciclone extratropical deixou **mais de 2 milhões** de consumidores sem energia por vários dias [3].
+Na Grande São Paulo, faltas de energia longas se repetem. Em outubro de 2024, um temporal deixou **3,1 milhões** de unidades sem energia num único dia [1]. Em dezembro de 2025, um ciclone extratropical deixou **mais de 2 milhões** de consumidores sem energia por vários dias [2].
 
 Para a maioria das pessoas, isso significa desconforto e prejuízo. Para quem **depende de um equipamento elétrico para respirar, se alimentar ou manter um tratamento em casa**, cada hora conta. Alguns casos noticiados:
 
-- Um paciente de 68 anos com doença rara usa cilindro de oxigênio, respirador e sonda de alimentação, todos elétricos. A família teve que comprar um gerador depois de três dias sem energia [4].
-- A filha de uma idosa que depende de aparelhos para respirar contou que a mãe estava no cadastro de "cliente vital" da distribuidora e, mesmo assim, não recebeu nenhum suporte [5].
+- Um paciente de 68 anos com doença rara usa cilindro de oxigênio, respirador e sonda de alimentação, todos elétricos. A família teve que comprar um gerador depois de três dias sem energia [3].
+- A filha de uma idosa que depende de aparelhos para respirar contou que a mãe estava no cadastro de "cliente vital" da distribuidora e, mesmo assim, não recebeu nenhum suporte [4].
 
 **O que observamos:** a falta de energia em si não é o único problema. Também faltam respostas rápidas para três perguntas:
 
@@ -27,7 +27,7 @@ Escolhemos atuar no **intervalo entre "a energia caiu" e "alguém responsável s
 
 | O que **não** é o foco | Por quê |
 |---|---|
-| Restabelecer a energia | É responsabilidade da distribuidora. Ela já mantém um cadastro de clientes vitais com atendimento preferencial [6] |
+| Restabelecer a energia | É responsabilidade da distribuidora. Ela já mantém um cadastro de clientes vitais com atendimento preferencial [5] |
 | Atendimento médico ou triagem | É papel de profissionais de saúde e do SAMU 192. A LuzVital **não** substitui esses serviços |
 | Fornecer equipamentos | Está fora do alcance de um software. A distribuição de kits de bateria aparece como **apoio à decisão** (Dynamic Programming), não como logística real |
 
@@ -42,7 +42,7 @@ Escolhemos atuar no **intervalo entre "a energia caiu" e "alguém responsável s
 | **Equipes de home care** | Usuários que cadastram pacientes e acompanham as ocorrências | Já conhecem os equipamentos e a autonomia de cada paciente |
 | **Operador da central de monitoramento** | Acompanha o painel e coordena as ações | Concentra a visão de todos os afetados |
 
-**Território de referência:** São Paulo, com foco no **Jardim Ângela (Zona Sul)**. Esse bairro foi o mais afetado da capital no desligamento de agosto de 2025 [7]. É um bairro periférico, onde a distância até os serviços aumenta o tempo de resposta. *(Proposta da equipe; os dados do sistema são simulados.)*
+**Território de referência:** São Paulo, com foco no **Jardim Ângela (Zona Sul)**. Esse bairro foi o mais afetado da capital no desligamento de agosto de 2025 [6]. É um bairro periférico, onde a distância até os serviços aumenta o tempo de resposta. *(Proposta da equipe; os dados do sistema são simulados.)*
 
 ## 1.4 A solução
 
@@ -101,11 +101,10 @@ Esses três pontos sustentam as personas (Mariana não sabe quem já está indo;
 ## Fontes
 
 1. eixos — crise de energia em SP após temporal de 11/10/2024: https://eixos.com.br/?p=314604
-2. InfoMoney — 760 mil clientes sem luz, moradores há quase 50 horas sem energia: https://www.infomoney.com.br/?p=2630950
-3. VIVA — "O abandono de quem depende de energia elétrica para viver" (19/12/2025): https://viva.com.br/cidadania-e-direitos/o-abandono-de-quem-depende-de-energia-eletrica-para-viver.html
-4. SBT News — família compra gerador para manter idoso vivo após três dias sem energia: https://sbtnews.sbt.com.br/noticia/brasil/familia-tem-que-comprar-gerador-para-manter-idoso-vivo-apos-tres-dias-sem-energia
-5. Band — "Mulher se revolta com falta de luz em SP" (12/12/2025): https://www.band.com.br/noticias/brasil-urgente/ultimas/mulher-se-revolta-com-falta-de-luz-em-sp-nao-tem-nenhum-suporte-202512121839
-6. VIVA (mesma reportagem do item 3) — resposta da Enel sobre o cadastro de clientes vitais
-7. BandNews FM — desligamento de 28/08/2025, Jardim Ângela como bairro mais afetado: https://www.band.com.br/bandnews-fm/noticias/apagao-sp-202508280636
-8. Documentário "De Volta para Casa (Back Home)" (YouTube), trechos usados com autorização
-9. CPFL Energia / RGE — vídeo "UTI Domiciliar: um projeto que transformou centenas de vidas" (YouTube)
+2. VIVA — "O abandono de quem depende de energia elétrica para viver" (19/12/2025): https://viva.com.br/cidadania-e-direitos/o-abandono-de-quem-depende-de-energia-eletrica-para-viver.html
+3. SBT News — família compra gerador para manter idoso vivo após três dias sem energia: https://sbtnews.sbt.com.br/noticia/brasil/familia-tem-que-comprar-gerador-para-manter-idoso-vivo-apos-tres-dias-sem-energia
+4. Band — "Mulher se revolta com falta de luz em SP" (12/12/2025): https://www.band.com.br/noticias/brasil-urgente/ultimas/mulher-se-revolta-com-falta-de-luz-em-sp-nao-tem-nenhum-suporte-202512121839
+5. VIVA (mesma reportagem do item 2) — resposta da Enel sobre o cadastro de clientes vitais
+6. BandNews FM — desligamento de 28/08/2025, Jardim Ângela como bairro mais afetado: https://www.band.com.br/bandnews-fm/noticias/apagao-sp-202508280636
+7. Documentário "De Volta para Casa (Back Home)" (YouTube), trechos usados com autorização
+8. CPFL Energia / RGE — vídeo "UTI Domiciliar: um projeto que transformou centenas de vidas" (YouTube)

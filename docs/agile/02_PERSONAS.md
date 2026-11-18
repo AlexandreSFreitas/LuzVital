@@ -2,7 +2,7 @@
 
 Item 2 da entrega de Agile Methodology (10 pontos).
 
-> As personas são **fictícias**. Foram construídas a partir de situações relatadas em reportagens públicas (ver `01_IDEIA.md`, fontes 3 a 5) e devem ser ajustadas depois da conversa com uma pessoa real.
+> As personas são **fictícias**. Foram construídas a partir de situações relatadas em reportagens públicas.
 
 Cada persona corresponde a um ator do diagrama de casos de uso:
 

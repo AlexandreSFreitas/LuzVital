@@ -67,7 +67,7 @@ Story Points medem **esforço relativo** (complexidade, volume e incerteza), nã
 | US19 | **Como** usuário, **quero** entrar com login e ver só o que meu perfil permite, **para** proteger os dados dos pacientes | UC20, UC21 | **8** |
 | US20 | **Como** contato de apoio, **quero** receber o alerta por SMS ou WhatsApp, **para** ser avisado mesmo sem abrir o sistema | UC10 | **8** |
 
-### Won't (nesta GS — visão futura)
+### Futuro
 
 | ID | História | UC | Por que não agora |
 |---|---|---|---|
@@ -102,7 +102,7 @@ Story Points medem **esforço relativo** (complexidade, volume e incerteza), nã
 | US19 | Login e perfis | 8 | **8** | Autenticação e autorização em todas as rotas |
 | US20 | Alerta por SMS ou WhatsApp | 8 | **8** | Integração externa, custo e cadastro no provedor |
 
-Histórias Won't (US21 a US23) não foram estimadas, porque dependem de hardware ou de acordos externos.
+Histórias futuras (US21 a US23) não foram estimadas, porque dependem de hardware ou de acordos externos.
 
 ## 4.4 Rastreabilidade
 

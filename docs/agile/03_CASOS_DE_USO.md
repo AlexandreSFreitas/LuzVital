@@ -39,8 +39,8 @@ Item 3 da entrega de Agile Methodology (20 pontos). Representa o **escopo total*
 | UC14 | Encerrar interrupção | Operador | **MVP** |
 | UC15 | Consultar orientações de emergência (SAMU 192) | Paciente, Contato de apoio | Should (estende UC10) |
 | UC16 | Escalar alerta sem resposta para o próximo contato | (estende UC09) | Could |
-| UC17 | Enviar sinal de funcionamento | Dispositivo de monitoramento | Futuro (Won't nesta GS) |
-| UC18 | Detectar ausência de sinal | (sistema; inclui UC07) | Futuro (Won't nesta GS) |
+| UC17 | Enviar sinal de funcionamento | Dispositivo de monitoramento | Futuro |
+| UC18 | Detectar ausência de sinal | (sistema; inclui UC07) | Futuro |
 | UC19 | Consultar indicadores (tempo até confirmação) | Operador, Administrador | Could |
 | UC20 | Autenticar-se | Todos os atores humanos, exceto o Paciente | Could |
 | UC21 | Gerenciar usuários e perfis | Administrador | Could |

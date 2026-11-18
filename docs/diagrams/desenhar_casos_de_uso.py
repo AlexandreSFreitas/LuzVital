@@ -67,7 +67,7 @@ LIGA = {
     "Admin": ["UC05", "UC06", "UC19", "UC21", "UC20"],
     "Dispositivo": ["UC17", "UC18"],
 }
-RX, RY = 205, 46
+RX, RY = 212, 50
 
 # moldura do sistema e grupos
 d.rounded_rectangle(s(440, 60, 2160, 1840), 28 * ESC, outline=OURO, width=5 * ESC)
@@ -83,7 +83,7 @@ for nome, x0, y0, x1, y1, fut in GRUPOS:
     for j in range(y0, y1, 18):
         d.line(s(x0, j, x0, min(j + 10, y1)), fill=cor, width=2 * ESC)
         d.line(s(x1, j, x1, min(j + 10, y1)), fill=cor, width=2 * ESC)
-    d.text(s((x0 + x1) // 2, y0 + 20), nome, font=fonte(20, "SemiBold"), fill=(91, 74, 0), anchor="mm")
+    d.text(s((x0 + x1) // 2, y0 + 20), nome, font=fonte(23, "SemiBold"), fill=(91, 74, 0), anchor="mm")
 
 
 def borda_ator(a):
@@ -136,7 +136,7 @@ for (x, y, r) in [(1790, 288, "«include»"), (1790, 403, "«include»"), (1795,
 for u, (t, x, y, fut) in UC.items():
     d.ellipse(s(x - RX, y - RY, x + RX, y + RY), fill=(241, 241, 241) if fut else (255, 248, 225),
               outline=(153, 153, 153) if fut else OURO, width=2 * ESC)
-    d.multiline_text(s(x, y), t, font=fonte(19), fill=(30, 30, 30), anchor="mm", align="center", spacing=4 * ESC)
+    d.multiline_text(s(x, y), t, font=fonte(23, "Medium"), fill=(30, 30, 30), anchor="mm", align="center", spacing=4 * ESC)
 
 # atores (boneco + nome)
 for a, (t, x, y, lado, ext) in ATOR.items():
@@ -147,7 +147,7 @@ for a, (t, x, y, lado, ext) in ATOR.items():
     d.line(s(x - 26, cy - 2, x + 26, cy - 2), fill=k, width=3 * ESC)
     d.line(s(x, cy + 22, x - 20, cy + 52), fill=k, width=3 * ESC)
     d.line(s(x, cy + 22, x + 20, cy + 52), fill=k, width=3 * ESC)
-    d.multiline_text(s(x, y + 50), t, font=fonte(19, "Medium"), fill=k, anchor="ma", align="center", spacing=3 * ESC)
+    d.multiline_text(s(x, y + 50), t, font=fonte(23, "SemiBold"), fill=k, anchor="ma", align="center", spacing=3 * ESC)
 
 d.text(s(60, 1870), "Linhas: associação ator–caso de uso. Tracejado: «include» / «extend». Cinza: escopo futuro, fora do MVP.",
        font=fonte(18), fill=(90, 90, 90), anchor="ls")

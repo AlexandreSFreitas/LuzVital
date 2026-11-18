@@ -34,10 +34,8 @@ def limpar(md: str) -> str:
 
 def html_secao(nome: str) -> str:
     md = limpar((AGILE / nome).read_text(encoding="utf-8"))
-    if nome == "03_CASOS_DE_USO.md":  # diagrama deitado, numa página só, logo depois do título
-        from PIL import Image
-        girado = SAIDA.with_name("_casos_de_uso_girado.png")
-        Image.open(RAIZ / "docs" / "diagrams" / "casos_de_uso.png").rotate(90, expand=True).save(girado)
+    if nome == "03_CASOS_DE_USO.md":  # diagrama em pé, na largura da página, logo depois do título
+        girado = RAIZ / "docs" / "diagrams" / "casos_de_uso.png"
         titulo, resto = md.split("\n", 1)
         corpo = markdown.markdown(resto, extensions=["tables", "sane_lists"])
         return (f'<section class="secao">{markdown.markdown(titulo)}<img class="diagrama" src="{girado.as_uri()}">'
@@ -60,7 +58,7 @@ th, td { border: 1px solid #DCE4F0; padding: 5px 7px; vertical-align: top; }
 tr { break-inside: avoid; }
 img { display: block; max-width: 100%; max-height: 225mm; margin: 10px auto; border: 1px solid #DCE4F0; border-radius: 6px; }
 img[src*="celular"], img[src*="tela_alerta"] { max-width: 62mm; }
-img.diagrama { border: 0; max-height: 228mm; }
+img.diagrama { border: 0; width: 100%; max-height: none; }
 blockquote { margin: 8px 0; padding: 6px 12px; border-left: 4px solid #F2B134; background: #FFF8E1; }
 code { font-size: 8.6pt; background: #F5F8FC; padding: 0 3px; border-radius: 3px; }
 a { color: #155EEF; }
@@ -138,7 +136,6 @@ async def main():
                      margin={"top": "16mm", "bottom": "18mm", "left": "16mm", "right": "16mm"})
         await b.close()
     tmp.unlink()
-    SAIDA.with_name("_casos_de_uso_girado.png").unlink(missing_ok=True)
     print("ok:", SAIDA, "| Planning Poker pendente" if planning_poker_vazio() else "")
 
 
