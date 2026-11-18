@@ -18,7 +18,7 @@ SAIDA = Path(__file__).with_name("entrega")
 SAIDA.mkdir(exist_ok=True)
 PDF = SAIDA / "LuzVital_Database_Design.pdf"
 
-NOME_EQUIPE = ""  # preencher com o nome oficial da equipe
+NOME_EQUIPE = "Equipe Luz Vital"
 SOLUCAO = "LuzVital"
 VIDEO = "https://youtu.be/WZSq77cMLtg"
 SITE = "https://luzvital.onrender.com"
