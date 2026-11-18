@@ -25,15 +25,14 @@ SELECT p.id_paciente,
 -- confirmados (PENDENTE / SEM_RESPOSTA) e exigem nova tentativa.
 -- ---------------------------------------------------------------------
 SELECT i.id_interrupcao,
-       r.nome            AS regiao,
+       i.data_inicio,
        i.status          AS status_interrupcao,
        a.status          AS status_alerta,
        COUNT(*)          AS qtd_alertas,
        MIN(a.prioridade) AS prioridade_mais_alta
   FROM interrupcao i
- INNER JOIN regiao r ON r.id_regiao      = i.id_regiao
  INNER JOIN alerta a ON a.id_interrupcao = i.id_interrupcao
- GROUP BY i.id_interrupcao, r.nome, i.status, a.status
+ GROUP BY i.id_interrupcao, i.data_inicio, i.status, a.status
  ORDER BY i.id_interrupcao, a.status;
 
 -- ---------------------------------------------------------------------
