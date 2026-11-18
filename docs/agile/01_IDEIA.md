@@ -83,6 +83,21 @@ A **LuzVital** é uma plataforma web que funciona assim:
 - **Dados de saúde são dados pessoais sensíveis (LGPD).** Por isso usamos minimização: só o essencial para quem vai ajudar. Tudo no projeto acadêmico é **fictício**.
 - **Integrações reais (distribuidora, SMS, dispositivo IoT) são futuras.** No MVP elas são simuladas, e isso é dito claramente.
 
+## 1.8 Escuta (etapa "Escutar" do briefing)
+
+A escuta foi feita a partir de depoimentos públicos de quem convive com o problema, usados com crédito e, no caso do documentário, com autorização da ONG produtora:
+
+- **Documentário "De Volta para Casa (Back Home)":** mostra o cotidiano do tratamento domiciliar, com equipes de saúde chegando às casas e pacientes que dependem de concentradores de oxigênio e outros aparelhos. Um paciente conta que o alto consumo de energia dos aparelhos torna o tratamento dispendioso para a família.
+- **Vídeo "UTI Domiciliar" (CPFL Energia / RGE):** uma senhora relata que precisa de oxigênio em casa durante 16 horas por dia e que o aparelho gasta bastante energia.
+- **Reportagens (JA 2ª Edição, Jornal Nacional, R7):** relatam famílias que ficaram horas sem energia com parentes dependentes de aparelhos, e o caso de uma bebê de 11 meses que morreu depois de ficar cerca de 15 horas sem energia em casa.
+
+**O que a escuta confirmou:**
+1. A dependência é contínua: são muitas horas por dia ligado à tomada, e o custo da energia já pesa.
+2. Quando falta energia, a família improvisa sozinha (gerador, bateria do carro, energia do vizinho) e nem sempre sabe se alguém já está ajudando.
+3. Existe uma rede de cuidado (família, cuidadores, equipe de home care), mas ela não é avisada de forma organizada.
+
+Esses três pontos sustentam as personas (Mariana não sabe quem já está indo; Rafael não sabe quais pacientes foram afetados) e as histórias Must do backlog.
+
 ## Fontes
 
 1. eixos — crise de energia em SP após temporal de 11/10/2024: https://eixos.com.br/?p=314604
@@ -92,12 +107,5 @@ A **LuzVital** é uma plataforma web que funciona assim:
 5. Band — "Mulher se revolta com falta de luz em SP" (12/12/2025): https://www.band.com.br/noticias/brasil-urgente/ultimas/mulher-se-revolta-com-falta-de-luz-em-sp-nao-tem-nenhum-suporte-202512121839
 6. VIVA (mesma reportagem do item 3) — resposta da Enel sobre o cadastro de clientes vitais
 7. BandNews FM — desligamento de 28/08/2025, Jardim Ângela como bairro mais afetado: https://www.band.com.br/bandnews-fm/noticias/apagao-sp-202508280636
-
-## Escuta (etapa "Escutar" do briefing)
-
-**Decisão da equipe (13/11/2026):** a escuta será feita a partir dos depoimentos do documentário **"De Volta para Casa (Back Home)"**, da ONG que atua com pessoas eletrodependentes.
-
-- [ ] Registrar aqui um resumo do que os depoimentos mostram: o que as famílias fazem hoje quando falta energia e o que atrapalha. Sem dados pessoais além do que o próprio documentário torna público.
-- [ ] Creditar o documentário e a ONG.
-- [ ] Ajustar as personas se os depoimentos contradisserem alguma suposição.
-- [ ] *Recomendado:* uma troca curta de mensagens com a ONG (o mesmo contato do pedido de autorização dos trechos para o pitch). Assim existe também uma **conversa** direta, que é o que o briefing pede literalmente.
+8. Documentário "De Volta para Casa (Back Home)" (YouTube), trechos usados com autorização
+9. CPFL Energia / RGE — vídeo "UTI Domiciliar: um projeto que transformou centenas de vidas" (YouTube)

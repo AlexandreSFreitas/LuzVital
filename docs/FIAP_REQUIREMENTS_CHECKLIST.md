@@ -15,13 +15,13 @@ Marque `[x]` somente quando o artefato existir **e** tiver sido conferido.
 
 ## Agile Methodology With Squad Framework — PDF único (+ link do vídeo)
 
-- [ ] 1. Apresentação descritiva da ideia: problema, foco, público-alvo e solução, com justificativas (10)
-- [ ] 2. Persona(s) com descrição narrativa (10)
-- [ ] 3. Diagrama de Casos de Uso com o escopo total e todos os atores (20)
+- [x] 1. Apresentação descritiva da ideia: problema, foco, público-alvo e solução, com justificativas (10)
+- [x] 2. Persona(s) com descrição narrativa (10)
+- [x] 3. Diagrama de Casos de Uso com o escopo total e todos os atores (20)
 - [ ] 4. Backlog com histórias coerentes com o diagrama, MoSCoW, Story Points por Planning Poker e destaque do MVP (20)
-- [ ] 5. Protótipo de no mínimo 3 telas, com comentários sobre a intenção e a UX (20)
-- [ ] 6. Vídeo pitch de até 3 min, ilustrado, com narração da equipe, no YouTube como **não listado** (20)
-- [ ] Tudo em **um único PDF** (mais de um PDF ou link externo = −10 pontos)
+- [x] 5. Protótipo de no mínimo 3 telas, com comentários sobre a intenção e a UX (20)
+- [x] 6. Vídeo pitch de até 3 min, ilustrado, com narração da equipe, no YouTube como **não listado** (20)
+- [ ] Tudo em **um único PDF** (`python disciplines/agile/montar_pdf.py`; falta só o Planning Poker) (mais de um PDF ou link externo = −10 pontos)
 - [ ] Link do vídeo testado em janela anônima (inacessível = zero no item)
 
 ## AR-VR Modelling And Simulation

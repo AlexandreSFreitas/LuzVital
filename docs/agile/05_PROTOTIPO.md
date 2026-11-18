@@ -2,79 +2,97 @@
 
 Item 5 da entrega de Agile Methodology (20 pontos).
 
-- **Protótipo navegável:** `frontend/prototipo/index.html`. Abra no navegador; não precisa de servidor.
-- **Imagens para o PDF:** `docs/agile/img/tela_*.png`.
-- Todos os dados são **fictícios** e coerentes com as personas e com o DML.
+As telas abaixo são do **site real da LuzVital**, publicado em **https://luzvital.onrender.com** (HTML, CSS e JavaScript puro, servido pelo backend Spring Boot). A demonstração usa **dados fictícios** e funciona sem enviar nenhuma mensagem real.
 
-> ⚠️ **Lembrete (decisão de 13/11/2026):** estas telas são o protótipo de Agile. Quando o backend Java estiver pronto, **atualizar as telas para o MVP oficial**: os mesmos campos e nomes da API, e telas ligadas aos endpoints reais. Os prints do PDF de DDD-Java devem sair dessa versão atualizada.
+Este item substitui o protótipo inicial de 13/11 (`frontend/prototipo/`), que serviu de rascunho. A tela de alerta no celular do contato ainda não existe no site, então ela aparece aqui no formato de protótipo, como próxima etapa.
 
 ## Decisões de UX que valem para todas as telas
 
 | Decisão | Por quê | Persona |
 |---|---|---|
-| Fonte **Atkinson Hyperlegible**, corpo de 18 px | Foi criada para leitores com baixa visão; letras como I, l e 1 são bem diferentes | Dona Lúcia, Mariana |
-| Contraste alto (azul-noite sobre claro, branco e âmbar sobre escuro) | Leitura rápida sob estresse e em ambientes com pouca luz | Todas |
-| Linguagem simples ("Caiu a energia", "Quem avisar, nesta ordem") | O cidadão não é especialista. Nada de "interrupção de fornecimento" ou "ID do contato" | Mariana |
-| A **barra de autonomia** aparece nas três telas | Mostra num olhar se a bateria aguenta a falta de energia (barra) ou não (barra antes do traço) | Rafael, Mariana |
-| Selo **"simulado"** visível | Não apresentamos uma integração simulada como real | — |
-| A orientação **SAMU 192** está sempre presente | A LuzVital não é serviço de emergência; orienta a usar o canal oficial | Todas |
-| A prioridade traz a frase "não é avaliação clínica" | Deixa claro que é uma regra operacional | Rafael |
+| Fonte **Inter**, textos curtos e linguagem simples ("Quando a energia acaba, o cuidado precisa continuar") | O cidadão não é especialista. Nada de "interrupção de fornecimento" ou "ID do contato" | Mariana, Dona Lúcia |
+| Azul de confiança como cor principal; **vermelho, laranja e verde só para estado** (prioridade 1, sem confirmação, confirmado) | A cor tem significado fixo e sempre vem acompanhada de texto, para não depender só da cor (daltonismo) | Rafael |
+| Avisos fixos: "Não substitui o SAMU 192" e "Demonstração com dados fictícios" | A LuzVital não é serviço de emergência, e uma simulação não deve parecer integração real | Todas |
+| Prioridade sempre com a frase "regra operacional, não é avaliação clínica" | Deixa claro que a ordem dos alertas não é diagnóstico | Rafael |
+| Acessibilidade: link "Pular para o conteúdo principal", foco visível no teclado, rótulos para leitores de tela (atributos `aria`) e animações reduzidas quando o sistema pede | O público inclui pessoas idosas e com deficiência | Dona Lúcia |
+| Layout que se reorganiza em uma coluna no celular | Quem cuida do paciente usa principalmente o celular | Mariana |
 
-## Tela 1 — Painel da interrupção (operador da central)
+## Tela 1 — Página inicial
 
-![Painel da interrupção](img/tela_painel.png)
+![Página inicial do site LuzVital](img/site_inicio.png)
 
-**Histórias:** US05, US06, US08, US09 (Must) e US13 (Should). **Casos de uso:** UC08, UC09, UC13, UC14.
+**Histórias relacionadas:** visão geral do produto (porta de entrada para US04–US08).
 
-**Intenção:** responder em poucos segundos às três perguntas do problema: **quem** foi afetado, **quem precisa primeiro** e **quem já está agindo**.
-
-**Adequação da UX:**
-- Os números grandes no topo (afetados, sem confirmação, confirmados) dão a situação geral antes da lista.
-- A lista já vem **ordenada por prioridade**. O operador não precisa ordenar nada no meio da crise.
-- A cor da prioridade sempre vem acompanhada de **texto** ("Prioridade 1"), para não depender só da cor (daltonismo).
-- Todos os pacientes usam a **mesma escala de 8 horas**. O traço vertical marca a duração estimada, então dá para comparar as linhas: quem não chega ao traço precisa de ajuda antes.
-- Os contatos aparecem na ordem de acionamento, com o status ao lado. "Sem confirmação" em âmbar chama a atenção sem alarmar.
-- Os filtros de uma tecla atendem aos dois usos mais comuns: quem ainda não respondeu e a prioridade 1.
-- "Encerrar interrupção" fica separado, no fim da página, para evitar um clique acidental.
-
-## Tela 2 — Alerta no celular (contato de apoio)
-
-![Alerta no celular](img/tela_alerta.png)
-
-**Histórias:** US07 (Must), US11 e US12 (Should). **Casos de uso:** UC10, UC11, UC12, UC15.
-
-**Intenção:** a Mariana entende o que aconteceu, quanto tempo há e o que fazer, com **um toque**.
+**Intenção:** em poucos segundos, dizer **para quem** é a LuzVital e **o que ela faz**, sem jargão técnico.
 
 **Adequação da UX:**
-- **Fundo escuro:** durante a falta de energia, o celular pode ser a única luz e a bateria importa. Em telas OLED, o fundo escuro gasta menos.
+- O título fala do sentimento do problema ("Quando a energia acaba, o cuidado precisa continuar"), e o parágrafo seguinte explica a solução em uma frase.
+- A ilustração mostra uma paciente com o concentrador de oxigênio, o indicador "Energia normal" e a "Rede de apoio: 3 contatos, em ordem". É o produto resumido numa imagem.
+- Dois caminhos claros: "Conheça o funcionamento" e "Ver demonstração", com um destaque visual só no principal.
+- Os avisos "Não substitui o SAMU 192" e "Demonstração com dados fictícios" aparecem logo na primeira tela.
+
+## Tela 2 — Como funciona
+
+![Seção Como funciona](img/site_como_funciona.png)
+
+**Histórias relacionadas:** US01–US03 (cadastro), US04–US06 (interrupção, identificação e prioridade), US07–US08 (alerta e acompanhamento).
+
+**Intenção:** explicar o fluxo completo em **cinco etapas numeradas**, do cadastro ao acompanhamento.
+
+**Adequação da UX:**
+- A numeração é usada porque o conteúdo **é** uma sequência: cadastro, monitoramento, identificação, alertas e acompanhamento.
+- Cada etapa tem um título de uma palavra e uma frase curta. A etapa de monitoramento diz claramente que hoje a interrupção é informada "de forma manual ou simulada".
+- O aviso sobre a prioridade como regra operacional fica logo abaixo das etapas.
+
+## Tela 3 — Painel da central (demonstração)
+
+![Painel da central durante uma falta de energia simulada](img/site_demonstracao.png)
+
+**Histórias relacionadas:** US04, US05, US06, US07 e US08 (Must, MVP). **Casos de uso:** UC07, UC08, UC09, UC11, UC13.
+
+**Intenção:** mostrar o que o operador da central (persona Rafael) vê quando falta energia num bairro: **quem foi afetado, quem precisa de ajuda primeiro e quem já confirmou**.
+
+**Adequação da UX:**
+- O operador escolhe a duração estimada da falta de energia (2, 4 ou 6 horas) e vê a prioridade mudar. Isso mostra que a ordem depende da autonomia da bateria de cada paciente.
+- Quatro números no topo resumem a situação: pacientes cadastrados, potencialmente afetados, alertas emitidos e confirmados.
+- Uma barra de etapas (ocorrência, identificação, alertas, acompanhamento) mostra em que ponto o atendimento está.
+- A lista já vem **ordenada por prioridade**. Cada paciente tem uma barra que compara a reserva da bateria com a falta estimada e uma frase simples: "A reserva acaba antes".
+- Os contatos aparecem na ordem de acionamento, com "Sem confirmação" em laranja e "Confirmou às 14h08" em verde.
+- A **linha do tempo** registra cada passo com o horário. Ela também alimenta o indicador de impacto: o tempo até a primeira confirmação.
+- Um paciente de outra região aparece marcado como "Fora da região: não afetado", para mostrar que o cruzamento é por região.
+
+## Tela 4 — O mesmo painel no celular
+
+![Painel da demonstração no celular](img/site_demonstracao_celular.png)
+
+**Histórias relacionadas:** US07 e US08. **Persona:** Mariana e Rafael fora da central.
+
+**Intenção:** o acompanhamento precisa funcionar numa tela pequena, porque numa falta de energia o celular pode ser o único aparelho ligado.
+
+**Adequação da UX:**
+- Os números viram uma grade de 2×2 e os cartões dos pacientes ocupam a largura toda. Não há rolagem lateral.
+- Os botões têm área de toque grande e texto que diz exatamente o que acontece.
+- A frase "Primeira confirmação 3 min após a falta de energia (simulado)" mostra o indicador de impacto em linguagem comum.
+
+## Tela 5 — Alerta no celular do contato (próxima etapa)
+
+![Protótipo do alerta no celular do contato](img/tela_alerta.png)
+
+**Histórias relacionadas:** US07 (Must), US11 e US12 (Should). **Casos de uso:** UC10, UC11, UC12, UC15.
+
+**Intenção:** a Mariana entende o que aconteceu, quanto tempo há e o que fazer, com **um toque**. No site atual a confirmação é simulada pelo botão "Simular confirmação" do painel; esta tela mostra como ela chegaria ao contato.
+
+**Adequação da UX:**
+- **Fundo escuro:** durante a falta de energia, o celular pode ser a única luz e a bateria importa.
 - O título diz **quem** e **o quê** em linguagem de família: "Caiu a energia na casa da Dona Lúcia".
-- O dado mais importante, o **tempo de reserva restante**, aparece em tamanho grande e em âmbar.
-- O botão principal ocupa toda a largura e fica na zona do polegar. O texto diz exatamente o que acontece: "Confirmar que vou ajudar". Depois do toque, aparece uma confirmação ("Você confirmou às 14h11") que também é anunciada para leitores de tela.
+- O tempo de reserva restante aparece em destaque, com a mesma barra de autonomia do painel.
+- O botão principal ocupa toda a largura, fica na zona do polegar e diz o que acontece: "Confirmar que vou ajudar".
 - A linha "Equipe Vida em Casa já confirmou. Paulo ainda não respondeu." evita que todos corram ao mesmo tempo ou que ninguém vá.
-- **"Ligar 192"** é um link de discagem direta. O texto orienta sem diagnosticar.
-- A paciente (Dona Lúcia) **não precisa operar nada**. O alerta vai para a rede de apoio dela.
-
-## Tela 3 — Cadastro do paciente (equipe de home care)
-
-![Cadastro do paciente](img/tela_paciente.png)
-
-**Histórias:** US01, US02, US03 (Must). **Casos de uso:** UC01, UC03, UC04.
-
-**Intenção:** registrar, numa só página, tudo o que o cruzamento e os alertas precisam, e **nada além disso**.
-
-**Adequação da UX:**
-- O subtítulo "Só o que quem vai ajudar precisa saber" aplica a **minimização de dados da LGPD**. Não há campos de diagnóstico, CPF ou prontuário.
-- Os campos usam os mesmos nomes do modelo de dados (região, reserva, ordem), para manter a coerência com o banco e a API.
-- A **região** explica para que serve ("Usada para saber quem foi afetado"), porque é o campo que faz o cruzamento funcionar.
-- Os equipamentos mostram a reserva em horas **e** em minutos, a unidade do banco. Assim a equipe confere o valor sem fazer contas.
-- O título "Quem avisar, nesta ordem" transforma o conceito técnico "ordem de acionamento" numa instrução.
-- Um aviso em destaque lembra que a reserva só ordena alertas e não substitui a avaliação da equipe.
-- Em telas pequenas, o layout passa a ter uma coluna só, para quem cadastra pelo celular durante a visita.
+- "Ligar 192" é um link de discagem direta. A paciente (Dona Lúcia) **não precisa operar nada**.
 
 ## Ligação com o restante do projeto
 
-| Tela | Endpoints que vai consumir (`API_CONTRACT.md`) | Tabelas (`DATABASE_MODEL.md`) |
+| Tela | O que já existe na API (`/api`) | O que ainda é simulado no site |
 |---|---|---|
-| Painel | `GET /interrupcoes/{id}`, `GET /alertas?interrupcao={id}`, `PUT /interrupcoes/{id}` | INTERRUPCAO, ALERTA, PACIENTE, PACIENTE_EQUIPAMENTO, CONTATO |
-| Alerta | `GET /alertas/{id}`, `PUT /alertas/{id}/confirmar` | ALERTA, ACAO_APOIO |
-| Cadastro | `POST/PUT /pacientes`, `/pacientes/{id}/equipamentos`, `/contatos` | PACIENTE, REGIAO, PACIENTE_EQUIPAMENTO, EQUIPAMENTO, PACIENTE_CONTATO, CONTATO |
+| Painel | `POST /api/interrupcoes` registra a interrupção e gera os alertas priorizados; `GET /api/interrupcoes/{id}` consulta; `/api/pacientes` e `/api/regioes` têm CRUD completo | A confirmação dos alertas ("Simular confirmação") e a linha do tempo |
+| Alerta no celular | — | Tela inteira (próxima etapa: endpoint de confirmação do alerta, US07) |
