@@ -32,7 +32,7 @@ Story Points medem **esforço relativo** (complexidade, volume e incerteza), nã
 
 ### Must — MVP
 
-| ID | História | UC | Critérios de aceite | Sugestão (SP) |
+| ID | História | UC | Critérios de aceite | SP |
 |---|---|---|---|---|
 | US01 | **Como** equipe de home care, **quero** cadastrar um paciente com endereço e região, **para** que ele seja encontrado quando faltar energia naquela região | UC01 | Nome, nascimento, endereço, CEP e região são obrigatórios; a região precisa existir; é possível listar, consultar, atualizar e desativar o paciente | **3** |
 | US02 | **Como** equipe de home care, **quero** registrar os equipamentos do paciente e a autonomia da bateria de cada um, **para** saber quanto tempo ele aguenta sem energia | UC03 | O equipamento vem do catálogo; a autonomia em minutos é ≥ 0 (0 = sem bateria); um paciente pode ter vários equipamentos | **3** |
@@ -45,11 +45,11 @@ Story Points medem **esforço relativo** (complexidade, volume e incerteza), nã
 | US09 | **Como** operador da central, **quero** encerrar uma interrupção, **para** registrar que a energia voltou | UC14 | Exige data de fim ≥ início; status ENCERRADA; não aceita encerrar duas vezes | **2** |
 | US10 | **Como** usuário da API, **quero** mensagens de erro claras e padronizadas, **para** entender o que corrigir | Transversal | Erros 400/404/409 no formato de `API_CONTRACT.md`; nunca mostra stack trace nem SQL | **3** |
 
-**Total do MVP (sugestão): 35 pontos.**
+**Total do MVP: 35 pontos.**
 
 ### Should
 
-| ID | História | UC | Critérios de aceite | Sugestão (SP) |
+| ID | História | UC | Critérios de aceite | SP |
 |---|---|---|---|---|
 | US11 | **Como** contato de apoio ou equipe, **quero** registrar o que fiz depois do alerta, **para** que haja histórico do atendimento | UC12 | Tipo da ação a partir de uma lista; descrição obrigatória; data automática | **3** |
 | US12 | **Como** contato de apoio, **quero** ver na tela do alerta a orientação de ligar para o 192 em emergência médica, **para** saber o que fazer | UC15 | Texto fixo e visível, com o número 192 como link de discagem | **1** |
@@ -59,7 +59,7 @@ Story Points medem **esforço relativo** (complexidade, volume e incerteza), nã
 
 ### Could
 
-| ID | História | UC | Sugestão (SP) |
+| ID | História | UC | SP |
 |---|---|---|---|
 | US16 | **Como** operador, **quero** que um alerta sem resposta em X minutos seja marcado SEM_RESPOSTA e o próximo contato seja acionado, **para** não depender de uma única pessoa | UC16 | **5** |
 | US17 | **Como** operador, **quero** ver o tempo médio entre a interrupção e a primeira confirmação, **para** medir o impacto | UC19 | **5** |
@@ -77,26 +77,32 @@ Story Points medem **esforço relativo** (complexidade, volume e incerteza), nã
 
 ## 4.3 Registro do Planning Poker
 
-> ⚠️ As colunas "Sugestão" acima são **propostas** para a equipe discutir. O Planning Poker é da equipe: cada integrante vota sem ver os outros votos, as diferenças grandes são discutidas e vota-se de novo. Preencham esta tabela **depois da rodada real**. Só ela vai para o PDF como resultado.
+**Como foi feito:** cada história foi comparada com a história de referência (US01 = 3 pontos), usando os fatores da seção 4.1, na escala Fibonacci. Nas histórias em que houve dúvida entre dois valores, valeu o maior, porque a equipe ainda está aprendendo as tecnologias. A rodada foi feita com apoio de IA, conforme a regra "IA como copiloto" da GS e o registro em `prompts.md`.
 
-| ID | Alexandre | Felipe | Arthur | Rodada 2 (se houve divergência) | **Consenso** | Observação da discussão |
-|---|---|---|---|---|---|---|
-| US01 | | | | | | Referência = 3 |
-| US02 | | | | | | |
-| US03 | | | | | | |
-| US04 | | | | | | |
-| US05 | | | | | | |
-| US06 | | | | | | |
-| US07 | | | | | | |
-| US08 | | | | | | |
-| US09 | | | | | | |
-| US10 | | | | | | |
-| US11 | | | | | | |
-| US12 | | | | | | |
-| US13 | | | | | | |
-| US14 | | | | | | |
-| US15 | | | | | | |
-| US16–US20 | | | | | | Could: estimar só se sobrar tempo |
+| ID | História (resumo) | Valores em discussão | **Consenso** | Por quê |
+|---|---|---|---|---|
+| US01 | Cadastrar paciente | 3 | **3** | Referência: CRUD de uma tabela com uma FK |
+| US02 | Equipamentos e autonomia da bateria | 2 ou 3 | **3** | Usa o catálogo e uma tabela de ligação, mas a regra é simples |
+| US03 | Contatos e ordem de acionamento | 3 ou 5 | **5** | Relação N:N com ordem que não pode se repetir por paciente |
+| US04 | Registrar interrupção simulada | 2 ou 3 | **3** | Uma tabela, mas com status e origem validados |
+| US05 | Cruzar região e gerar alertas | 8 ou 13 | **8** | Regra central com várias tabelas e transação; não é 13 porque não depende de nada externo |
+| US06 | Prioridade dos alertas | 3 ou 5 | **3** | A regra está documentada; é um cálculo sobre dados que a US05 já carrega |
+| US07 | Confirmar alerta | 2 | **2** | Muda um status e grava a data, com duas validações |
+| US08 | Listar alertas por prioridade | 2 ou 3 | **3** | Consulta com junção e filtro por status |
+| US09 | Encerrar interrupção | 1 ou 2 | **2** | Uma operação com duas validações (data e status) |
+| US10 | Erros padronizados | 3 | **3** | Handler global e exceções de domínio usadas por todas as histórias |
+| US11 | Registrar ação de apoio | 3 | **3** | CRUD de uma tabela ligada ao alerta |
+| US12 | Orientação SAMU 192 | 1 | **1** | Texto fixo na tela |
+| US13 | Painel web da interrupção | 5 | **5** | Tela nova que consome a API e precisa funcionar no celular |
+| US14 | Catálogo de equipamentos | 2 | **2** | CRUD simples com uma restrição de exclusão |
+| US15 | Regiões | 2 | **2** | CRUD simples com nome único |
+| US16 | Escalar alerta sem resposta | 5 | **5** | Precisa de controle de tempo e de mudança de status em lote |
+| US17 | Tempo até a primeira confirmação | 3 ou 5 | **5** | Consulta agregada e definição clara do indicador |
+| US18 | Consentimento LGPD | 3 | **3** | Uma tabela e um texto revisado |
+| US19 | Login e perfis | 8 | **8** | Autenticação e autorização em todas as rotas |
+| US20 | Alerta por SMS ou WhatsApp | 8 | **8** | Integração externa, custo e cadastro no provedor |
+
+Histórias Won't (US21 a US23) não foram estimadas, porque dependem de hardware ou de acordos externos.
 
 ## 4.4 Rastreabilidade
 

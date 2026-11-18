@@ -50,7 +50,7 @@ Este arquivo orienta o Claude Code neste repositório. Ele é curto de propósit
 6. Rode os testes da parte alterada (veja "Como validar").
 7. Revise segurança e privacidade (Skill `luzvital-security`) se tocar em dados pessoais, autenticação ou configuração.
 8. Atualize a documentação e marque o item no `docs/FIAP_REQUIREMENTS_CHECKLIST.md`.
-9. Registre o prompt relevante em `prompts.md` (exigência da FIAP: "IA como copiloto").
+9. Registre o prompt relevante: Agile em `prompts.md`, as outras disciplinas em `prompts_outras_disciplinas.md` (exigência da FIAP: "IA como copiloto").
 
 **Não altere a pasta de outra disciplina** sem antes explicar o impacto e pedir confirmação. As partes conversam entre si: mudar o modelo do banco afeta o backend, o DER, o diagrama de classes e o notebook.
 

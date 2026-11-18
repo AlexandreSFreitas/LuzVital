@@ -1,0 +1,16 @@
+# Registro de prompts — outras disciplinas
+
+Prompts que não são de Agile, retirados de `prompts.md` em 18/11/2026 e guardados aqui para a entrega das outras disciplinas.
+
+| Data | Disciplina | Prompt (resumo) | Para que foi usado | O que a equipe revisou ou mudou |
+|---|---|---|---|---|
+| 12/11/2026 | Todas | Configuração do ambiente do Claude Code e da estrutura do repositório | Criar `CLAUDE.md`, `docs/`, Skills e regras de segurança | _a preencher_ |
+| 12/11/2026 | Todas | "Resuma o projeto e liste as skills disponíveis" | Visão geral do projeto, do estado das pastas e das Skills do Claude Code | _a preencher_ |
+| 12/11/2026 | Todas | "Faça git init, o commit inicial e crie o repositório privado LuzVital no GitHub" | Versionar o projeto: `git init`, verificação de segredos antes do commit, commit inicial e repositório privado no GitHub | _a preencher_ |
+| 12/11/2026 | Todas | "Registre em prompts.md e faça o commit" | Manter este registro de prompts atualizado (exigência "IA como copiloto") | _a preencher_ |
+| 13/11/2026 | Todas | Contexto mestre do projeto + "analise o briefing e apresente diagnóstico, riscos e plano" | Comparar o briefing oficial com o contexto, listar pendências e plano de 13 a 19/11 | _a preencher_ |
+| 13/11/2026 | Todas | Respostas às pendências (equipe, nome LuzVital, JDBC/DAO, credenciais Oracle) | Registrar equipe, responsáveis e decisão JDBC puro no README, CLAUDE.md e ARCHITECTURE.md | _a preencher_ |
+| 13/11/2026 | Database Design | "Crie o documento" (proposta do modelo final para revisão) | Proposta v1 do modelo de dados em `docs/DATABASE_MODEL.md` (8 tabelas, decisões e regra de prioridade) | _a preencher (revisão do Felipe)_ |
+| 13/11/2026 | Database Design | "Continue de onde paramos: começaremos Java e Data Base" + decisões (nomes sem prefixo, PK IDENTITY) | Gerar `database/ddl.sql`, `dml.sql` (dados fictícios) e `dql.sql`; passo a passo do Data Modeler | _a preencher_ |
+| 13/11/2026 | Database Design | "Pode fazer" / "Cuide disso" (Claude operando o Data Modeler e o SQL Developer na tela, com permissão) | Importar o DDL no Data Modeler, exportar o diagrama, rodar DDL/DML/DQL no Oracle da FIAP e conferir resultados; commit e sincronização da pasta local | _a preencher_ |
+| 14/11/2026 | DDD - Java | "Comece o backend em backend/: Spring Boot, Java 21, Maven Wrapper, camadas model, DAO (JDBC puro), BO, controller e exceções; primeiro Regiao e Paciente com CRUD completo; depois a BO de interrupção que gera alertas pela regra de prioridade. Apresente o plano antes de implementar" | Projeto Spring Boot 4.1.2, CRUD de regiões e pacientes, registro de interrupção com geração de alertas numa transação, handler de erros e 43 testes sem banco | _a preencher (decisões aprovadas: DELETE físico com 409, prioridade olhando todos os equipamentos, paciente sem contato listado na resposta)_ |
