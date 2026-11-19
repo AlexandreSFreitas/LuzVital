@@ -3,8 +3,7 @@
 Uso: python disciplines/java/montar_entrega.py
 Saída em disciplines/java/entrega/ (fora do Git):
   - LuzVital_DDD_Java.pdf   (documentação única)
-  - links.txt               (GitHub e deploy)
-  - LuzVital_DDD_Java.zip   (PDF + links.txt), para o Portal do Aluno
+  - LuzVital_DDD_Java.zip   (só o PDF), para o Portal do Aluno
 Requer: playwright, Google Chrome; antes rode docs/diagrams/gerar_diagrama_classes.py.
 """
 import asyncio
@@ -60,7 +59,7 @@ def capa():
   <div>
     <p><b>Equipe:</b> {EQUIPE_NOME}</p>
     <table>{linhas}</table>
-    <p class="links"><b>GitHub:</b> <a href="{REPO}">{REPO}</a><br><b>Deploy:</b> <a href="{DEPLOY}">{DEPLOY}</a></p>
+    <p class="links"><b>GitHub:</b> <a href="{REPO}">{REPO}</a><br><b>Deploy:</b> <a href="{DEPLOY}">{DEPLOY}</a><br><b>Teste da API:</b> <a href="{DEPLOY}/api.html">{DEPLOY}/api.html</a></p>
   </div>
 </section>
 <section class="secao sumario">
@@ -195,7 +194,8 @@ def corpo():
   </table>
   <h2>Links</h2>
   <p><b>GitHub:</b> <a href="{REPO}">{REPO}</a> (código em <code>backend/</code>)<br>
-  <b>Deploy:</b> <a href="{DEPLOY}">{DEPLOY}</a> · API em <code>{DEPLOY}/api/...</code></p>
+  <b>Deploy:</b> <a href="{DEPLOY}">{DEPLOY}</a> · API em <code>{DEPLOY}/api/...</code><br>
+  <b>Teste da API (guia interativo no navegador):</b> <a href="{DEPLOY}/api.html">{DEPLOY}/api.html</a></p>
   <h2>Passo a passo (execução local)</h2>
   <ol>
     <li>Clone o repositório: <code>git clone {REPO}.git</code></li>
@@ -271,13 +271,9 @@ async def main():
                      margin={"top": "16mm", "bottom": "18mm", "left": "16mm", "right": "16mm"})
         await b.close()
     tmp.unlink()
-    links = SAIDA / "links.txt"
-    links.write_text(f"LuzVital — Domain Driven Design - Java — {EQUIPE_NOME}\n\n"
-                     + "".join(f"{n} — RM {rm}\n" for n, rm in sorted(EQUIPE))
-                     + f"\nGitHub: {REPO}\nDeploy: {DEPLOY}\nVídeo pitch: {VIDEO}\n", encoding="utf-8")
+    (SAIDA / "links.txt").unlink(missing_ok=True)
     with zipfile.ZipFile(SAIDA / "LuzVital_DDD_Java.zip", "w", zipfile.ZIP_DEFLATED) as z:
         z.write(PDF, PDF.name)
-        z.write(links, links.name)
     print("ok:", *sorted(f.name for f in SAIDA.iterdir()))
 
 
